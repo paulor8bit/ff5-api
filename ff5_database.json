@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "game": "Final Fantasy V",
+    "version": "1.0.0",
+    "description": "Complete Final Fantasy V database with all game data",
+    "author": "FF5 API Project",
+    "created": "2025",
+    "total_records": {
+      "jobs": 26,
+      "characters": 5,
+      "spells": 124,
+      "weapons": 70,
+      "armor": 50,
+      "items": 50,
+      "monsters": 302,
+      "abilities": 80
+    }
+  },
+  "data_sources": {
+    "jobs": "/json/jobs.json",
+    "characters": "/json/characters.json",
+    "magic": "/json/magic.json",
+    "equipment": "/json/equipment.json",
+    "items": "/json/items.json",
+    "monsters": "/json/monsters.json",
+    "abilities": "/json/abilities.json"
+  },
+  "image_directory": "/images/",
+  "api_endpoints": {
+    "jobs": {
+      "list": "GET /api/jobs",
+      "single": "GET /api/jobs/:id",
+      "search": "GET /api/jobs?name=:name"
+    },
+    "characters": {
+      "list": "GET /api/characters",
+      "single": "GET /api/characters/:id",
+      "npcs": "GET /api/characters/npcs"
+    },
+    "magic": {
+      "white": "GET /api/magic/white",
+      "black": "GET /api/magic/black",
+      "time": "GET /api/magic/time",
+      "summon": "GET /api/magic/summon",
+      "blue": "GET /api/magic/blue",
+      "all": "GET /api/magic"
+    },
+    "equipment": {
+      "weapons": "GET /api/equipment/weapons",
+      "armor": "GET /api/equipment/armor",
+      "shields": "GET /api/equipment/shields",
+      "accessories": "GET /api/equipment/accessories"
+    },
+    "items": {
+      "recovery": "GET /api/items/recovery",
+      "battle": "GET /api/items/battle",
+      "key_items": "GET /api/items/key"
+    },
+    "monsters": {
+      "list": "GET /api/monsters",
+      "bosses": "GET /api/monsters/bosses",
+      "by_world": "GET /api/monsters/world/:world"
+    },
+    "abilities": {
+      "command": "GET /api/abilities/command",
+      "support": "GET /api/abilities/support",
+      "by_job": "GET /api/abilities/job/:job_id"
+    },
+    "images": {
+      "get": "GET /api/images/:image_id",
+      "by_type": "GET /api/images?type=:type"
+    }
+  }
+}

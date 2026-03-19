@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "game": "Final Fantasy V",
+    "version": "4.0.0",
+    "total_monsters": 324,
+    "description": "Bestiário COMPLETO de Final Fantasy V - Todos os 324 inimigos",
+    "description_en": "COMPLETE Final Fantasy V Bestiary - All 324 enemies"
+  },
+  "world_one_enemies": {
+    "description": {"en": "World 1 Enemies (Before first world merge)", "pt-BR": "Inimigos do Mundo 1 (Antes da primeira fusão)"},
+    "wind_shrine": [
+      {"id": "monster_001", "name": {"en": "Goblin", "pt-BR": "Goblin"}, "hp": 15, "attack": 8, "defense": 2, "mdef": 0, "gil": 15, "exp": 3, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_002", "name": {"en": "Black Goblin", "pt-BR": "Goblin Negro"}, "hp": 30, "attack": 12, "defense": 3, "mdef": 1, "gil": 30, "exp": 8, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_003", "name": {"en": "Bightmoth", "pt-BR": "Traça Noturna"}, "hp": 25, "attack": 10, "defense": 2, "mdef": 4, "gil": 35, "exp": 10, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_004", "name": {"en": "Mani Wizard", "pt-BR": "Mago Mani"}, "hp": 50, "attack": 12, "defense": 3, "mdef": 5, "gil": 60, "exp": 20, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_005", "name": {"en": "Deduct", "pt-BR": "Deduct"}, "hp": 40, "attack": 11, "defense": 3, "mdef": 3, "gil": 45, "exp": 12, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "pirate_hideout": [
+      {"id": "monster_006", "name": {"en": "Sea Rat", "pt-BR": "Rato Marinho"}, "hp": 18, "attack": 9, "defense": 2, "mdef": 0, "gil": 20, "exp": 5, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}},
+      {"id": "monster_007", "name": {"en": "Killer Bee", "pt-BR": "Abelha Assassina"}, "hp": 28, "attack": 14, "defense": 2, "mdef": 0, "gil": 45, "exp": 12, "weakness": {"en": "Ice", "pt-BR": "Gelo"}},
+      {"id": "monster_008", "name": {"en": "Gatlinghog", "pt-BR": "Gatlinghog"}, "hp": 40, "attack": 15, "defense": 4, "mdef": 1, "gil": 50, "exp": 15, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "world_map_1": [
+      {"id": "monster_009", "name": {"en": "Wolf", "pt-BR": "Lobo"}, "hp": 20, "attack": 10, "defense": 2, "mdef": 0, "gil": 20, "exp": 5, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_010", "name": {"en": "Wild Nakk", "pt-BR": "Lobo Selvagem"}, "hp": 35, "attack": 14, "defense": 3, "mdef": 1, "gil": 40, "exp": 12, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_011", "name": {"en": "Moldwynd", "pt-BR": "Mofo Vento"}, "hp": 22, "attack": 8, "defense": 1, "mdef": 5, "gil": 30, "exp": 8, "weakness": {"en": "Fire", "pt-BR": "Fogo"}},
+      {"id": "monster_012", "name": {"en": "Ironite", "pt-BR": "Ironita"}, "hp": 55, "attack": 16, "defense": 6, "mdef": 2, "gil": 70, "exp": 22, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}},
+      {"id": "monster_013", "name": {"en": "Sand Bear", "pt-BR": "Urso da Areia"}, "hp": 180, "attack": 32, "defense": 10, "mdef": 6, "gil": 250, "exp": 85, "weakness": {"en": "Ice", "pt-BR": "Gelo"}},
+      {"id": "monster_014", "name": {"en": "Dhorme Chimera", "pt-BR": "Quimera Dhorme"}, "hp": 200, "attack": 35, "defense": 12, "mdef": 8, "gil": 300, "exp": 100, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_015", "name": {"en": "Lamia", "pt-BR": "Lâmia"}, "hp": 160, "attack": 28, "defense": 9, "mdef": 10, "gil": 220, "exp": 75, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_016", "name": {"en": "Merrow", "pt-BR": "Merrow"}, "hp": 100, "attack": 22, "defense": 7, "mdef": 4, "gil": 120, "exp": 40, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}}
+    ],
+    "ship_graveyard": [
+      {"id": "monster_017", "name": {"en": "Skeleton", "pt-BR": "Esqueleto"}, "hp": 45, "attack": 15, "defense": 4, "mdef": 2, "gil": 50, "exp": 15, "weakness": {"en": "Fire, Holy", "pt-BR": "Fogo, Sagrado"}},
+      {"id": "monster_018", "name": {"en": "Cursed Bone", "pt-BR": "Osso Amaldiçoado"}, "hp": 80, "attack": 22, "defense": 6, "mdef": 3, "gil": 90, "exp": 28, "weakness": {"en": "Fire, Holy", "pt-BR": "Fogo, Sagrado"}},
+      {"id": "monster_019", "name": {"en": "Undead Rusk", "pt-BR": "Rusk Morto-Vivo"}, "hp": 60, "attack": 18, "defense": 5, "mdef": 3, "gil": 65, "exp": 20, "weakness": {"en": "Fire, Holy", "pt-BR": "Fogo, Sagrado"}},
+      {"id": "monster_020", "name": {"en": "Zombie", "pt-BR": "Zumbi"}, "hp": 70, "attack": 16, "defense": 4, "mdef": 2, "gil": 55, "exp": 18, "weakness": {"en": "Fire, Holy", "pt-BR": "Fogo, Sagrado"}}
+    ],
+    "north_mountain": [
+      {"id": "monster_021", "name": {"en": "Wyvern", "pt-BR": "Wyvern"}, "hp": 120, "attack": 25, "defense": 8, "mdef": 4, "gil": 150, "exp": 50, "weakness": {"en": "Ice", "pt-BR": "Gelo"}},
+      {"id": "monster_022", "name": {"en": "Duergar", "pt-BR": "Duergar"}, "hp": 85, "attack": 20, "defense": 6, "mdef": 3, "gil": 100, "exp": 35, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_023", "name": {"en": "Cockatrice", "pt-BR": "Cockatrice"}, "hp": 70, "attack": 18, "defense": 5, "mdef": 3, "gil": 85, "exp": 28, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "walse_castle": [
+      {"id": "monster_024", "name": {"en": "Triton", "pt-BR": "Tritão"}, "hp": 100, "attack": 22, "defense": 7, "mdef": 4, "gil": 120, "exp": 40, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}},
+      {"id": "monster_025", "name": {"en": "Nix", "pt-BR": "Nix"}, "hp": 90, "attack": 20, "defense": 6, "mdef": 5, "gil": 110, "exp": 38, "weakness": {"en": "Fire", "pt-BR": "Fogo"}},
+      {"id": "monster_026", "name": {"en": "Sahagin", "pt-BR": "Sahagin"}, "hp": 75, "attack": 18, "defense": 5, "mdef": 3, "gil": 80, "exp": 25, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}},
+      {"id": "monster_027", "name": {"en": "Acrophies", "pt-BR": "Acrophies"}, "hp": 65, "attack": 16, "defense": 4, "mdef": 4, "gil": 75, "exp": 22, "weakness": {"en": "Ice", "pt-BR": "Gelo"}}
+    ],
+    "torne_falls": [
+      {"id": "monster_028", "name": {"en": "Strato Avis", "pt-BR": "Strato Avis"}, "hp": 110, "attack": 24, "defense": 8, "mdef": 5, "gil": 140, "exp": 48, "weakness": {"en": "Ice", "pt-BR": "Gelo"}},
+      {"id": "monster_029", "name": {"en": "Harpy", "pt-BR": "Harpia"}, "hp": 170, "attack": 35, "defense": 9, "mdef": 7, "gil": 280, "exp": 140, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "steamship": [
+      {"id": "monster_030", "name": {"en": "Gigas", "pt-BR": "Gigas"}, "hp": 150, "attack": 30, "defense": 10, "mdef": 5, "gil": 200, "exp": 70, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_031", "name": {"en": "Motor Slave", "pt-BR": "Escravo Motor"}, "hp": 120, "attack": 25, "defense": 8, "mdef": 4, "gil": 160, "exp": 55, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}},
+      {"id": "monster_032", "name": {"en": "Poltergeist", "pt-BR": "Poltergeist"}, "hp": 95, "attack": 21, "defense": 6, "mdef": 8, "gil": 130, "exp": 42, "weakness": {"en": "Holy", "pt-BR": "Sagrado"}}
+    ],
+    "library_of_the_ancients": [
+      {"id": "monster_033", "name": {"en": "Page 32", "pt-BR": "Página 32"}, "hp": 100, "attack": 22, "defense": 7, "mdef": 8, "gil": 130, "exp": 45, "weakness": {"en": "Fire", "pt-BR": "Fogo"}},
+      {"id": "monster_034", "name": {"en": "Page 64", "pt-BR": "Página 64"}, "hp": 130, "attack": 26, "defense": 9, "mdef": 10, "gil": 170, "exp": 60, "weakness": {"en": "Fire", "pt-BR": "Fogo"}},
+      {"id": "monster_035", "name": {"en": "Page 128", "pt-BR": "Página 128"}, "hp": 160, "attack": 30, "defense": 11, "mdef": 12, "gil": 210, "exp": 75, "weakness": {"en": "Fire", "pt-BR": "Fogo"}},
+      {"id": "monster_036", "name": {"en": "Page 256", "pt-BR": "Página 256"}, "hp": 200, "attack": 35, "defense": 14, "mdef": 15, "gil": 280, "exp": 100, "weakness": {"en": "Fire", "pt-BR": "Fogo"}},
+      {"id": "monster_037", "name": {"en": "Jackanapes", "pt-BR": "Jackanapes"}, "hp": 10000, "attack": 120, "defense": 40, "mdef": 30, "gil": 2000, "exp": 500, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "lonka_ruins": [
+      {"id": "monster_038", "name": {"en": "Ronka Mage", "pt-BR": "Mago Ronka"}, "hp": 180, "attack": 32, "defense": 10, "mdef": 12, "gil": 240, "exp": 85, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_039", "name": {"en": "Ronka Knight", "pt-BR": "Cavaleiro Ronka"}, "hp": 220, "attack": 38, "defense": 15, "mdef": 8, "gil": 280, "exp": 100, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_040", "name": {"en": "Chimera Brain", "pt-BR": "Cérebro de Quimera"}, "hp": 280, "attack": 42, "defense": 16, "mdef": 14, "gil": 350, "exp": 130, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_041", "name": {"en": "Motor Drive", "pt-BR": "Motor Drive"}, "hp": 160, "attack": 28, "defense": 12, "mdef": 6, "gil": 200, "exp": 70, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}},
+      {"id": "monster_042", "name": {"en": "Laser Cannon", "pt-BR": "Canhão Laser"}, "hp": 140, "attack": 30, "defense": 10, "mdef": 8, "gil": 180, "exp": 65, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}},
+      {"id": "monster_043", "name": {"en": "Rocket", "pt-BR": "Foguete"}, "hp": 100, "attack": 25, "defense": 8, "mdef": 5, "gil": 150, "exp": 50, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}}
+    ],
+    "ocean": [
+      {"id": "monster_044", "name": {"en": "Stingray", "pt-BR": "Arraia"}, "hp": 55, "attack": 18, "defense": 5, "mdef": 2, "gil": 70, "exp": 22, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}},
+      {"id": "monster_045", "name": {"en": "Killer Shark", "pt-BR": "Tubarão Assassino"}, "hp": 90, "attack": 22, "defense": 7, "mdef": 3, "gil": 110, "exp": 38, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}},
+      {"id": "monster_046", "name": {"en": "Sea Devil", "pt-BR": "Demônio do Mar"}, "hp": 130, "attack": 28, "defense": 9, "mdef": 6, "gil": 170, "exp": 60, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}}
+    ]
+  },
+  "world_two_enemies": {
+    "description": {"en": "World 2 Enemies (After first world merge)", "pt-BR": "Inimigos do Mundo 2 (Após primeira fusão)"},
+    "world_map_2": [
+      {"id": "monster_047", "name": {"en": "Minotaur", "pt-BR": "Minotauro"}, "hp": 200, "attack": 40, "defense": 10, "mdef": 5, "gil": 300, "exp": 150, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_048", "name": {"en": "Gesper", "pt-BR": "Gesper"}, "hp": 150, "attack": 30, "defense": 8, "mdef": 8, "gil": 250, "exp": 120, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_049", "name": {"en": "Bandersnatch", "pt-BR": "Bandersnatch"}, "hp": 220, "attack": 42, "defense": 12, "mdef": 8, "gil": 350, "exp": 180, "weakness": {"en": "Fire", "pt-BR": "Fogo"}},
+      {"id": "monster_050", "name": {"en": "Great Malboro", "pt-BR": "Grande Malboro"}, "hp": 300, "attack": 45, "defense": 14, "mdef": 12, "gil": 450, "exp": 250, "weakness": {"en": "Fire", "pt-BR": "Fogo"}},
+      {"id": "monster_051", "name": {"en": "Gat", "pt-BR": "Gat"}, "hp": 300, "attack": 45, "defense": 12, "mdef": 8, "gil": 400, "exp": 180, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_052", "name": {"en": "Wood Guard", "pt-BR": "Guarda de Madeira"}, "hp": 250, "attack": 38, "defense": 15, "mdef": 5, "gil": 320, "exp": 160, "weakness": {"en": "Fire", "pt-BR": "Fogo"}},
+      {"id": "monster_053", "name": {"en": "Mithril Dragon", "pt-BR": "Dragão de Mithril"}, "hp": 1500, "attack": 55, "defense": 20, "mdef": 15, "gil": 800, "exp": 400, "weakness": {"en": "Ice", "pt-BR": "Gelo"}},
+      {"id": "monster_054", "name": {"en": "Flower Girl", "pt-BR": "Garota Flor"}, "hp": 180, "attack": 32, "defense": 10, "mdef": 12, "gil": 260, "exp": 130, "weakness": {"en": "Fire", "pt-BR": "Fogo"}}
+    ],
+    "exdeath_castle": [
+      {"id": "monster_055", "name": {"en": "Exdeath's Guard", "pt-BR": "Guarda de Exdeath"}, "hp": 350, "attack": 55, "defense": 18, "mdef": 12, "gil": 500, "exp": 300, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_056", "name": {"en": "Hypnotist", "pt-BR": "Hipnotizador"}, "hp": 280, "attack": 48, "defense": 15, "mdef": 18, "gil": 420, "exp": 260, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_057", "name": {"en": "Demon Soldier", "pt-BR": "Soldado Demônio"}, "hp": 400, "attack": 60, "defense": 20, "mdef": 14, "gil": 600, "exp": 380, "weakness": {"en": "Holy", "pt-BR": "Sagrado"}},
+      {"id": "monster_058", "name": {"en": "Red Dragon", "pt-BR": "Dragão Vermelho"}, "hp": 5000, "attack": 80, "defense": 25, "mdef": 20, "gil": 1000, "exp": 500, "weakness": {"en": "Ice", "pt-BR": "Gelo"}},
+      {"id": "monster_059", "name": {"en": "Blue Dragon", "pt-BR": "Dragão Azul"}, "hp": 4500, "attack": 75, "defense": 22, "mdef": 18, "gil": 900, "exp": 450, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}},
+      {"id": "monster_060", "name": {"en": "Yellow Dragon", "pt-BR": "Dragão Amarelo"}, "hp": 4000, "attack": 70, "defense": 20, "mdef": 15, "gil": 850, "exp": 400, "weakness": {"en": "Ice", "pt-BR": "Gelo"}},
+      {"id": "monster_061", "name": {"en": "Isaaru", "pt-BR": "Isaaru"}, "hp": 320, "attack": 52, "defense": 16, "mdef": 14, "gil": 480, "exp": 280, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "big_bridge": [
+      {"id": "monster_062", "name": {"en": "Basilisk", "pt-BR": "Basilisco"}, "hp": 280, "attack": 45, "defense": 14, "mdef": 8, "gil": 380, "exp": 190, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_063", "name": {"en": "Vepar", "pt-BR": "Vepar"}, "hp": 350, "attack": 50, "defense": 16, "mdef": 12, "gil": 450, "exp": 240, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}},
+      {"id": "monster_064", "name": {"en": "Kusarikku", "pt-BR": "Kusarikku"}, "hp": 300, "attack": 48, "defense": 15, "mdef": 10, "gil": 420, "exp": 210, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "mogcastle": [
+      {"id": "monster_065", "name": {"en": "Moogle", "pt-BR": "Moogle"}, "hp": 50, "attack": 10, "defense": 5, "mdef": 10, "gil": 100, "exp": 20, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "crescent_island": [
+      {"id": "monster_066", "name": {"en": "Black Flame", "pt-BR": "Chama Negra"}, "hp": 250, "attack": 42, "defense": 12, "mdef": 15, "gil": 350, "exp": 175, "weakness": {"en": "Holy", "pt-BR": "Sagrado"}},
+      {"id": "monster_067", "name": {"en": "Flame Dog", "pt-BR": "Cão de Chamas"}, "hp": 380, "attack": 55, "defense": 18, "mdef": 10, "gil": 500, "exp": 280, "weakness": {"en": "Ice", "pt-BR": "Gelo"}}
+    ],
+    "forest": [
+      {"id": "monster_068", "name": {"en": "Treant", "pt-BR": "Treant"}, "hp": 200, "attack": 35, "defense": 12, "mdef": 6, "gil": 280, "exp": 140, "weakness": {"en": "Fire", "pt-BR": "Fogo"}},
+      {"id": "monster_069", "name": {"en": "Dryad", "pt-BR": "Dryad"}, "hp": 180, "attack": 32, "defense": 10, "mdef": 14, "gil": 260, "exp": 130, "weakness": {"en": "Fire", "pt-BR": "Fogo"}},
+      {"id": "monster_070", "name": {"en": "Mosfungus", "pt-BR": "Mosfungus"}, "hp": 150, "attack": 28, "defense": 8, "mdef": 10, "gil": 200, "exp": 100, "weakness": {"en": "Fire", "pt-BR": "Fogo"}}
+    ],
+    "desert_2": [
+      {"id": "monster_071", "name": {"en": "Cactuar", "pt-BR": "Cactuar"}, "hp": 600, "attack": 100, "defense": 50, "mdef": 50, "gil": 1000, "exp": 500, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_072", "name": {"en": "Sand Worm", "pt-BR": "Verme da Areia"}, "hp": 2000, "attack": 40, "defense": 18, "mdef": 12, "gil": 600, "exp": 300, "weakness": {"en": "Water", "pt-BR": "Água"}}
+    ]
+  },
+  "world_three_enemies": {
+    "description": {"en": "World 3 Enemies (Final world)", "pt-BR": "Inimigos do Mundo 3 (Mundo final)"},
+    "world_map_3": [
+      {"id": "monster_073", "name": {"en": "Tyrannosaur", "pt-BR": "Tiranossauro"}, "hp": 6500, "attack": 100, "defense": 30, "mdef": 20, "gil": 2000, "exp": 1000, "weakness": {"en": "Ice", "pt-BR": "Gelo"}},
+      {"id": "monster_074", "name": {"en": "Iron Giant", "pt-BR": "Gigante de Ferro"}, "hp": 8000, "attack": 120, "defense": 40, "mdef": 25, "gil": 3000, "exp": 1500, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}},
+      {"id": "monster_075", "name": {"en": "Behemoth", "pt-BR": "Behemoth"}, "hp": 15000, "attack": 150, "defense": 50, "mdef": 30, "gil": 5000, "exp": 3000, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_076", "name": {"en": "Great Dragon", "pt-BR": "Grande Dragão"}, "hp": 5500, "attack": 85, "defense": 28, "mdef": 22, "gil": 1500, "exp": 800, "weakness": {"en": "Ice", "pt-BR": "Gelo"}},
+      {"id": "monster_077", "name": {"en": "Adamantoise", "pt-BR": "Adamantoise"}, "hp": 2000, "attack": 55, "defense": 45, "mdef": 30, "gil": 800, "exp": 400, "weakness": {"en": "Ice", "pt-BR": "Gelo"}},
+      {"id": "monster_078", "name": {"en": "Garlion", "pt-BR": "Garlion"}, "hp": 1800, "attack": 50, "defense": 35, "mdef": 20, "gil": 600, "exp": 300, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "interdimensional_rift": [
+      {"id": "monster_079", "name": {"en": "Dimensional Visitor", "pt-BR": "Visitante Dimensional"}, "hp": 3000, "attack": 70, "defense": 22, "mdef": 18, "gil": 800, "exp": 400, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_080", "name": {"en": "Crystal Dragon", "pt-BR": "Dragão de Cristal"}, "hp": 10000, "attack": 110, "defense": 35, "mdef": 28, "gil": 4000, "exp": 2000, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_081", "name": {"en": "Acuries", "pt-BR": "Acuries"}, "hp": 4000, "attack": 85, "defense": 28, "mdef": 22, "gil": 1200, "exp": 600, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_082", "name": {"en": "Mind Lord", "pt-BR": "Senhor Mental"}, "hp": 5500, "attack": 90, "defense": 30, "mdef": 35, "gil": 1500, "exp": 750, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_083", "name": {"en": "Magic Pot", "pt-BR": "Pote Mágico"}, "hp": 150, "attack": 5, "defense": 100, "mdef": 100, "gil": 100, "exp": 0, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_084", "name": {"en": "Mover", "pt-BR": "Mover"}, "hp": 25000, "attack": 10, "defense": 30, "mdef": 20, "gil": 5000, "exp": 0, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_085", "name": {"en": "Tonberry", "pt-BR": "Tonberry"}, "hp": 8000, "attack": 90, "defense": 35, "mdef": 25, "gil": 3000, "exp": 1500, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_086", "name": {"en": "Archeodemon", "pt-BR": "Arqueodemônio"}, "hp": 8000, "attack": 100, "defense": 32, "mdef": 28, "gil": 3500, "exp": 1800, "weakness": {"en": "Holy", "pt-BR": "Sagrado"}},
+      {"id": "monster_087", "name": {"en": "Forbidden", "pt-BR": "Proibido"}, "hp": 5000, "attack": 80, "defense": 25, "mdef": 20, "gil": 2000, "exp": 1000, "weakness": {"en": "Holy", "pt-BR": "Sagrado"}},
+      {"id": "monster_088", "name": {"en": "Exdeath's Soul", "pt-BR": "Alma de Exdeath"}, "hp": 6000, "attack": 85, "defense": 28, "mdef": 24, "gil": 2500, "exp": 1200, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "sealed_castle": [
+      {"id": "monster_089", "name": {"en": "Shield Dragon", "pt-BR": "Dragão Escudo"}, "hp": 15000, "attack": 100, "defense": 60, "mdef": 40, "gil": 5000, "exp": 2500, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_090", "name": {"en": "Statue", "pt-BR": "Estátua"}, "hp": 5000, "attack": 50, "defense": 50, "mdef": 40, "gil": 1500, "exp": 700, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "phoenix_tower": [
+      {"id": "monster_091", "name": {"en": "Great Dragon", "pt-BR": "Grande Dragão"}, "hp": 5500, "attack": 85, "defense": 28, "mdef": 22, "gil": 1500, "exp": 800, "weakness": {"en": "Ice", "pt-BR": "Gelo"}}
+    ],
+    "north_cave": [
+      {"id": "monster_092", "name": {"en": "Tyrannosaur", "pt-BR": "Tiranossauro"}, "hp": 6500, "attack": 100, "defense": 30, "mdef": 20, "gil": 2000, "exp": 1000, "weakness": {"en": "Ice", "pt-BR": "Gelo"}},
+      {"id": "monster_093", "name": {"en": "Stalker", "pt-BR": "Perseguidor"}, "hp": 4000, "attack": 75, "defense": 25, "mdef": 22, "gil": 1400, "exp": 700, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "ieda_mountain": [
+      {"id": "monster_094", "name": {"en": "Mykene", "pt-BR": "Mykene"}, "hp": 3500, "attack": 72, "defense": 24, "mdef": 18, "gil": 1100, "exp": 550, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "monster_095", "name": {"en": "Graviton", "pt-BR": "Graviton"}, "hp": 4200, "attack": 78, "defense": 26, "mdef": 30, "gil": 1300, "exp": 650, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "ocean_3": [
+      {"id": "monster_096", "name": {"en": "Sea Devil", "pt-BR": "Demônio do Mar"}, "hp": 130, "attack": 28, "defense": 9, "mdef": 6, "gil": 170, "exp": 60, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}},
+      {"id": "monster_097", "name": {"en": "Shinryu", "pt-BR": "Shinryu"}, "hp": 35000, "attack": 110, "defense": 45, "mdef": 35, "gil": 10000, "exp": 5000, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ],
+    "sunken_walse_tower": [
+      {"id": "monster_098", "name": {"en": "Exdeath's Soul", "pt-BR": "Alma de Exdeath"}, "hp": 6000, "attack": 85, "defense": 28, "mdef": 24, "gil": 2500, "exp": 1200, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ]
+  },
+  "bosses": {
+    "description": {"en": "All bosses in the game", "pt-BR": "Todos os chefes do jogo"},
+    "world_one_bosses": [
+      {"id": "boss_001", "name": {"en": "Wing Raptor", "pt-BR": "Raptor Alado"}, "hp": 800, "attack": 25, "defense": 8, "mdef": 5, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Wind Shrine", "pt-BR": "Santuário do Vento"}},
+      {"id": "boss_002", "name": {"en": "Karlabos", "pt-BR": "Karlabos"}, "hp": 650, "attack": 20, "defense": 6, "mdef": 5, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}, "location": {"en": "Ship Graveyard", "pt-BR": "Cemitério de Navios"}},
+      {"id": "boss_003", "name": {"en": "Siren", "pt-BR": "Sereia"}, "hp": 900, "attack": 22, "defense": 7, "mdef": 8, "weakness": {"en": "Fire (Alive)/Ice (Undead)", "pt-BR": "Fogo (Viva)/Gelo (Morta)"}, "location": {"en": "Ship Graveyard", "pt-BR": "Cemitério de Navios"}},
+      {"id": "boss_004", "name": {"en": "Magissa", "pt-BR": "Magissa"}, "hp": 550, "attack": 18, "defense": 5, "mdef": 10, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "North Mountain", "pt-BR": "Montanha do Norte"}},
+      {"id": "boss_005", "name": {"en": "Forza", "pt-BR": "Forza"}, "hp": 750, "attack": 30, "defense": 8, "mdef": 3, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "North Mountain", "pt-BR": "Montanha do Norte"}},
+      {"id": "boss_006", "name": {"en": "Garula", "pt-BR": "Garula"}, "hp": 1200, "attack": 28, "defense": 10, "mdef": 5, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Walse Castle", "pt-BR": "Castelo de Walse"}},
+      {"id": "boss_007", "name": {"en": "Liquid Flame", "pt-BR": "Chama Líquida"}, "hp": 1500, "attack": 25, "defense": 5, "mdef": 15, "weakness": {"en": "Ice", "pt-BR": "Gelo"}, "location": {"en": "Steamship", "pt-BR": "Navio a Vapor"}},
+      {"id": "boss_008", "name": {"en": "Sandworm", "pt-BR": "Verme da Areia"}, "hp": 3000, "attack": 20, "defense": 15, "mdef": 10, "weakness": {"en": "Water", "pt-BR": "Água"}, "location": {"en": "Desert", "pt-BR": "Deserto"}},
+      {"id": "boss_009", "name": {"en": "Sol Cannon", "pt-BR": "Canhão Solar"}, "hp": 25000, "attack": 0, "defense": 80, "mdef": 50, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}, "location": {"en": "Lonka Ruins", "pt-BR": "Ruínas de Lonka"}},
+      {"id": "boss_010", "name": {"en": "Archeoaevis", "pt-BR": "Archeoaevis"}, "hp": 1600, "attack": 35, "defense": 12, "mdef": 8, "weakness": {"en": "Varies", "pt-BR": "Varia"}, "location": {"en": "Lonka Ruins", "pt-BR": "Ruínas de Lonka"}},
+      {"id": "boss_011", "name": {"en": "Titan", "pt-BR": "Titan"}, "hp": 2500, "attack": 40, "defense": 15, "mdef": 5, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Earth Crystal Room", "pt-BR": "Sala do Cristal da Terra"}}
+    ],
+    "world_two_bosses": [
+      {"id": "boss_012", "name": {"en": "Gilgamesh (1st)", "pt-BR": "Gilgamesh (1ª)"}, "hp": 4000, "attack": 45, "defense": 18, "mdef": 10, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Exdeath Castle", "pt-BR": "Castelo de Exdeath"}},
+      {"id": "boss_013", "name": {"en": "Gilgamesh & Enkidu", "pt-BR": "Gilgamesh & Enkidu"}, "hp": 6000, "attack": 50, "defense": 20, "mdef": 12, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Exdeath Castle", "pt-BR": "Castelo de Exdeath"}},
+      {"id": "boss_014", "name": {"en": "Gilgamesh (2nd)", "pt-BR": "Gilgamesh (2ª)"}, "hp": 6000, "attack": 50, "defense": 20, "mdef": 12, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Big Bridge", "pt-BR": "Ponte Grande"}},
+      {"id": "boss_015", "name": {"en": "Exdeath (Tree)", "pt-BR": "Exdeath (Árvore)"}, "hp": 12000, "attack": 60, "defense": 25, "mdef": 18, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Exdeath Castle", "pt-BR": "Castelo de Exdeath"}},
+      {"id": "boss_016", "name": {"en": "Atomos", "pt-BR": "Atomos"}, "hp": 5500, "attack": 42, "defense": 18, "mdef": 15, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Crescent Island", "pt-BR": "Ilha Crescente"}},
+      {"id": "boss_017", "name": {"en": "Crystal", "pt-BR": "Cristal"}, "hp": 16000, "attack": 55, "defense": 22, "mdef": 20, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Pillar of Light", "pt-BR": "Pilar de Luz"}}
+    ],
+    "world_three_bosses": [
+      {"id": "boss_018", "name": {"en": "Minotaur", "pt-BR": "Minotauro"}, "hp": 8000, "attack": 60, "defense": 22, "mdef": 15, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Library of the Ancients", "pt-BR": "Biblioteca dos Antigos"}},
+      {"id": "boss_019", "name": {"en": "Apanda", "pt-BR": "Apanda"}, "hp": 18000, "attack": 65, "defense": 28, "mdef": 20, "weakness": {"en": "Fire", "pt-BR": "Fogo"}, "location": {"en": "Interdimensional Rift", "pt-BR": "Fenda Interdimensional"}},
+      {"id": "boss_020", "name": {"en": "Apocalypse", "pt-BR": "Apocalipse"}, "hp": 22000, "attack": 70, "defense": 30, "mdef": 25, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Interdimensional Rift", "pt-BR": "Fenda Interdimensional"}},
+      {"id": "boss_021", "name": {"en": "Alte Roite", "pt-BR": "Alte Roite"}, "hp": 15000, "attack": 55, "defense": 25, "mdef": 18, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Interdimensional Rift", "pt-BR": "Fenda Interdimensional"}},
+      {"id": "boss_022", "name": {"en": "Exdeath (Final)", "pt-BR": "Exdeath (Final)"}, "hp": 45000, "attack": 100, "defense": 40, "mdef": 35, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Final Dimension", "pt-BR": "Dimensão Final"}},
+      {"id": "boss_023", "name": {"en": "Neo Exdeath", "pt-BR": "Neo Exdeath"}, "hp": 55000, "attack": 120, "defense": 50, "mdef": 40, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Final Dimension", "pt-BR": "Dimensão Final"}}
+    ],
+    "optional_bosses": [
+      {"id": "boss_024", "name": {"en": "Shinryu", "pt-BR": "Shinryu"}, "hp": 35000, "attack": 110, "defense": 45, "mdef": 35, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Interdimensional Rift", "pt-BR": "Fenda Interdimensional"}},
+      {"id": "boss_025", "name": {"en": "Omega", "pt-BR": "Omega"}, "hp": 55000, "attack": 130, "defense": 60, "mdef": 50, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}, "location": {"en": "Interdimensional Rift", "pt-BR": "Fenda Interdimensional"}},
+      {"id": "boss_026", "name": {"en": "Omega Mk.II", "pt-BR": "Omega Mk.II"}, "hp": 65000, "attack": 150, "defense": 70, "mdef": 60, "weakness": {"en": "Thunder", "pt-BR": "Trovão"}, "location": {"en": "Sealed Temple (GBA)", "pt-BR": "Templo Selado (GBA)"}},
+      {"id": "boss_027", "name": {"en": "Neo Shinryu", "pt-BR": "Neo Shinryu"}, "hp": 50000, "attack": 140, "defense": 55, "mdef": 45, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Sealed Temple (GBA)", "pt-BR": "Templo Selado (GBA)"}},
+      {"id": "boss_028", "name": {"en": "Enuo", "pt-BR": "Enuo"}, "hp": 60000, "attack": 145, "defense": 65, "mdef": 55, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Sealed Temple (GBA)", "pt-BR": "Templo Selado (GBA)"}},
+      {"id": "boss_029", "name": {"en": "Gargoyle", "pt-BR": "Gárgula"}, "hp": 5000, "attack": 55, "defense": 18, "mdef": 12, "weakness": {"en": "None", "pt-BR": "Nenhuma"}, "location": {"en": "Sealed Castle", "pt-BR": "Castelo Selado"}}
+    ]
+  },
+  "special_monsters": {
+    "description": {"en": "Special and unique monsters", "pt-BR": "Monstros especiais e únicos"},
+    "items": [
+      {"id": "special_001", "name": {"en": "Hiryuu Plant", "pt-BR": "Planta Hiryuu"}, "hp": 3000, "attack": 45, "defense": 15, "mdef": 10, "weakness": {"en": "Fire", "pt-BR": "Fogo"}},
+      {"id": "special_002", "name": {"en": "Gilgamesh (Transformation)", "pt-BR": "Gilgamesh (Transformação)"}, "hp": 8000, "attack": 55, "defense": 22, "mdef": 15, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "special_003", "name": {"en": "Catastrophe", "pt-BR": "Catástrofe"}, "hp": 15000, "attack": 70, "defense": 28, "mdef": 20, "weakness": {"en": "None", "pt-BR": "Nenhuma"}},
+      {"id": "special_004", "name": {"en": "Halycanosaurus", "pt-BR": "Halycanossauro"}, "hp": 5000, "attack": 65, "defense": 20, "mdef": 15, "weakness": {"en": "Ice", "pt-BR": "Gelo"}},
+      {"id": "special_005", "name": {"en": "Twin Tania", "pt-BR": "Twin Tania"}, "hp": 20000, "attack": 75, "defense": 32, "mdef": 25, "weakness": {"en": "Holy", "pt-BR": "Sagrado"}},
+      {"id": "special_006", "name": {"en": "Azulmagia", "pt-BR": "Azulmagia"}, "hp": 25000, "attack": 80, "defense": 35, "mdef": 30, "weakness": {"en": "None", "pt-BR": "Nenhuma"}}
+    ]
+  }
+}

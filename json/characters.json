@@ -1,0 +1,255 @@
+{
+  "metadata": {
+    "game": "Final Fantasy V",
+    "version": "2.0.0",
+    "total_characters": 5,
+    "description": "Lista completa de todos os personagens jogáveis do Final Fantasy V",
+    "description_en": "Complete list of all playable characters from Final Fantasy V"
+  },
+  "characters": [
+    {
+      "id": "char_001",
+      "name": "Bartz Klauser",
+      "name_jp": "Battsu Kurausaa",
+      "nickname": "Butz",
+      "age": 20,
+      "origin": "Vila Lix",
+      "origin_en": "Lix Village",
+      "description": "Um aventureiro errante e protagonista principal. Viaja com seu chocobo Boko e se envolve na missão para salvar os cristais.",
+      "description_en": "A wandering adventurer and main protagonist. Travels with his chocobo Boko and gets involved in the mission to save the crystals.",
+      "background": "Filho de Dorgann Klauser, um dos quatro Guerreiros do Amanhecer que selaram Exdeath trinta anos atrás. Após a morte de seu pai, Bartz tornou-se um errante até conhecer Lenna e Galuf.",
+      "background_en": "Son of Dorgann Klauser, one of the four Dawn Warriors who sealed Exdeath thirty years ago. After his father's death, Bartz became a wanderer until meeting Lenna and Galuf.",
+      "starting_job": "Aventureiro",
+      "starting_job_en": "Freelancer",
+      "base_stats": {
+        "level": 1,
+        "hp": 38,
+        "mp": 10,
+        "strength": 23,
+        "agility": 22,
+        "vitality": 22,
+        "magic": 21
+      },
+      "personality": "Corajoso, despreocupado e aventureiro. Apesar de sua relutância inicial em se envolver, prova ser um líder nato.",
+      "personality_en": "Brave, carefree and adventurous. Despite initial reluctance to get involved, proves to be a natural leader.",
+      "relationships": {
+        "father": "Dorgann Klauser",
+        "companion": "Boko (Chocobo)",
+        "friends": ["Lenna", "Faris", "Galuf", "Krile"]
+      },
+      "image_id": "img_char_001"
+    },
+    {
+      "id": "char_002",
+      "name": "Lenna Charlotte Tycoon",
+      "name_jp": "Rena Shyarurotto Taikun",
+      "nickname": "Reina",
+      "age": 19,
+      "origin": "Castelo Tycoon",
+      "origin_en": "Tycoon Castle",
+      "description": "Princesa de Tycoon e uma das quatro Guerreiras da Luz. Parte para investigar o Cristal do Vento e encontra Bartz pelo caminho.",
+      "description_en": "Princess of Tycoon and one of the four Warriors of Light. Leaves to investigate the Wind Crystal and meets Bartz along the way.",
+      "background": "Filha do Rei Alexander Tycoon. Sua mãe morreu quando ela era jovem, e ela tem uma conexão profunda com dragosas e dragões.",
+      "background_en": "Daughter of King Alexander Tycoon. Her mother died when she was young, and she has a deep connection with wind drakes and dragons.",
+      "starting_job": "Aventureiro",
+      "starting_job_en": "Freelancer",
+      "base_stats": {
+        "level": 1,
+        "hp": 36,
+        "mp": 12,
+        "strength": 21,
+        "agility": 23,
+        "vitality": 20,
+        "magic": 24
+      },
+      "personality": "Bondosa, altruísta e determinada. Preza profundamente por seu reino e se sacrificaria pelos outros.",
+      "personality_en": "Kind, selfless and determined. Deeply values her kingdom and would sacrifice herself for others.",
+      "relationships": {
+        "father": "Rei Alexander Tycoon / King Alexander Tycoon",
+        "mother": "Rainha de Tycoon (falecida) / Queen of Tycoon (deceased)",
+        "sister": "Sarisa (Faris)",
+        "pet": "Dragosa (Hiryuu) / Wind Drake"
+      },
+      "image_id": "img_char_002"
+    },
+    {
+      "id": "char_003",
+      "name": "Galuf Halm Baldesion",
+      "name_jp": "Garufu Harumu Barudeishion",
+      "nickname": "Galuf",
+      "age": 60,
+      "origin": "Mundo 2 (Mundo de Galuf)",
+      "origin_en": "World 2 (Galuf's World)",
+      "description": "Um velho amnésico que se junta a Bartz e Lenna. Na verdade é o Rei Galuf de Bal e um dos Guerreiros do Amanhecer originais.",
+      "description_en": "An amnesiac old man who joins Bartz and Lenna. Actually King Galuf of Bal and one of the original Dawn Warriors.",
+      "background": "Um dos quatro Guerreiros do Amanhecer que selaram Exdeath trinta anos atrás. Retornou ao seu mundo após a batalha mas perdeu a memória temporariamente.",
+      "background_en": "One of the four Dawn Warriors who sealed Exdeath thirty years ago. Returned to his world after the battle but temporarily lost his memory.",
+      "starting_job": "Aventureiro",
+      "starting_job_en": "Freelancer",
+      "base_stats": {
+        "level": 1,
+        "hp": 42,
+        "mp": 8,
+        "strength": 24,
+        "agility": 19,
+        "vitality": 24,
+        "magic": 19
+      },
+      "personality": "Sábio, corajoso e bem-humorado apesar da idade. Tem forte senso de dever e proteção sobre sua neta Krile.",
+      "personality_en": "Wise, brave and good-humored despite his age. Has a strong sense of duty and protection over his granddaughter Krile.",
+      "relationships": {
+        "granddaughter": "Krile Mayer Baldesion",
+        "comrades": ["Dorgann", "Zeza", "Kelger"],
+        "enemy": "Exdeath"
+      },
+      "image_id": "img_char_003"
+    },
+    {
+      "id": "char_004",
+      "name": "Faris Scherwiz",
+      "name_jp": "Farisu Sheuruwizu",
+      "nickname": "Sarisa Tycoon",
+      "age": 20,
+      "origin": "Castelo Tycoon (criada por piratas)",
+      "origin_en": "Tycoon Castle (raised by pirates)",
+      "description": "Capitã de um bando de piratas que inicialmente parece homem. Na verdade é a irmã mais velha perdida de Lenna, Sarisa.",
+      "description_en": "Captain of a pirate band who initially appears male. Actually Lenna's lost older sister, Sarisa.",
+      "background": "Nascida como Princesa Sarisa de Tycoon, foi perdida no mar quando criança e criada por piratas. Tornou-se capitã e os lidera com respeito e lealdade.",
+      "background_en": "Born as Princess Sarisa of Tycoon, was lost at sea as a child and raised by pirates. Became captain and leads them with respect and loyalty.",
+      "starting_job": "Aventureiro",
+      "starting_job_en": "Freelancer",
+      "base_stats": {
+        "level": 1,
+        "hp": 40,
+        "mp": 10,
+        "strength": 24,
+        "agility": 24,
+        "vitality": 21,
+        "magic": 20
+      },
+      "personality": "Audaciosa, durona e intensamente leal. Apesar de sua criação pirata, tem um coração nobre e se importa profundamente com sua tripulação e irmã recém-encontrada.",
+      "personality_en": "Bold, tough and intensely loyal. Despite her pirate upbringing, has a noble heart and deeply cares for her crew and newly-found sister.",
+      "relationships": {
+        "father": "Rei Alexander Tycoon / King Alexander Tycoon",
+        "sister": "Lenna",
+        "crew": "Piratas de Syldra / Syldra Pirates",
+        "companion": "Syldra (Dragão Marinho) / Syldra (Sea Dragon)"
+      },
+      "image_id": "img_char_004"
+    },
+    {
+      "id": "char_005",
+      "name": "Krile Mayer Baldesion",
+      "name_jp": "Kuraru Meiaa Barudeishion",
+      "nickname": "Cara",
+      "age": 14,
+      "origin": "Castelo Bal, Mundo 2",
+      "origin_en": "Bal Castle, World 2",
+      "description": "Neta de Galuf que herda seu lugar no grupo. Pode se comunicar com moogles e possui habilidades telepáticas.",
+      "description_en": "Galuf's granddaughter who inherits his place in the party. Can communicate with moogles and has telepathic abilities.",
+      "background": "Princesa de Bal e neta de Galuf. Herdou fortes habilidades mágicas e pode se comunicar com criaturas como moogles e dragosas.",
+      "background_en": "Princess of Bal and Galuf's granddaughter. Inherited strong magical abilities and can communicate with creatures like moogles and wind drakes.",
+      "starting_job": "Aventureiro",
+      "starting_job_en": "Freelancer",
+      "base_stats": {
+        "level": 1,
+        "hp": 34,
+        "mp": 14,
+        "strength": 19,
+        "agility": 24,
+        "vitality": 19,
+        "magic": 26
+      },
+      "personality": "Alegre, corajosa e resourceful. Apesar da pouca idade, prova ser digna de continuar o legado de Galuf como Guerreira da Luz.",
+      "personality_en": "Cheerful, brave and resourceful. Despite her young age, proves worthy of continuing Galuf's legacy as a Warrior of Light.",
+      "relationships": {
+        "grandfather": "Galuf Halm Baldesion",
+        "pet": "Moogle",
+        "friends": ["Bartz", "Lenna", "Faris"]
+      },
+      "image_id": "img_char_005"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "npc_001",
+      "name": "Cid Previa",
+      "name_en": "Cid Previa",
+      "role": "Estudioso/Inventor",
+      "role_en": "Scholar/Inventor",
+      "description": "Um brilhante estudioso que criou o navio a vapor. Ajuda o grupo durante toda a jornada.",
+      "description_en": "A brilliant scholar who created the steamship. Helps the party throughout their journey.",
+      "image_id": "img_npc_001"
+    },
+    {
+      "id": "npc_002",
+      "name": "Mid Previa",
+      "name_en": "Mid Previa",
+      "role": "Neto de Cid",
+      "role_en": "Cid's Grandson",
+      "description": "Neto de Cid que continua as pesquisas do avô. Auxilia com conhecimento técnico.",
+      "description_en": "Cid's grandson who continues his grandfather's research. Assists with technical knowledge.",
+      "image_id": "img_npc_002"
+    },
+    {
+      "id": "npc_003",
+      "name": "Rei Alexander Tycoon",
+      "name_en": "King Alexander Tycoon",
+      "role": "Rei de Tycoon",
+      "role_en": "King of Tycoon",
+      "description": "Pai de Lenna e Faris que desaparece enquanto investigava os cristais.",
+      "description_en": "Father of Lenna and Faris who disappears while investigating the crystals.",
+      "image_id": "img_npc_003"
+    },
+    {
+      "id": "npc_004",
+      "name": "Boko",
+      "name_en": "Boko",
+      "role": "Chocobo",
+      "role_en": "Chocobo",
+      "description": "Chocobo leal de Bartz que ajuda durante toda a aventura.",
+      "description_en": "Bartz's loyal chocobo who helps throughout the entire adventure.",
+      "image_id": "img_npc_004"
+    },
+    {
+      "id": "npc_005",
+      "name": "Syldra",
+      "name_en": "Syldra",
+      "role": "Dragão Marinho",
+      "role_en": "Sea Dragon",
+      "description": "Companheira dragão marinho de Faris que controla a água e ajuda na navegação.",
+      "description_en": "Faris's sea dragon companion who controls water and helps with navigation.",
+      "image_id": "img_npc_005"
+    },
+    {
+      "id": "npc_006",
+      "name": "Hiryuu",
+      "name_en": "Hiryuu",
+      "role": "Dragosa",
+      "role_en": "Wind Drake",
+      "description": "Dragosa companheira de Lenna. A última de sua espécie no Mundo 1.",
+      "description_en": "Lenna's wind drake companion. The last of its kind in World 1.",
+      "image_id": "img_npc_006"
+    },
+    {
+      "id": "npc_007",
+      "name": "Exdeath",
+      "name_en": "Exdeath",
+      "role": "Vilão Principal",
+      "role_en": "Main Villain",
+      "description": "Um mago das trevas que foi selado pelos Guerreiros do Amanhecer. Busca absorver o poder dos cristais para dominar os mundos.",
+      "description_en": "A dark mage who was sealed by the Dawn Warriors. Seeks to absorb the crystals' power to dominate the worlds.",
+      "image_id": "img_npc_007"
+    },
+    {
+      "id": "npc_008",
+      "name": "Gilgamesh",
+      "name_en": "Gilgamesh",
+      "role": "Chefe Recorrente",
+      "role_en": "Recurring Boss",
+      "description": "Um guerreiro excêntrico que serve Exdeath. Aparece múltiplas vezes durante o jogo e se torna memorável.",
+      "description_en": "An eccentric warrior who serves Exdeath. Appears multiple times throughout the game and becomes memorable.",
+      "image_id": "img_npc_008"
+    }
+  ]
+}

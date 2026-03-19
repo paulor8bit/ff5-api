@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  ff5-api:
+    build: .
+    container_name: ff5-api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./json:/app/json
+      - ./images:/app/images
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3000

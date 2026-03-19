@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "game": "Final Fantasy V",
+    "version": "3.0.0",
+    "description": "Lista COMPLETA de todos os itens do Final Fantasy V",
+    "description_en": "COMPLETE list of all Final Fantasy V items"
+  },
+  "recovery_items": {
+    "description": {"en": "Items that restore HP, MP or cure status", "pt-BR": "Itens que restauram HP, MP ou curam status"},
+    "items": [
+      {"id": "item_r001", "name": {"en": "Potion", "pt-BR": "Poção"}, "effect": {"en": "Restores 100 HP", "pt-BR": "Restaura 100 HP"}, "price": 50, "battle": true, "field": true},
+      {"id": "item_r002", "name": {"en": "Hi-Potion", "pt-BR": "Super Poção"}, "effect": {"en": "Restores 500 HP", "pt-BR": "Restaura 500 HP"}, "price": 300, "battle": true, "field": true},
+      {"id": "item_r003", "name": {"en": "X-Potion", "pt-BR": "Ultra Poção"}, "effect": {"en": "Restores 1000 HP", "pt-BR": "Restaura 1000 HP"}, "price": 1500, "battle": true, "field": true},
+      {"id": "item_r004", "name": {"en": "Ether", "pt-BR": "Éter"}, "effect": {"en": "Restores 50 MP", "pt-BR": "Restaura 50 MP"}, "price": 500, "battle": true, "field": true},
+      {"id": "item_r005", "name": {"en": "Hi-Ether", "pt-BR": "Super Éter"}, "effect": {"en": "Restores 150 MP", "pt-BR": "Restaura 150 MP"}, "price": 2000, "battle": true, "field": true},
+      {"id": "item_r006", "name": {"en": "Elixir", "pt-BR": "Elixir"}, "effect": {"en": "Fully restores HP and MP", "pt-BR": "Restaura completamente HP e MP"}, "price": 10000, "battle": true, "field": true},
+      {"id": "item_r007", "name": {"en": "Megalixir", "pt-BR": "Mega Elixir"}, "effect": {"en": "Fully restores HP and MP of entire party", "pt-BR": "Restaura completamente HP e MP de todo o grupo"}, "price": 0, "battle": true, "field": true},
+      {"id": "item_r008", "name": {"en": "Phoenix Down", "pt-BR": "Cauda de Fênix"}, "effect": {"en": "Revives a KO'd ally", "pt-BR": "Revive um aliado nocauteado"}, "price": 500, "battle": true, "field": true},
+      {"id": "item_r009", "name": {"en": "Antidote", "pt-BR": "Antídoto"}, "effect": {"en": "Cures Poison", "pt-BR": "Cura Veneno"}, "price": 40, "battle": true, "field": true},
+      {"id": "item_r010", "name": {"en": "Eye Drops", "pt-BR": "Colírio"}, "effect": {"en": "Cures Blind", "pt-BR": "Cura Cegueira"}, "price": 30, "battle": true, "field": true},
+      {"id": "item_r011", "name": {"en": "Echo Grass", "pt-BR": "Erva do Eco"}, "effect": {"en": "Cures Silence", "pt-BR": "Cura Mudez"}, "price": 50, "battle": true, "field": true},
+      {"id": "item_r012", "name": {"en": "Soft", "pt-BR": "Agulha de Ouro"}, "effect": {"en": "Cures Petrification", "pt-BR": "Cura Petrificação"}, "price": 200, "battle": true, "field": true},
+      {"id": "item_r013", "name": {"en": "Maiden's Kiss", "pt-BR": "Beijo da Donzela"}, "effect": {"en": "Cures Toad", "pt-BR": "Cura Sapo"}, "price": 100, "battle": true, "field": true},
+      {"id": "item_r014", "name": {"en": "Cornucopia", "pt-BR": "Cornucópia"}, "effect": {"en": "Cures Mini", "pt-BR": "Cura Mini"}, "price": 100, "battle": true, "field": true},
+      {"id": "item_r015", "name": {"en": "Holy Water", "pt-BR": "Água Benta"}, "effect": {"en": "Cures Zombie", "pt-BR": "Cura Zumbi"}, "price": 150, "battle": true, "field": true},
+      {"id": "item_r016", "name": {"en": "Remedy", "pt-BR": "Remédio"}, "effect": {"en": "Cures all status ailments", "pt-BR": "Cura todos os problemas de status"}, "price": 1000, "battle": true, "field": true},
+      {"id": "item_r017", "name": {"en": "Tent", "pt-BR": "Barraca"}, "effect": {"en": "Restores HP/MP, can save game", "pt-BR": "Restaura HP/MP, pode salvar o jogo"}, "price": 250, "battle": false, "field": true},
+      {"id": "item_r018", "name": {"en": "Cottage", "pt-BR": "Cabana"}, "effect": {"en": "Fully restores HP/MP, can save", "pt-BR": "Restaura completamente HP/MP, pode salvar"}, "price": 2000, "battle": false, "field": true},
+      {"id": "item_r019", "name": {"en": "Sleeping Bag", "pt-BR": "Saco de Dormir"}, "effect": {"en": "Restores HP/MP, cannot save", "pt-BR": "Restaura HP/MP, não pode salvar"}, "price": 100, "battle": false, "field": true}
+    ]
+  },
+  "offensive_items": {
+    "description": {"en": "Items that deal damage in battle", "pt-BR": "Itens que causam dano em batalha"},
+    "items": [
+      {"id": "item_o001", "name": {"en": "Bomb Fragment", "pt-BR": "Fragmento de Bomba"}, "effect": {"en": "Fire damage to all enemies", "pt-BR": "Dano de fogo a todos os inimigos"}, "element": {"en": "Fire", "pt-BR": "Fogo"}, "price": 500},
+      {"id": "item_o002", "name": {"en": "Bomb Core", "pt-BR": "Núcleo de Bomba"}, "effect": {"en": "Large fire damage to all enemies", "pt-BR": "Grande dano de fogo a todos os inimigos"}, "element": {"en": "Fire", "pt-BR": "Fogo"}, "price": 1500},
+      {"id": "item_o003", "name": {"en": "Antarctic Wind", "pt-BR": "Vento Antártico"}, "effect": {"en": "Ice damage to all enemies", "pt-BR": "Dano de gelo a todos os inimigos"}, "element": {"en": "Ice", "pt-BR": "Gelo"}, "price": 500},
+      {"id": "item_o004", "name": {"en": "Arctic Wind", "pt-BR": "Vento Ártico"}, "effect": {"en": "Large ice damage to all enemies", "pt-BR": "Grande dano de gelo a todos os inimigos"}, "element": {"en": "Ice", "pt-BR": "Gelo"}, "price": 1500},
+      {"id": "item_o005", "name": {"en": "Zeus's Wrath", "pt-BR": "Fúria de Zeus"}, "effect": {"en": "Thunder damage to all enemies", "pt-BR": "Dano de trovão a todos os inimigos"}, "element": {"en": "Thunder", "pt-BR": "Trovão"}, "price": 500},
+      {"id": "item_o006", "name": {"en": "Jupiter's Wrath", "pt-BR": "Fúria de Júpiter"}, "effect": {"en": "Large thunder damage to all enemies", "pt-BR": "Grande dano de trovão a todos os inimigos"}, "element": {"en": "Thunder", "pt-BR": "Trovão"}, "price": 1500},
+      {"id": "item_o007", "name": {"en": "Earth Drum", "pt-BR": "Tambor da Terra"}, "effect": {"en": "Earth damage to all enemies", "pt-BR": "Dano de terra a todos os inimigos"}, "element": {"en": "Earth", "pt-BR": "Terra"}, "price": 800},
+      {"id": "item_o008", "name": {"en": "Gaia Drum", "pt-BR": "Tambor de Gaia"}, "effect": {"en": "Large earth damage to all enemies", "pt-BR": "Grande dano de terra a todos os inimigos"}, "element": {"en": "Earth", "pt-BR": "Terra"}, "price": 2000},
+      {"id": "item_o009", "name": {"en": "Fire Fang", "pt-BR": "Presa de Fogo"}, "effect": {"en": "Fire damage to one enemy", "pt-BR": "Dano de fogo a um inimigo"}, "element": {"en": "Fire", "pt-BR": "Fogo"}, "price": 300},
+      {"id": "item_o010", "name": {"en": "Ice Fang", "pt-BR": "Presa de Gelo"}, "effect": {"en": "Ice damage to one enemy", "pt-BR": "Dano de gelo a um inimigo"}, "element": {"en": "Ice", "pt-BR": "Gelo"}, "price": 300},
+      {"id": "item_o011", "name": {"en": "Thunder Fang", "pt-BR": "Presa de Trovão"}, "effect": {"en": "Thunder damage to one enemy", "pt-BR": "Dano de trovão a um inimigo"}, "element": {"en": "Thunder", "pt-BR": "Trovão"}, "price": 300},
+      {"id": "item_o012", "name": {"en": "Dark Matter", "pt-BR": "Matéria Escura"}, "effect": {"en": "Large non-elemental damage", "pt-BR": "Grande dano não-elemental"}, "element": {"en": "None", "pt-BR": "Nenhum"}, "price": 0},
+      {"id": "item_o013", "name": {"en": "Shuriken", "pt-BR": "Shuriken"}, "effect": {"en": "Throwing weapon damage", "pt-BR": "Dano de arma arremessável"}, "element": {"en": "None", "pt-BR": "Nenhum"}, "price": 200},
+      {"id": "item_o014", "name": {"en": "Fuma Shuriken", "pt-BR": "Fuma Shuriken"}, "effect": {"en": "Large throwing weapon damage", "pt-BR": "Grande dano de arma arremessável"}, "element": {"en": "None", "pt-BR": "Nenhum"}, "price": 800}
+    ]
+  },
+  "stat_items": {
+    "description": {"en": "Items that boost stats temporarily", "pt-BR": "Itens que aumentam atributos temporariamente"},
+    "items": [
+      {"id": "item_s001", "name": {"en": "Power Drink", "pt-BR": "Bebida de Força"}, "effect": {"en": "Temporarily increases Strength", "pt-BR": "Aumenta temporariamente a Força"}, "price": 500},
+      {"id": "item_s002", "name": {"en": "Speed Drink", "pt-BR": "Bebida de Velocidade"}, "effect": {"en": "Temporarily increases Speed", "pt-BR": "Aumenta temporariamente a Velocidade"}, "price": 500},
+      {"id": "item_s003", "name": {"en": "Guard Drink", "pt-BR": "Bebida de Guarda"}, "effect": {"en": "Temporarily increases Defense", "pt-BR": "Aumenta temporariamente a Defesa"}, "price": 500},
+      {"id": "item_s004", "name": {"en": "Hero Drink", "pt-BR": "Bebida de Herói"}, "effect": {"en": "Temporarily increases all stats", "pt-BR": "Aumenta temporariamente todos os atributos"}, "price": 2000},
+      {"id": "item_s005", "name": {"en": "Giant's Drink", "pt-BR": "Bebida de Gigante"}, "effect": {"en": "Temporarily doubles max HP", "pt-BR": "Dobra temporariamente o HP máximo"}, "price": 1500},
+      {"id": "item_s006", "name": {"en": "Dragon Power", "pt-BR": "Poder do Dragão"}, "effect": {"en": "Temporarily increases Level", "pt-BR": "Aumenta temporariamente o Nível"}, "price": 3000}
+    ]
+  },
+  "key_items": {
+    "description": {"en": "Story-critical items", "pt-BR": "Itens críticos da história"},
+    "items": [
+      {"id": "key_001", "name": {"en": "Wind Crystal", "pt-BR": "Cristal do Vento"}, "effect": {"en": "Grants access to Wind Crystal jobs", "pt-BR": "Concede acesso às classes do Cristal do Vento"}},
+      {"id": "key_002", "name": {"en": "Water Crystal", "pt-BR": "Cristal da Água"}, "effect": {"en": "Grants access to Water Crystal jobs", "pt-BR": "Concede acesso às classes do Cristal da Água"}},
+      {"id": "key_003", "name": {"en": "Fire Crystal", "pt-BR": "Cristal do Fogo"}, "effect": {"en": "Grants access to Fire Crystal jobs", "pt-BR": "Concede acesso às classes do Cristal do Fogo"}},
+      {"id": "key_004", "name": {"en": "Earth Crystal", "pt-BR": "Cristal da Terra"}, "effect": {"en": "Grants access to Earth Crystal jobs", "pt-BR": "Concede acesso às classes do Cristal da Terra"}},
+      {"id": "key_005", "name": {"en": "World Map", "pt-BR": "Mapa do Mundo"}, "effect": {"en": "Shows the world map", "pt-BR": "Mostra o mapa do mundo"}},
+      {"id": "key_006", "name": {"en": "Boko", "pt-BR": "Chocobo"}, "effect": {"en": "Allows faster travel", "pt-BR": "Permite viagem mais rápida"}},
+      {"id": "key_007", "name": {"en": "Black Chocobo", "pt-BR": "Chocobo Negro"}, "effect": {"en": "Can fly between worlds", "pt-BR": "Pode voar entre mundos"}},
+      {"id": "key_008", "name": {"en": "Airship", "pt-BR": "Nave Voadora"}, "effect": {"en": "Ship for world travel", "pt-BR": "Nave para viagem pelo mundo"}},
+      {"id": "key_009", "name": {"en": "Submarine", "pt-BR": "Submarino"}, "effect": {"en": "Underwater exploration", "pt-BR": "Exploração submarina"}},
+      {"id": "key_010", "name": {"en": "Fire-Powered Ship", "pt-BR": "Navio a Vapor"}, "effect": {"en": "Ship powered by Fire Crystal", "pt-BR": "Navio movido pelo Cristal do Fogo"}},
+      {"id": "key_011", "name": {"en": "Sealed Book", "pt-BR": "Livro Selado"}, "effect": {"en": "Contains the twelve legendary weapons", "pt-BR": "Contém as doze armas lendárias"}},
+      {"id": "key_012", "name": {"en": "Adamantite", "pt-BR": "Adamantita"}, "effect": {"en": "Used to upgrade equipment", "pt-BR": "Usado para melhorar equipamentos"}},
+      {"id": "key_013", "name": {"en": "Pass", "pt-BR": "Passe"}, "effect": {"en": "Allows entry to certain areas", "pt-BR": "Permite entrada em certas áreas"}},
+      {"id": "key_014", "name": {"en": "Hiryuu", "pt-BR": "Dragão Voador"}, "effect": {"en": "Flying mount", "pt-BR": "Montaria voadora"}},
+      {"id": "key_015", "name": {"en": "Galuf's Pendant", "pt-BR": "Pingente de Galuf"}, "effect": {"en": "Story item", "pt-BR": "Item da história"}},
+      {"id": "key_016", "name": {"en": "Dragon Grass", "pt-BR": "Erva do Dragão"}, "effect": {"en": "Heals Hiryuu", "pt-BR": "Cura o Dragão Voador"}}
+    ]
+  },
+  "elemental_items": {
+    "description": {"en": "Elemental attack items", "pt-BR": "Itens de ataque elemental"},
+    "items": [
+      {"id": "elem_001", "name": {"en": "Fire Scroll", "pt-BR": "Pergaminho de Fogo"}, "effect": {"en": "Fire damage", "pt-BR": "Dano de fogo"}, "price": 500},
+      {"id": "elem_002", "name": {"en": "Water Scroll", "pt-BR": "Pergaminho de Água"}, "effect": {"en": "Water damage", "pt-BR": "Dano de água"}, "price": 500},
+      {"id": "elem_003", "name": {"en": "Wind Scroll", "pt-BR": "Pergaminho de Vento"}, "effect": {"en": "Wind damage", "pt-BR": "Dano de vento"}, "price": 500},
+      {"id": "elem_004", "name": {"en": "Shadow Scroll", "pt-BR": "Pergaminho de Sombra"}, "effect": {"en": "Dark damage", "pt-BR": "Dano de escuridão"}, "price": 500}
+    ]
+  },
+  "rare_items": {
+    "description": {"en": "Rare and unique items", "pt-BR": "Itens raros e únicos"},
+    "items": [
+      {"id": "rare_001", "name": {"en": "Ribbon", "pt-BR": "Laço"}, "effect": {"en": "Protects from all status ailments", "pt-BR": "Protege de todos os problemas de status"}},
+      {"id": "rare_002", "name": {"en": "Brave Blade", "pt-BR": "Lâmina Corajosa"}, "effect": {"en": "Power based on battles won without fleeing", "pt-BR": "Poder baseado em batalhas vencidas sem fugir"}},
+      {"id": "rare_003", "name": {"en": "Chicken Knife", "pt-BR": "Faca Frango"}, "effect": {"en": "Power based on times fled", "pt-BR": "Poder baseado em vezes que fugiu"}},
+      {"id": "rare_004", "name": {"en": "Mirage Vest", "pt-BR": "Colete Miragem"}, "effect": {"en": "Auto-Blink effect", "pt-BR": "Efeito Auto-Piscar"}},
+      {"id": "rare_005", "name": {"en": "Hermes Sandals", "pt-BR": "Sandálias de Hermes"}, "effect": {"en": "Auto-Haste effect", "pt-BR": "Efeito Auto-Haste"}}
+    ]
+  }
+}
