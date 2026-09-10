@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestiário · FFV Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="bestiary.html">
+
+  <header class="wiki-nav" id="wiki-nav"></header>
+
+  <main class="wiki-main">
+    <div class="page-head">
+      <span class="icon">👹</span>
+      <h1>Bestiário <span class="en">Monster Pokedex</span></h1>
+      <p>Todos os inimigos, chefes, invocações e espécimes especiais. Filtre por mundo ou categoria e pesquise pelo nome.</p>
+    </div>
+
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Pesquisar pelo nome... (ex: goblin, exdeath, bahamut)">
+      <select id="sort">
+        <option value="level">Ordem: Nível ↑</option>
+        <option value="hp">Ordem: HP ↑</option>
+        <option value="name">Ordem: Nome</option>
+      </select>
+      <button onclick="location.href='index.html'" style="padding:10px 14px;background:var(--bg2);color:var(--muted);border:1px solid var(--line);border-radius:10px;cursor:pointer;">🏰 Início</button>
+    </div>
+
+    <div class="filters" id="filters"></div>
+
+    <div class="note" id="resultInfo"></div>
+    <div class="poke-grid" id="grid"></div>
+  </main>
+
+  <footer>
+    Final Fantasy V © Square Enix · Wiki lê os arquivos estáticos <code>json/*.json</code> e <code>images/*</code>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    const state = { q: '', cat: 'all', sort: 'level', list: [] };
+
+    const CAT_FILTERS = [
+      ['all', 'Todos'],
+      ['world_one', '🌍 Mundo 1'],
+      ['world_two', '🌏 Mundo 2'],
+      ['world_three', '🌎 Mundo 3'],
+      ['boss', '👑 Chefes'],
+      ['summon', '💎 Invocações'],
+      ['special', '⭐ Especiais'],
+    ];
+
+    function renderFilters() {
+      $('#filters').innerHTML = CAT_FILTERS.map(([v, label]) =>
+        `<span class="chip clickable ${state.cat === v ? 'active' : ''}" data-cat="${v}">${esc(label)}</span>`).join('');
+      $('#filters').querySelectorAll('[data-cat]').forEach((el) => {
+        el.addEventListener('click', () => {
+          state.cat = el.dataset.cat;
+          renderFilters();
+          render();
+        });
+      });
+    }
+
+    function statFor(m) {
+      const map = { hp: m.hp, mp: m.mp, attack: m.attack, defense: m.defense, mdef: m.mdef, speed: m.speed };
+      const best = Math.max(1, ...Object.values(map).filter((v) => v != null && v > 0));
+      const hpPct = Math.round((m.hp / best) * 100);
+      const atkPct = Math.round(((m.attack || 0) / best) * 100);
+      const defPct = Math.round(((m.defense || 0) / best) * 100);
+      const mdefPct = Math.round(((m.mdef || 0) / best) * 100);
+      const spdPct = Math.round(((m.speed || 0) / best) * 100);
+      return `
+        <div class="statbar"><div class="row">
+          <span class="label">HP</span><span class="track"><span class="fill" style="width:${Math.max(2, hpPct)}%"></span></span><span class="value">${fmt(m.hp)}</span>
+        </div></div>
+        <div class="statbar"><div class="row">
+          <span class="label">ATK</span><span class="track"><span class="fill" style="width:${Math.max(2, atkPct)}%;background:linear-gradient(90deg,#ff6b6b,#ffb347)"></span></span><span class="value">${fmt(m.attack)}</span>
+        </div></div>
+        <div class="statbar"><div class="row">
+          <span class="label">DEF</span><span class="track"><span class="fill" style="width:${Math.max(2, defPct)}%;background:linear-gradient(90deg,#4ecdc4,#57e389)"></span></span><span class="value">${fmt(m.defense)}</span>
+        </div></div>
+        <div class="statbar"><div class="row">
+          <span class="label">MDEF</span><span class="track"><span class="fill" style="width:${Math.max(2, mdefPct)}%;background:linear-gradient(90deg,#b48cff,#ff9cf0)"></span></span><span class="value">${fmt(m.mdef)}</span>
+        </div></div>
+        <div class="statbar"><div class="row">
+          <span class="label">VEL</span><span class="track"><span class="fill" style="width:${Math.max(2, spdPct)}%;background:linear-gradient(90deg,#ffd700,#ffc390)"></span></span><span class="value">${fmt(m.speed)}</span>
+        </div></div>`;
+    }
+
+    function pokeNumber(m) {
+      return String(m.id || '').replace(/[^0-9]/g, '');
+    }
+
+    function render() {
+      const q = state.q.toLowerCase();
+      let list = state.list.filter((m) => {
+        if (state.cat !== 'all' && m._cat !== state.cat) return false;
+        if (q && !nameOf(m).toLowerCase().includes(q)) return false;
+        return true;
+      });
+      if (state.sort === 'level') list.sort((a, b) => (a.level || 0) - (b.level || 0));
+      else if (state.sort === 'hp') list.sort((a, b) => (a.hp || 0) - (b.hp || 0));
+      else list.sort((a, b) => nameOf(a).localeCompare(nameOf(b)));
+
+      $('#resultInfo').textContent =
+        list.length === 0 ? 'Nenhum monstro encontrado. Ajuste a busca ou o filtro.' :
+        `Exibindo ${list.length} de ${state.list.length} monstros.`;
+
+      const weakIcon = (m) => { const s = elementSlug(weaknessOf(m)); return s ? ` · Fraqueza: ${s}` : ''; };
+
+      $('#grid').innerHTML = list.map((m) => {
+        const [label, cls] = badgeFor(m._cat);
+        return `
+        <div class="poke-card" onclick="location.href='monster.html?id=${esc(m.id)}'">
+          <img class="poke-sprite" src="${imURL(m)}" alt="" loading="lazy" onerror="this.remove()">
+          <div class="poke-num">#${esc(pokeNumber(m))} · ${esc(label)}</div>
+          <div class="poke-name">${esc(nameOf(m))}</div>
+          <div class="poke-level">${m.level != null ? `LV ${m.level}` : ''} <span class="poke-hp">HP ${fmt(m.hp)}</span></div>
+          ${statFor(m)}
+          <div class="poke-weak">${esc(weaknessOf(m))}${weakIcon(m)}</div>
+        </div>`;
+      }).join('');
+    }
+
+    (async () => {
+      const grid = $('#grid');
+      showSpinner(grid, 'Carregando bestiário...');
+      try {
+        state.list = await loadAllMonsters();
+        renderFilters();
+        render();
+      } catch (err) { showError(grid, err); }
+
+      $('#search').addEventListener('input', (e) => { state.q = e.target.value; render(); });
+      $('#sort').addEventListener('change', (e) => { state.sort = e.target.value; render(); });
+    })();
+  </script>
+</body>
+</html>

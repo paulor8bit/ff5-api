@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itens · FFV Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="items.html">
+
+  <header class="wiki-nav" id="wiki-nav"></header>
+
+  <main class="wiki-main">
+    <div class="page-head">
+      <span class="icon">🎒</span>
+      <h1>Itens <span class="en">Inventory</span></h1>
+      <p>Todos os itens do jogo: recuperação, ofensivos, de stats, elementais, raros e itens-chave.</p>
+    </div>
+
+    <div id="content"></div>
+  </main>
+
+  <footer>
+    Final Fantasy V © Square Enix · Wiki lê os arquivos estáticos <code>json/*.json</code> e <code>images/*</code>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    const SECTIONS = [
+      ['recovery_items', '❤️ Recuperação'],
+      ['offensive_items', '💥 Ofensivos'],
+      ['stat_items', '📈 Stats'],
+      ['elemental_items', '🌪️ Elementais'],
+      ['rare_items', '💎 Raros'],
+      ['key_items', '🔑 Chave'],
+    ];
+
+    function itemCard(it) {
+      const eff = (it.effect && it.effect.en) || it.effect || it.description || '';
+      const sub = it.price != null ? `💰 ${fmt(it.price)}` : '';
+      return `
+      <div class="card">
+        <div class="card-top">
+          <h3>${esc((it.name && it.name.en) || it.name || '')}</h3>
+          ${sub ? `<span class="chip summon">${sub}</span>` : ''}
+        </div>
+        <div class="sub">${it.id}</div>
+        <div class="desc" style="margin-top:6px;">${esc(eff)}</div>
+        ${it.element ? `<div style="margin-top:8px;"><span class="chip special">✨ ${esc((it.element && it.element.en) || it.element)}</span></div>` : ''}
+      </div>`;
+    }
+
+    (async () => {
+      const el = $('#content');
+      showSpinner(el, 'Carregando itens...');
+      try {
+        const data = await API.get('items.json');
+        el.innerHTML = SECTIONS.map(([key, label]) => {
+          const arr = (data[key] && data[key].items) || [];
+          if (!arr.length) return '';
+          return `
+          <div class="section">
+            <div class="section-title">${esc(label)} <span class="count">(${arr.length})</span></div>
+            <div class="grid wide">${arr.map(itemCard).join('')}</div>
+          </div>`;
+        }).join('');
+      } catch (err) { showError(el, err); }
+    })();
+  </script>
+</body>
+</html>

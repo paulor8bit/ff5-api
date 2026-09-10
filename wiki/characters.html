@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personagens · FFV Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="characters.html">
+
+  <header class="wiki-nav" id="wiki-nav"></header>
+
+  <main class="wiki-main">
+    <div class="page-head">
+      <span class="icon">🧙</span>
+      <h1>Personagens <span class="en">Warriors of the Dawn</span></h1>
+      <p>Os cinco heróis que selam Exdeath e os NPCs que os ajudam na jornada.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">👥 Heróis jogáveis</div>
+      <div class="grid wide" id="heroes"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">🗣️ NPCs</div>
+      <div class="grid" id="npcs"></div>
+    </div>
+  </main>
+
+  <footer>
+    Final Fantasy V © Square Enix · Wiki lê os arquivos estáticos <code>json/*.json</code> e <code>images/*</code>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    function baseBar(label, key, v) {
+      const max = { level: 99, hp: 400, mp: 200, strength: 30, agility: 30, vitality: 30, magic: 30 };
+      const pct = Math.min(100, Math.round((v / max[key]) * 100));
+      const color = { hp: 'linear-gradient(90deg,#ff6b6b,#ffb347)', mp: 'linear-gradient(90deg,#b48cff,#7aa2ff)' }[key];
+      return `<div class="statbar"><div class="row"><span class="label">${label}</span><span class="track"><span class="fill" style="width:${Math.max(3, pct)}%;${color ? `background:${color}` : ''}"></span></span><span class="value">${fmt(v)}</span></div></div>`;
+    }
+
+    (async () => {
+      const heroesEl = $('#heroes');
+      const npcsEl = $('#npcs');
+      showSpinner(heroesEl, 'Carregando heróis...');
+      try {
+        const data = await API.get('characters.json');
+        await IMG.init();
+
+        heroesEl.innerHTML = data.characters.map((c) => {
+          const s = c.base_stats || {};
+          return `
+          <div class="card">
+            <div class="card-top">
+              <div style="flex:0 0 74px;height:86px;background:var(--bg1);border:1px solid var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;">
+                <img src="${IMG.urlSync(c.image_id) || ''}" alt="${esc(c.name)}" onerror="this.style.display='none'" style="max-width:70px;max-height:82px;image-rendering:pixelated;">
+              </div>
+              <div>
+                <h3>${esc(c.name)} <span class="jp">${esc(c.nickname || '')}</span></h3>
+                <div class="sub">${esc(c.name_jp)} · ${esc(c.origin_en)}</div>
+              </div>
+            </div>
+            <div class="desc" style="margin-top:10px;">${esc(c.description_en)}</div>
+            <div style="margin-top:12px;">
+              ${baseBar('LV', 'level', s.level)}
+              ${baseBar('HP', 'hp', s.hp)}
+              ${baseBar('MP', 'mp', s.mp)}
+              ${baseBar('FOR', 'strength', s.strength)}
+              ${baseBar('AGI', 'agility', s.agility)}
+              ${baseBar('VIT', 'vitality', s.vitality)}
+              ${baseBar('MAG', 'magic', s.magic)}
+            </div>
+            <div style="margin-top:10px;font-size:.8rem;color:var(--muted);">
+              Job inicial: <b style="color:var(--cyan);">${esc(c.starting_job_en || '—')}</b>
+            </div>
+          </div>`;
+        }).join('');
+
+        npcsEl.innerHTML = data.npcs.map((n) => `
+          <div class="card">
+            <div class="card-top">
+              <div style="flex:0 0 52px;height:56px;background:var(--bg1);border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+                <img src="${IMG.urlSync(n.image_id) || ''}" alt="${esc(n.name_en)}" onerror="this.style.display='none'" style="max-width:48px;max-height:52px;image-rendering:pixelated;">
+              </div>
+              <div>
+                <h3>${esc(n.name_en)}</h3>
+                <div class="sub">${esc(n.role_en || '')}</div>
+              </div>
+            </div>
+            <div class="desc" style="margin-top:10px;">${esc(n.description_en)}</div>
+          </div>`).join('');
+      } catch (err) { showError(heroesEl, err); showError(npcsEl, err); }
+    })();
+  </script>
+</body>
+</html>

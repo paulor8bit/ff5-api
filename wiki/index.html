@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FFV Wiki · Enciclopédia de Final Fantasy V</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="index.html">
+
+  <header class="wiki-nav" id="wiki-nav"></header>
+
+  <main class="wiki-main">
+    <div class="page-head">
+      <span class="icon">📖</span>
+      <h1>Final Fantasy V <span class="en">Enciclopédia Wiki / Pokedex</span></h1>
+      <p>Enciclopédia interativa que lê os arquivos estáticos <code>json/*.json</code> e <code>images/*</code> — dados completos de Final Fantasy V (SNES).</p>
+    </div>
+
+    <div class="section">
+      <div class="stat-cards" id="statCards">
+        <div class="stat-card-ex"><div class="n">…</div><div class="l">Carregando</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">🗺️ Seções</div>
+      <div class="grid wide">
+        <a class="card link" href="bestiary.html">
+          <div class="card-top"><h3>👹 Bestiário</h3><span class="chip three">Pokedex</span></div>
+          <div class="sub">360 monstros organizados por mundo</div>
+          <div class="desc">Explore todos os inimigos, chefes, invocações e espécimes especiais com status, fraquezas, locais e itens de steal/drop.</div>
+        </a>
+        <a class="card link" href="jobs.html">
+          <div class="card-top"><h3>⚔️ Jobs</h3><span class="chip one">26 classes</span></div>
+          <div class="sub">Classes e cristais</div>
+          <div class="desc">Todas as 26 profissões com estatísticas base, habilidades inatas, equipamentos e custo de ABP.</div>
+        </a>
+        <a class="card link" href="magic.html">
+          <div class="card-top"><h3>✨ Magias</h3><span class="chip summon">>100 feitiços</span></div>
+          <div class="sub">Branca · Negra · Tempo · Invocação · Azul</div>
+          <div class="desc">Cada feitiço com custo de MP, nível e efeito — incluindo canções de Bardo e habilidades de Geomante.</div>
+        </a>
+        <a class="card link" href="equipment.html">
+          <div class="card-top"><h3>🛡️ Equipamentos</h3><span class="chip two">Armas &amp; armaduras</span></div>
+          <div class="sub">Todas as categorias</div>
+          <div class="desc">Espadas, cajados, arcos, escudos, elmos, acessórios e as armas lendárias.</div>
+        </a>
+        <a class="card link" href="items.html">
+          <div class="card-top"><h3>🎒 Itens</h3><span class="chip one">Consumíveis</span></div>
+          <div class="sub">Recuperação, ataque, chave...</div>
+          <div class="desc">Itens de recuperação, ofensivos, de stats, elementais, raros e itens-chave da história.</div>
+        </a>
+        <a class="card link" href="abilities.html">
+          <div class="card-top"><h3>💪 Habilidades</h3><span class="chip boss">Comando &amp; suporte</span></div>
+          <div class="sub">Todas as habilidades</div>
+          <div class="desc">Comandos, habilidades de suporte e habilidades inatas de cada job.</div>
+        </a>
+        <a class="card link" href="characters.html">
+          <div class="card-top"><h3>🧙 Personagens</h3><span class="chip two">5 heróis + NPCs</span></div>
+          <div class="sub">Bartz, Lenna, Galuf, Faris e Krile</div>
+          <div class="desc">Heróis jogáveis com estatísticas base, origens e relacionamentos + todos os NPCs.</div>
+        </a>
+        <a class="card link" href="images.html">
+          <div class="card-top"><h3>🖼️ Galeria</h3><span class="chip summon">Sprites</span></div>
+          <div class="sub">Imagens da API</div>
+          <div class="desc">Todos os sprites disponíveis: personagens, jobs, NPCs e os 227 inimigos recortados da sheet.</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">⭐ Monstros notáveis</div>
+      <div class="poke-grid" id="notable"></div>
+    </div>
+  </main>
+
+  <footer>
+    Final Fantasy V © Square Enix · dados e sprites para fins educacionais<br>
+    Wiki lê os arquivos estáticos <code>json/*.json</code> e <code>images/*</code> — a <a href="/" target="_blank">FF5 API</a> continua disponível para consumo.
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    (async () => {
+      const cards = document.getElementById('statCards');
+      const notableEl = document.getElementById('notable');
+      showSpinner(cards, 'Carregando estatísticas...');
+      showSpinner(notableEl, 'Carregando notáveis...');
+      try {
+        const [monsters, jobs, magic, characters, notable, eq] = await Promise.all([
+          API.get('monsters.json'),
+          API.get('jobs.json'),
+          API.get('magic.json'),
+          API.get('characters.json'),
+          API.get('monsters.json').then((d) => d.notable_monsters || []),
+          API.get('equipment.json'),
+        ]);
+
+        const magicTotal = Object.keys(magic)
+          .filter((k) => magic[k] && Array.isArray(magic[k].spells))
+          .reduce((a, k) => a + magic[k].spells.length, 0);
+        const monstersMeta = monsters.metadata || {};
+        const breakdown = monstersMeta.breakdown || {};
+
+        cards.innerHTML = [
+          ['Monstros', monstersMeta.total_monsters || 360],
+          ['Regular (3 mundos)', (breakdown.world_one_enemies || 80) + (breakdown.world_two_enemies || 118) + (breakdown.world_three_enemies || 58)],
+          ['Chefes', breakdown.bosses || 86],
+          ['Invocações', breakdown.summons || 14],
+          ['Jobs', jobs.jobs.length],
+          ['Magias', magicTotal],
+          ['Personagens', characters.characters.length],
+          ['NPCs', characters.npcs.length],
+          ['Armaduras + Armas', eq.weapons ? (Object.keys(eq.weapons).filter(k => k !== 'description').length + Object.keys(eq.armor).filter(k => k !== 'description').length) : '—'],
+        ].map(([l, n]) => `<div class="stat-card-ex"><div class="n">${fmt(n)}</div><div class="l">${esc(l)}</div></div>`).join('');
+
+        notableEl.innerHTML = notable.map((m) => `
+          <div class="poke-card" onclick="location.href='monster.html?id=${esc(m.id)}'">
+            <img class="poke-sprite" src="${imURL(m)}" alt="" loading="lazy" onerror="this.remove()">
+            <div class="poke-num">#${esc(m.id.replace(/[^0-9]/g, ''))}</div>
+            <div class="poke-name">${esc(nameOf(m))}</div>
+            <div class="poke-level">LV ${fmt(m.level)}</div>
+            <div class="poke-hp">HP ${fmt(m.hp)}</div>
+            <div class="poke-meta"><span class="chip boss">Notável</span></div>
+          </div>`).join('');
+      } catch (err) {
+        showError(cards, err);
+        showError(notableEl, err);
+      }
+    })();
+  </script>
+</body>
+</html>

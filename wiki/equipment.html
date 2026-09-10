@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipamentos · FFV Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="equipment.html">
+
+  <header class="wiki-nav" id="wiki-nav"></header>
+
+  <main class="wiki-main">
+    <div class="page-head">
+      <span class="icon">🛡️</span>
+      <h1>Equipamentos <span class="en">Weapons &amp; Armor</span></h1>
+      <p>Armas e armaduras organizadas por tipo, com ataque/defesa, preço, elemento e jobs que podem equipar.</p>
+    </div>
+
+    <div class="tabs" id="tabs"></div>
+    <div id="panes"></div>
+  </main>
+
+  <footer>
+    Final Fantasy V © Square Enix · Wiki lê os arquivos estáticos <code>json/*.json</code> e <code>images/*</code>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    const TYPE_LABEL = {
+      swords: 'Espadas', katanas: 'Katana', spears: 'Lanças', axes: 'Machados',
+      daggers: 'Adagas', rods: 'Varinhas', staves: 'Cajados', bells: 'Sinos',
+      whips: 'Chicotes', bows: 'Arcos', harp: 'Harpa', fists: 'Socos', throwing: 'Arremesso',
+      boomerangs: 'Bumerangues',
+      shields: 'Escudos', helmets: 'Elmos', armor_body: 'Armaduras', accessories: 'Acessórios',
+    };
+
+    function itemCard(it) {
+      const isAcc = it.id && it.id.startsWith('acc_');
+      const main = isAcc
+        ? `<span class="chip two">${esc((it.effect && it.effect.en) || it.effect || '—')}</span>`
+        : `<span class="chip one">ATK/DEF ${fmt(it.attack || it.defense)}</span>${it.magic_defense != null ? ` <span class="chip">MDEF ${fmt(it.magic_defense)}</span>` : ''}`;
+      return `
+      <div class="card">
+        <div class="card-top">
+          <h3>${esc((it.name && it.name.en) || it.name || '')}</h3>
+          <span class="chip summon">💰 ${fmt(it.price)}</span>
+        </div>
+        <div class="sub">${it.id}</div>
+        ${main}
+        <div style="margin-top:8px;display:flex;gap:4px;flex-wrap:wrap;">
+          ${(it.jobs || []).slice(0, 5).map((j) => `<span class="chip">${esc(j)}</span>`).join('')}
+          ${it.element && it.element.en && String(it.element.en).toLowerCase() !== 'none'
+            ? `<span class="chip special">🌪️ ${esc(it.element.en)}</span>` : ''}
+        </div>
+      </div>`;
+    }
+
+    (async () => {
+      const tabsEl = $('#tabs');
+      const panesEl = $('#panes');
+      showSpinner(panesEl, 'Carregando equipamentos...');
+      try {
+        const data = await API.get('equipment.json');
+
+        const sections = [
+          ['weapons', data.weapons, Object.keys(data.weapons).filter((k) => k !== 'description')],
+          ['armor', data.armor, Object.keys(data.armor).filter((k) => k !== 'description')],
+          ['legendary', { items: data.legendary_weapons.items }, ['items']],
+        ];
+
+        let active = 'weapons';
+        const switchTab = (key) => {
+          active = key;
+          tabsEl.querySelectorAll('.tab').forEach((t) => t.classList.toggle('active', t.dataset.tab === key));
+          panesEl.querySelectorAll('.tab-pane').forEach((p) => p.classList.toggle('active', p.dataset.pane === key));
+        };
+
+        const tabs = [
+          ['weapons', `⚔️ Armas (${sections[0][2].length} tipos)`],
+          ['armor', `🛡️ Armaduras (${sections[1][2].length} tipos)`],
+          ['legendary', `💠 Lendárias (${data.legendary_weapons.items.length})`],
+        ];
+        tabsEl.innerHTML = tabs.map(([k, l]) => `<span class="tab ${k === active ? 'active' : ''}" data-tab="${k}">${esc(l)}</span>`).join('');
+
+        const weaponsPane = sections[0][2].map((type) => {
+          const items = (data.weapons[type] && data.weapons[type].items) || [];
+          if (!items.length) return '';
+          return `
+            <div class="section">
+              <div class="section-title">${esc(TYPE_LABEL[type] || type)} <span class="count">(${items.length})</span></div>
+              <div class="grid wide">${items.map(itemCard).join('')}</div>
+            </div>`;
+        }).join('');
+
+        const armorPane = sections[1][2].map((type) => {
+          const items = (data.armor[type] && data.armor[type].items) || [];
+          return `
+            <div class="section">
+              <div class="section-title">${esc(TYPE_LABEL[type] || type)} <span class="count">(${items.length})</span></div>
+              <div class="grid wide">${items.map(itemCard).join('')}</div>
+            </div>`;
+        }).join('');
+
+        const legendaryPane = `
+          <div class="section">
+            <div class="section-title">💠 Armas lendárias <span class="count">(${data.legendary_weapons.items.length})</span></div>
+            <div class="grid wide">${data.legendary_weapons.items.map((it) => `
+              <div class="card">
+                <div class="card-top">
+                  <h3 style="color:var(--gold);">${esc((it.name && it.name.en) || it.name || '')}</h3>
+                  <span class="chip boss">${esc(it.type || '')}</span>
+                </div>
+                <div class="sub">${it.id}</div>
+                <div style="margin-top:6px;"><span class="chip one">ATK ${fmt(it.attack)}</span></div>
+                ${it.special ? `<div class="desc" style="margin-top:8px;">${esc((it.special && it.special.en) || it.special || '')}</div>` : ''}
+              </div>`).join('')}
+            </div>
+          </div>`;
+
+        panesEl.innerHTML = `
+          <div class="tab-pane ${active === 'weapons' ? 'active' : ''}" data-pane="weapons">${weaponsPane}</div>
+          <div class="tab-pane ${active === 'armor' ? 'active' : ''}" data-pane="armor">${armorPane}</div>
+          <div class="tab-pane ${active === 'legendary' ? 'active' : ''}" data-pane="legendary">${legendaryPane}</div>`;
+
+        tabsEl.querySelectorAll('.tab').forEach((t) => t.addEventListener('click', () => switchTab(t.dataset.tab)));
+      } catch (err) { showError(panesEl, err); }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagens · FFV Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="images.html">
+
+  <header class="wiki-nav" id="wiki-nav"></header>
+
+  <main class="wiki-main">
+    <div class="page-head">
+      <span class="icon">🖼️</span>
+      <h1>Galeria de Sprites <span class="en">Image Gallery</span></h1>
+      <p>Personagens, jobs, NPCs, monstros (sprites individuais do ffsky), invocações e os 227 inimigos recortados da sprite sheet. Filtre por tipo.</p>
+    </div>
+
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Filtrar id... (ex: char, job, enemy)">
+      <select id="group" style="padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);color:var(--text);">
+        <option value="">Todos</option>
+        <option value="char">Personagens (char)</option>
+        <option value="job">Jobs</option>
+        <option value="npc">NPCs</option>
+        <option value="monster">Monstros (monster)</option>
+        <option value="enemy">Inimigos (enemy)</option>
+        <option value="spell">Magias (spell)</option>
+        <option value="boss">Chefes (boss)</option>
+      </select>
+    </div>
+
+    <div class="note">
+      <code>img_monster_*</code> são sprites individuais por monstro (fonte ffsky). Já os
+      <code>img_enemy_NNN</code> são os recortes best-effort da sheet <code>img_enemies_sheet.png</code>;
+      a ordem segue a posição física na imagem e não corresponde a ids do bestiário.
+    </div>
+
+    <div class="section">
+      <div class="section-title">🗂️ Mapa de imagens <span class="count" id="count"></span></div>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </main>
+
+  <footer>
+    Final Fantasy V © Square Enix · Sprites individuais: ffsky; tiles recortados: The Spriters Resource · Wiki lê os arquivos estáticos <code>json/*.json</code> e <code>images/*</code>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    (async () => {
+      const el = $('#gallery');
+      const countEl = $('#count');
+      showSpinner(el, 'Carregando mapa de imagens...');
+      try {
+        const data = await API.get('image_map.json');
+        let entries = Object.entries(data.map).filter(([, v]) => v);
+
+        const render = () => {
+          const q = ($('#search').value || '').toLowerCase();
+          const g = $('#group').value;
+          const list = entries.filter(([id]) =>
+            (!q || id.toLowerCase().includes(q)) && (!g || fileGroup(id) === g));
+          countEl.textContent = `(${list.length} de ${entries.length})`;
+          el.innerHTML = list.map(([id, url]) => `
+            <figure>
+              <img src="${esc('/img/' + url)}" alt="${esc(id)}" loading="lazy" onerror="this.closest('figure').style.display='none'">
+              <figcaption>${esc(id)}</figcaption>
+            </figure>`).join('') || '<div class="loading">Nenhuma imagem corresponde ao filtro.</div>';
+        };
+
+        const fileGroup = (id) => {
+          if (id.startsWith('img_char_')) return 'char';
+          if (id.startsWith('img_job_')) return 'job';
+          if (id.startsWith('img_npc_')) return 'npc';
+          if (id.startsWith('img_monster_')) return 'monster';
+          if (id.startsWith('img_enemy_')) return 'enemy';
+          if (id.startsWith('img_spell_')) return 'spell';
+          if (id.startsWith('img_boss_')) return 'boss';
+          return 'other';
+        };
+
+        $('#search').addEventListener('input', render);
+        $('#group').addEventListener('change', render);
+        render();
+      } catch (err) { showError(el, err); }
+    })();
+  </script>
+</body>
+</html>

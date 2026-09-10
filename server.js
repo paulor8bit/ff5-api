@@ -22,6 +22,7 @@ app.use(express.json());
 
 // Servir arquivos estáticos (página web)
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/wiki', express.static(path.join(__dirname, 'wiki')));
 
 // Log de requisições
 app.use((req, res, next) => {
@@ -34,6 +35,10 @@ app.use((req, res, next) => {
 // =============================================
 const jsonDir = path.join(__dirname, 'json');
 
+// Dados e imagens em arquivos brutos (para a wiki e outros consumidores)
+app.use('/data', express.static(jsonDir));
+app.use('/img', express.static(path.join(__dirname, 'images')));
+
 const loadData = () => {
   try {
     return {
@@ -43,7 +48,8 @@ const loadData = () => {
       equipment: JSON.parse(fs.readFileSync(path.join(jsonDir, 'equipment.json'), 'utf8')),
       items: JSON.parse(fs.readFileSync(path.join(jsonDir, 'items.json'), 'utf8')),
       monsters: JSON.parse(fs.readFileSync(path.join(jsonDir, 'monsters.json'), 'utf8')),
-      abilities: JSON.parse(fs.readFileSync(path.join(jsonDir, 'abilities.json'), 'utf8'))
+      abilities: JSON.parse(fs.readFileSync(path.join(jsonDir, 'abilities.json'), 'utf8')),
+      imageMap: JSON.parse(fs.readFileSync(path.join(jsonDir, 'image_map.json'), 'utf8')).map
     };
   } catch (error) {
     console.error('Erro ao carregar arquivos JSON:', error.message);
@@ -52,6 +58,25 @@ const loadData = () => {
 };
 
 const data = loadData();
+
+const nameIncludes = (name, query) => {
+  if (name == null) return false;
+  const strings = typeof name === 'string' ? [name] : Object.values(name);
+  return strings.some((s) => typeof s === 'string' && s.toLowerCase().includes(query));
+};
+
+const flattenMonsters = (world) => {
+  const list = [];
+  Object.values(world).forEach((area) => {
+    if (Array.isArray(area)) list.push(...area);
+  });
+  return list;
+};
+
+const collectWorldMonsters = (world) => {
+  if (Array.isArray(world)) return world;
+  return flattenMonsters(world);
+};
 
 // =============================================
 // ROTA RAIZ - Documentação
@@ -70,7 +95,7 @@ app.get('/', (req, res) => {
       time_magic: data.magic.time_magic.spells.length,
       summon_magic: data.magic.summon_magic.spells.length,
       blue_magic: data.magic.blue_magic.spells.length,
-      monsters: 302,
+      monsters: data.monsters.metadata.total_monsters,
       bosses: Object.values(data.monsters.bosses).flat().length
     },
     endpoints: {
@@ -111,7 +136,9 @@ app.get('/', (req, res) => {
         by_world: 'GET /api/monsters/world/:number',
         bosses: 'GET /api/monsters/bosses',
         bosses_by_world: 'GET /api/monsters/bosses/world/:number',
-        notable: 'GET /api/monsters/notable'
+        notable: 'GET /api/monsters/notable',
+        summons: 'GET /api/monsters/summons',
+        special: 'GET /api/monsters/special'
       },
       abilities: {
         all: 'GET /api/abilities',
@@ -121,9 +148,16 @@ app.get('/', (req, res) => {
       },
       images: {
         serve: 'GET /api/images/:folder/:filename',
-        list: 'GET /api/images/list'
+        list: 'GET /api/images/list',
+        by_id: 'GET /api/images/id/:image_id',
+        map: 'GET /api/images/map'
       },
       search: 'GET /api/search?q=query&type=optional_type'
+    },
+    static_files: {
+      wiki: 'GET /wiki (enciclopédia; lê json/* e images/* diretamente, sem API)',
+      data: 'GET /data/:file (arquivos JSON brutos da pasta json/)',
+      images: 'GET /img/:path (arquivos de imagem brutos da pasta images/)'
     },
     credits: {
       game: 'Final Fantasy V © Square Enix',
@@ -365,7 +399,7 @@ app.get('/api/equipment', (req, res) => {
  * @apiGroup Equipment
  */
 app.get('/api/equipment/weapons', (req, res) => {
-  const weaponTypes = Object.keys(data.equipment.weapons);
+  const weaponTypes = Object.keys(data.equipment.weapons).filter(type => type !== 'description');
   const result = {};
   let total = 0;
   
@@ -410,7 +444,7 @@ app.get('/api/equipment/weapons/:type', (req, res) => {
  * @apiGroup Equipment
  */
 app.get('/api/equipment/armor', (req, res) => {
-  const armorTypes = Object.keys(data.equipment.armor);
+  const armorTypes = Object.keys(data.equipment.armor).filter(type => type !== 'description');
   const result = {};
   let total = 0;
   
@@ -550,16 +584,17 @@ app.get('/api/monsters', (req, res) => {
  */
 app.get('/api/monsters/world/:world', (req, res) => {
   const world = req.params.world;
-  const worldKey = `world_${world}`;
-  const monsters = data.monsters.regular_enemies[worldKey];
-  
-  if (!monsters) {
+  const worldMap = { '1': 'world_one_enemies', '2': 'world_two_enemies', '3': 'world_three_enemies' };
+  const worldData = data.monsters[worldMap[world]];
+
+  if (!worldData) {
     return res.status(404).json({ 
       error: 'Mundo não encontrado',
       requested: world,
       available_worlds: ['1', '2', '3']
     });
   }
+  const monsters = collectWorldMonsters(worldData);
   res.json({
     world: parseInt(world),
     total: monsters.length,
@@ -583,7 +618,8 @@ app.get('/api/monsters/bosses', (req, res) => {
  */
 app.get('/api/monsters/bosses/world/:world', (req, res) => {
   const world = req.params.world;
-  const bossKey = `world_${world}_bosses`;
+  const bossMap = { '1': 'world_one_bosses', '2': 'world_two_bosses', '3': 'world_three_bosses' };
+  const bossKey = bossMap[world] || `world_${world}_bosses`;
   const bosses = data.monsters.bosses[bossKey];
   
   if (!bosses) {
@@ -606,6 +642,32 @@ app.get('/api/monsters/bosses/world/:world', (req, res) => {
  */
 app.get('/api/monsters/notable', (req, res) => {
   res.json(data.monsters.notable_monsters);
+});
+
+/**
+ * @api {get} /api/monsters/summons Summons (espers)
+ * @apiName GetMonsterSummons
+ * @apiGroup Monsters
+ */
+app.get('/api/monsters/summons', (req, res) => {
+  res.json({
+    total: data.monsters.summons.length,
+    summons: data.monsters.summons
+  });
+});
+
+/**
+ * @api {get} /api/monsters/special Monstros especiais
+ * @apiName GetSpecialMonsters
+ * @apiGroup Monsters
+ */
+app.get('/api/monsters/special', (req, res) => {
+  const special = data.monsters.special_monsters;
+  res.json({
+    description: special.description,
+    total: special.items.length,
+    monsters: special.items
+  });
 });
 
 // =============================================
@@ -713,6 +775,83 @@ app.get('/api/images/list', (req, res) => {
   });
 });
 
+/**
+ * @api {get} /api/images/id/:image_id Resolver image_id para arquivo
+ * @apiName ResolveImage
+ * @apiGroup Images
+ * @apiParam {String} image_id ID da imagem (ex: img_char_003, img_job_008)
+ * @apiDescription Resolve o image_id referenciado nos JSONs para o arquivo de sprite correspondente.
+ */
+app.get('/api/images/id/:imageId', (req, res) => {
+  const { imageId } = req.params;
+  const imagesDir = path.join(__dirname, 'images');
+
+  const resolveImage = (id) => {
+    if (data.imageMap[id]) {
+      return path.join(imagesDir, data.imageMap[id]);
+    }
+
+    const candidates = [
+      path.join(imagesDir, `${id}.png`),
+      path.join(imagesDir, `${id}.gif`),
+      path.join(imagesDir, `${id}_*.png`),
+      path.join(imagesDir, `${id}_*.gif`)
+    ];
+
+    for (const pattern of candidates) {
+      if (fs.existsSync(pattern) && fs.statSync(pattern).isFile()) {
+        return pattern;
+      }
+      if (pattern.includes('*')) {
+        const matches = fs.readdirSync(path.dirname(pattern)).filter(f => f.startsWith(id));
+        if (matches.length > 0) {
+          return path.join(path.dirname(pattern), matches[0]);
+        }
+      }
+    }
+
+    return null;
+  };
+
+  const filePath = resolveImage(imageId);
+
+  if (!filePath || !fs.existsSync(filePath)) {
+    return res.status(404).json({
+      error: 'Imagem não encontrada',
+      image_id: imageId,
+      hint: 'Use GET /api/images/list para listar as imagens disponíveis, ou GET /api/images/id/ para ver o mapa de image_id'
+    });
+  }
+
+  res.sendFile(filePath);
+});
+
+/**
+ * @api {get} /api/images/map Mapa de image_id -> arquivo
+ * @apiName ImageMap
+ * @apiGroup Images
+ * @apiDescription Retorna o mapa completo de image_id para caminhos de arquivo.
+ */
+app.get('/api/images/map', (req, res) => {
+  const imagesDir = path.join(__dirname, 'images');
+  const map = {};
+  const sorted = Object.keys(data.imageMap).sort((a, b) => {
+    const num = (id) => parseInt(id.replace(/\D/g, '')) || 0;
+    return num(a) - num(b);
+  });
+  sorted.forEach(id => {
+    map[id] = data.imageMap[id]
+      ? `/api/images/${data.imageMap[id]}`
+      : null;
+  });
+  res.json({
+    base_url: '/api/images/',
+    total_mapped: sorted.filter(id => data.imageMap[id]).length,
+    total_missing: sorted.filter(id => !data.imageMap[id]).length,
+    map
+  });
+});
+
 // =============================================
 // SEARCH - Busca Global
 // =============================================
@@ -741,8 +880,8 @@ app.get('/api/search', (req, res) => {
   // Buscar em jobs
   if (!type || type === 'jobs') {
     results.jobs = data.jobs.jobs.filter(j => 
-      j.name.toLowerCase().includes(query) ||
-      j.name_jp.toLowerCase().includes(query)
+      nameIncludes(j.name, query) ||
+      nameIncludes(j.name_jp, query)
     );
     total += results.jobs.length;
   }
@@ -750,8 +889,8 @@ app.get('/api/search', (req, res) => {
   // Buscar em personagens
   if (!type || type === 'characters') {
     results.characters = data.characters.characters.filter(c => 
-      c.name.toLowerCase().includes(query) ||
-      c.name_jp.toLowerCase().includes(query)
+      nameIncludes(c.name, query) ||
+      nameIncludes(c.name_jp, query)
     );
     total += results.characters.length;
   }
@@ -759,24 +898,36 @@ app.get('/api/search', (req, res) => {
   // Buscar em monstros
   if (!type || type === 'monsters') {
     results.monsters = [];
-    Object.values(data.monsters.regular_enemies).forEach(world => {
-      if (Array.isArray(world)) {
-        results.monsters.push(...world.filter(m => 
-          m.name.toLowerCase().includes(query)
-        ));
-      }
+    ['world_one_enemies', 'world_two_enemies', 'world_three_enemies'].forEach(worldKey => {
+      const world = data.monsters[worldKey];
+      if (!world) return;
+      const monsters = collectWorldMonsters(world);
+      monsters.forEach(m => {
+        if (nameIncludes(m.name, query)) {
+          results.monsters.push({ ...m, world: worldKey.replace('_enemies', ''), location: (m.location && m.location.en) ? m.location.en : null });
+        }
+      });
     });
+    if (data.monsters.special_monsters && Array.isArray(data.monsters.special_monsters.items)) {
+      data.monsters.special_monsters.items.forEach(m => {
+        if (nameIncludes(m.name, query)) {
+          results.monsters.push({ ...m, world: 'special', location: (m.location && m.location.en) ? m.location.en : null });
+        }
+      });
+    }
     total += results.monsters.length;
   }
   
   // Buscar em bosses
   if (!type || type === 'bosses' || type === 'monsters') {
     results.bosses = [];
-    Object.values(data.monsters.bosses).forEach(bossGroup => {
-      if (Array.isArray(bossGroup)) {
-        results.bosses.push(...bossGroup.filter(b => 
-          b.name.toLowerCase().includes(query)
-        ));
+    Object.keys(data.monsters.bosses).forEach(bossKey => {
+      if (Array.isArray(data.monsters.bosses[bossKey])) {
+        data.monsters.bosses[bossKey].forEach(b => {
+          if (nameIncludes(b.name, query)) {
+            results.bosses.push({ ...b, group: bossKey });
+          }
+        });
       }
     });
     total += results.bosses.length;
@@ -788,7 +939,7 @@ app.get('/api/search', (req, res) => {
     const magicTypes = ['white_magic', 'black_magic', 'time_magic', 'summon_magic', 'blue_magic'];
     magicTypes.forEach(magicType => {
       const found = data.magic[magicType].spells.filter(s => 
-        s.name.toLowerCase().includes(query)
+        nameIncludes(s.name, query)
       );
       results.spells.push(...found.map(s => ({ ...s, category: magicType.replace('_magic', '') })));
     });
@@ -801,7 +952,7 @@ app.get('/api/search', (req, res) => {
     Object.values(data.equipment.weapons).forEach(weaponType => {
       if (weaponType.items) {
         const found = weaponType.items.filter(w => 
-          w.name.toLowerCase().includes(query)
+          nameIncludes(w.name, query)
         );
         results.weapons.push(...found);
       }
@@ -812,7 +963,7 @@ app.get('/api/search', (req, res) => {
   // Buscar em habilidades
   if (!type || type === 'abilities') {
     results.abilities = data.abilities.command_abilities.abilities.filter(a =>
-      a.name.toLowerCase().includes(query)
+      nameIncludes(a.name, query)
     );
     total += results.abilities.length;
   }
@@ -859,14 +1010,14 @@ app.listen(PORT, () => {
   console.log('║                                                  ║');
   console.log('╠══════════════════════════════════════════════════╣');
   console.log('║                                                  ║');
-  console.log(`║  🚀 Servidor: http://localhost:${PORT}              ║');
+  console.log(`║  🚀 Servidor: http://localhost:${PORT}              ║`);
   console.log('║  📚 Docs:      http://localhost:' + PORT + '/              ║');
   console.log('║                                                  ║');
   console.log('╠══════════════════════════════════════════════════╣');
   console.log('║                                                  ║');
   console.log('║  📊 Dados carregados:                           ║');
   console.log(`║     • ${data.jobs.jobs.length} Jobs                            ║`);
-  console.log(`║     • ${data.characters.characters.length} Personagens                    ║');
+  console.log(`║     • ${data.characters.characters.length} Personagens                    ║`);
   console.log(`║     • ${data.magic.white_magic.spells.length + data.magic.black_magic.spells.length + data.magic.time_magic.spells.length + data.magic.summon_magic.spells.length + data.magic.blue_magic.spells.length} Magias                          ║`);
   console.log('║     • 302 Monstros                              ║');
   console.log('║                                                  ║');

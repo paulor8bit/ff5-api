@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs · FFV Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="jobs.html">
+
+  <header class="wiki-nav" id="wiki-nav"></header>
+
+  <main class="wiki-main">
+    <div class="page-head">
+      <span class="icon">⚔️</span>
+      <h1>Jobs <span class="en">Classes &amp; Cristais</span></h1>
+      <p>As 26 classes de Final Fantasy V, suas habilidades inatas, habilidades aprendíveis e custo de maestria.</p>
+    </div>
+
+    <div class="filters" id="filters"></div>
+
+    <div class="grid wide" id="grid"></div>
+  </main>
+
+  <footer>
+    Final Fantasy V © Square Enix · Wiki lê os arquivos estáticos <code>json/*.json</code> e <code>images/*</code>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    const CRYSTALS = ['Padrão', 'Vento', 'Água', 'Fogo', 'Terra'];
+    const statsMax = { strength: 14, agility: 14, vitality: 14, magic: 14 };
+
+    function renderFilters(jobs) {
+      const counts = {};
+      jobs.forEach((j) => { counts[j.crystal] = (counts[j.crystal] || 0) + 1; });
+      $('#filters').innerHTML = CRYSTALS.map((c) =>
+        counts[c] ? `<span class="chip clickable" data-crystal="${esc(c)}">${esc(c)} · ${counts[c]}</span>` : '').join('');
+      $('#filters').querySelectorAll('[data-crystal]').forEach((el) => {
+        el.addEventListener('click', () => {
+          $('#filters').querySelectorAll('[data-crystal]').forEach((x) => x.classList.remove('active'));
+          el.classList.add('active');
+          render(jobs, el.dataset.crystal);
+        });
+      });
+    }
+
+    function statBar(label, key, v) {
+      const pct = Math.min(100, Math.round((v / statsMax[key]) * 100));
+      return `<div class="statbar"><div class="row"><span class="label">${label}</span><span class="track"><span class="fill" style="width:${Math.max(4, pct)}%"></span></span><span class="value">${v}</span></div></div>`;
+    }
+
+    window.__jobs = {};
+    function modalOpenById(id) { modalOpen(window.__jobs[id]); }
+    function modalOpen(job) {
+      const overlay = document.createElement('div');
+      overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;';
+      overlay.innerHTML = `
+        <div style="max-width:640px;width:100%;max-height:86vh;overflow:auto;background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:26px;">
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="flex:0 0 90px;display:flex;align-items:center;justify-content:center;background:var(--bg1);border:1px solid var(--line);border-radius:12px;height:100px;">
+              <img src="${IMG.urlSync(job.image_id) || ''}" alt="" onerror="this.style.display='none'" style="max-width:84px;max-height:96px;image-rendering:pixelated;">
+            </div>
+            <div style="flex:1">
+              <h2 style="color:var(--gold);margin-bottom:2px;">${esc(job.name)} <span style="color:var(--muted);font-size:.9rem;">· ${esc(job.name_en)}</span></h2>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;margin:6px 0;">
+                <span class="chip one">${esc(job.crystal)}</span>
+                <span class="chip">ABP: ${fmt(job.abp_to_master)}</span>
+              </div>
+              <p style="color:var(--muted);font-size:.87rem;line-height:1.45;">${esc(job.description_en)}</p>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:16px;">
+            <div>
+              <h3 style="color:var(--cyan);font-size:.95rem;margin-bottom:6px;">Estatísticas base</h3>
+              ${statBar('Força', 'strength', job.base_stats.strength)}
+              ${statBar('Agilidade', 'agility', job.base_stats.agility)}
+              ${statBar('Vitalidade', 'vitality', job.base_stats.vitality)}
+              ${statBar('Magia', 'magic', job.base_stats.magic)}
+            </div>
+            <div>
+              <h3 style="color:var(--cyan);font-size:.95rem;margin-bottom:6px;">Habilidades inatas</h3>
+              <ul style="list-style:none;font-size:.85rem;color:var(--text);">
+                ${(job.innate_abilities_en || []).map((a) => `<li>◆ ${esc(a)}</li>`).join('') || '<li style="color:var(--muted)">—</li>'}
+              </ul>
+              <h3 style="color:var(--cyan);font-size:.95rem;margin:10px 0 6px;">Aprendíveis (Técnicas)</h3>
+              <ul style="list-style:none;font-size:.85rem;color:var(--text);">
+                ${(job.learnable_abilities_en || []).map((a) => `<li>✦ ${esc(a)}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+          <div style="margin-top:14px;">
+            <h3 style="color:var(--cyan);font-size:.95rem;margin-bottom:6px;">Equipamentos permitidos</h3>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">${(job.equipment_en || []).map((e) => `<span class="chip">${esc(e)}</span>`).join('')}</div>
+          </div>
+          <button onclick="this.closest('div').closest('div').remove()" style="margin-top:18px;padding:10px 18px;background:var(--gold);border:none;border-radius:8px;font-weight:700;color:#141a26;cursor:pointer;">Fechar</button>
+        </div>`;
+      overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove(); });
+      document.body.appendChild(overlay);
+    }
+
+    function render(jobs, crystal) {
+      const list = crystal && crystal !== 'Todos' ? jobs.filter((j) => j.crystal === crystal) : jobs;
+      jobs.forEach((j) => { window.__jobs[j.id] = j; });
+      $('#grid').innerHTML = list.map((j) => `
+        <div class="card" onclick="modalOpenById('${esc(j.id)}')" style="cursor:pointer;">
+          <div class="card-top">
+            <div style="flex:0 0 52px;height:56px;background:var(--bg1);border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+              <img src="${IMG.urlSync(j.image_id) || ''}" alt="${esc(j.name_en)}" onerror="this.style.display='none'" style="max-width:48px;max-height:52px;image-rendering:pixelated;">
+            </div>
+            <div>
+              <h3>${esc(j.name)}</h3>
+              <div class="sub">${esc(j.name_en)} · ${esc(j.crystal)}</div>
+            </div>
+          </div>
+          <div class="desc" style="margin-top:10px;">${esc(j.description_en)}</div>
+          <div style="margin-top:10px;font-size:.78rem;color:var(--muted);">
+            ABP para dominar: <b style="color:var(--gold);">${fmt(j.abp_to_master)}</b>
+          </div>
+        </div>`).join('');
+    }
+
+    (async () => {
+      const grid = $('#grid');
+      showSpinner(grid, 'Carregando jobs...');
+      try {
+        const data = await API.get('jobs.json');
+        await IMG.init();
+        renderFilters(data.jobs);
+        render(data.jobs, null);
+      } catch (err) { showError(grid, err); }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magias · FFV Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="magic.html">
+
+  <header class="wiki-nav" id="wiki-nav"></header>
+
+  <main class="wiki-main">
+    <div class="page-head">
+      <span class="icon">✨</span>
+      <h1>Magias <span class="en">White · Black · Time · Summon · Blue</span></h1>
+      <p>Todos os feitiços com custo de MP, nível e efeito — incluindo canções de Bardo e terreno de Geomante.</p>
+    </div>
+
+    <div class="tabs" id="tabs"></div>
+    <div id="panes"></div>
+  </main>
+
+  <footer>
+    Final Fantasy V © Square Enix · Wiki lê os arquivos estáticos <code>json/*.json</code> e <code>images/*</code>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    const CATS = [
+      ['white_magic', '🤍 Branca'],
+      ['black_magic', '🖤 Negra'],
+      ['time_magic', '⏳ Tempo'],
+      ['summon_magic', '💎 Invocação'],
+      ['blue_magic', '🐙 Azul'],
+      ['bardsong', '🎵 Canções'],
+      ['terrain', '🗻 Terreno'],
+    ];
+
+    function spellCard(sp) {
+      return `
+      <div class="card">
+        <div class="card-top">
+          <h3>${esc((sp.name && sp.name.en) || sp.name || '')} <span class="jp">${sp.name && sp.name['pt-BR'] ? esc(sp.name['pt-BR']) : ''}</span></h3>
+          <span class="chip summon">MP ${fmt(sp.mp_cost)}</span>
+        </div>
+        <div class="sub">${esc(sp.level != null ? 'Nível ' + sp.level : '')}</div>
+        <div class="desc" style="margin-top:6px;">${esc((sp.effect && sp.effect.en) || sp.effect || '')}</div>
+        ${sp.target ? `<div style="margin-top:8px;"><span class="chip two">🎯 ${esc((sp.target && sp.target.en) || sp.target)}</span></div>` : ''}
+      </div>`;
+    }
+
+    (async () => {
+      const tabsEl = $('#tabs');
+      const panesEl = $('#panes');
+      showSpinner(panesEl, 'Carregando magias...');
+      try {
+        const data = await API.get('magic.json');
+
+        const catLabel = {
+          white_magic: 'Branca', black_magic: 'Negra', time_magic: 'Tempo',
+          summon_magic: 'Invocação', blue_magic: 'Azul', bardsong: 'Canções', terrain: 'Terreno',
+        };
+
+        let active = CATS[0][0];
+        const switchTab = (key) => {
+          active = key;
+          tabsEl.querySelectorAll('.tab').forEach((t) => t.classList.toggle('active', t.dataset.tab === key));
+          panesEl.querySelectorAll('.tab-pane').forEach((p) => p.classList.toggle('active', p.dataset.pane === key));
+        };
+
+        tabsEl.innerHTML = CATS.map(([key, label]) => {
+          const arr = data[key] && data[key].spells ? data[key].spells : [];
+          return `<span class="tab ${key === active ? 'active' : ''}" data-tab="${key}">${esc(label)} <span style="opacity:.6">(${arr.length})</span></span>`;
+        }).join('');
+
+        panesEl.innerHTML = CATS.map(([key, label]) => {
+          const arr = data[key] && data[key].spells ? data[key].spells : [];
+          const desc = data[key] && data[key].description && (data[key].description.en || data[key].description['pt-BR']);
+          return `
+          <div class="tab-pane ${key === active ? 'active' : ''}" data-pane="${key}">
+            ${desc ? `<div class="note">${esc(desc)}</div>` : ''}
+            <div class="grid wide">
+              ${arr.map(spellCard).join('') || '<div class="loading">Sem feitiços nesta categoria.</div>'}
+            </div>
+          </div>`;
+        }).join('');
+
+        tabsEl.querySelectorAll('.tab').forEach((t) => t.addEventListener('click', () => switchTab(t.dataset.tab)));
+      } catch (err) { showError(panesEl, err); }
+    })();
+  </script>
+</body>
+</html>

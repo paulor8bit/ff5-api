@@ -10,20 +10,25 @@
     "swords": {
       "description": {"en": "Swords - can be used by multiple classes", "pt-BR": "Espadas - podem ser usadas por múltiplas classes"},
       "items": [
-        {"id": "weapon_s001", "name": {"en": "Broad Sword", "pt-BR": "Espada Larga"}, "attack": 18, "price": 450, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "weapon_s002", "name": {"en": "Long Sword", "pt-BR": "Espada Longa"}, "attack": 25, "price": 800, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "weapon_s003", "name": {"en": "Mythril Sword", "pt-BR": "Espada de Mithril"}, "attack": 31, "price": 1500, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "weapon_s004", "name": {"en": "Coral Sword", "pt-BR": "Espada de Coral"}, "attack": 35, "price": 2200, "element": {"en": "Thunder", "pt-BR": "Trovão"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "weapon_s005", "name": {"en": "Ancient Sword", "pt-BR": "Espada Antiga"}, "attack": 41, "price": 3800, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "weapon_s006", "name": {"en": "Sleep Blade", "pt-BR": "Lâmina do Sono"}, "attack": 38, "price": 3500, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Induces Sleep", "pt-BR": "Causa Sono"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "weapon_s007", "name": {"en": "Enhancer", "pt-BR": "Potencializador"}, "attack": 46, "price": 5000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "+3 Magic", "pt-BR": "+3 Magia"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "weapon_s008", "name": {"en": "Buster Sword", "pt-BR": "Espada Destruidora"}, "attack": 51, "price": 6800, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "weapon_s009", "name": {"en": "Ice Brand", "pt-BR": "Marca de Gelo"}, "attack": 54, "price": 7500, "element": {"en": "Ice", "pt-BR": "Gelo"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "weapon_s010", "name": {"en": "Flametongue", "pt-BR": "Língua de Fogo"}, "attack": 57, "price": 8000, "element": {"en": "Fire", "pt-BR": "Fogo"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "weapon_s011", "name": {"en": "Blood Sword", "pt-BR": "Espada de Sangue"}, "attack": 45, "price": 10000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Drains HP", "pt-BR": "Drena HP"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "weapon_s012", "name": {"en": "Excalibur", "pt-BR": "Excalibur"}, "attack": 82, "price": 0, "element": {"en": "Holy", "pt-BR": "Sagrado"}, "special": {"en": "+5 Strength", "pt-BR": "+5 Força"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "weapon_s013", "name": {"en": "Rune Blade", "pt-BR": "Lâmina Rúnica"}, "attack": 62, "price": 12000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Ignores defense", "pt-BR": "Ignora defesa"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "weapon_s014", "name": {"en": "Assassin Dagger", "pt-BR": "Adaga do Assassino"}, "attack": 56, "price": 9500, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Chance of instant death", "pt-BR": "Chance de morte instantânea"}, "jobs": ["Thief", "Ninja", "Freelancer"]}
+        {"id": "weapon_s001", "name": {"en": "Broadsword", "pt-BR": "Espada Larga"}, "attack": 15, "price": 280, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s002", "name": {"en": "Long Sword", "pt-BR": "Espada Longa"}, "attack": 22, "price": 480, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s003", "name": {"en": "Mythril Sword", "pt-BR": "Espada de Mithril"}, "attack": 31, "price": 880, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s004", "name": {"en": "Coral Sword", "pt-BR": "Espada de Coral"}, "attack": 37, "price": 2800, "element": {"en": "Thunder", "pt-BR": "Trovão"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s005", "name": {"en": "Ancient Sword", "pt-BR": "Espada Antiga"}, "attack": 43, "price": 4200, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Ages enemies", "pt-BR": "Envelhece inimigos"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s006", "name": {"en": "Sleep Blade", "pt-BR": "Lâmina do Sono"}, "attack": 49, "price": 5600, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Induces Sleep", "pt-BR": "Causa Sono"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s007", "name": {"en": "Rune Blade", "pt-BR": "Lâmina Rúnica"}, "attack": 50, "price": 9500, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Uses MP for critical hits", "pt-BR": "Usa MP para acertos críticos"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s008", "name": {"en": "Great Sword", "pt-BR": "Espada Grande"}, "attack": 57, "price": 8400, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s009", "name": {"en": "Flametongue", "pt-BR": "Língua de Fogo"}, "attack": 63, "price": 10000, "element": {"en": "Fire", "pt-BR": "Fogo"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s010", "name": {"en": "Icebrand", "pt-BR": "Marca de Gelo"}, "attack": 65, "price": 11000, "element": {"en": "Ice", "pt-BR": "Gelo"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s011", "name": {"en": "Blood Sword", "pt-BR": "Espada de Sangue"}, "attack": 84, "price": 16000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Drains HP", "pt-BR": "Drena HP"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s012", "name": {"en": "Defender", "pt-BR": "Defensor"}, "attack": 99, "price": 11000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Parries enemy attacks", "pt-BR": "Defende ataques inimigos"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s013", "name": {"en": "Enhancer", "pt-BR": "Potencializador"}, "attack": 102, "price": 20000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "+3 Magic", "pt-BR": "+3 Magia"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s014", "name": {"en": "Excalipoor", "pt-BR": "Excalibur Falso"}, "attack": 1, "price": 1, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Fake legendary sword", "pt-BR": "Espada lendária falsa"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s015", "name": {"en": "Excalibur", "pt-BR": "Excalibur"}, "attack": 110, "price": 0, "element": {"en": "Holy", "pt-BR": "Sagrado"}, "special": {"en": "+5 Strength", "pt-BR": "+5 Força"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s016", "name": {"en": "Brave Blade", "pt-BR": "Espada Corajosa"}, "attack": 150, "price": 30000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Loses power when fleeing", "pt-BR": "Perde poder ao fugir"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s017", "name": {"en": "Ragnarok", "pt-BR": "Ragnarok"}, "attack": 140, "price": 0, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Cast Flare", "pt-BR": "Lança Flare"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s018", "name": {"en": "Apocalypse", "pt-BR": "Apocalipse"}, "attack": 145, "price": 0, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Ancient power", "pt-BR": "Poder ancestral"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "weapon_s019", "name": {"en": "Ultima Weapon", "pt-BR": "Arma Última"}, "attack": 180, "price": 0, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Power of destruction", "pt-BR": "Poder de destruição"}, "jobs": ["Knight", "Mystic Knight", "Freelancer"]}
       ]
     },
     "katanas": {
@@ -32,64 +37,80 @@
         {"id": "weapon_k001", "name": {"en": "Kotetsu", "pt-BR": "Kotetsu"}, "attack": 45, "price": 4000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Samurai"]},
         {"id": "weapon_k002", "name": {"en": "Murasame", "pt-BR": "Murasame"}, "attack": 52, "price": 6000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Samurai"]},
         {"id": "weapon_k003", "name": {"en": "Ichimonji", "pt-BR": "Ichimonji"}, "attack": 58, "price": 8500, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Samurai"]},
-        {"id": "weapon_k004", "name": {"en": "Masamune", "pt-BR": "Masamune"}, "attack": 82, "price": 0, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "First strike", "pt-BR": "Ataque primeiro"}, "jobs": ["Samurai"]}
+        {"id": "weapon_k004", "name": {"en": "Masamune", "pt-BR": "Masamune"}, "attack": 82, "price": 0, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "First strike", "pt-BR": "Ataque primeiro"}, "jobs": ["Samurai"]},
+        {"id": "weapon_k005", "name": {"en": "Sasuke's Katana", "pt-BR": "Katana de Sasuke"}, "attack": 68, "price": 0, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "High speed", "pt-BR": "Alta velocidade"}, "jobs": ["Samurai"]}
       ]
     },
     "spears": {
       "description": {"en": "Spears - Dragoon weapons, bonus when jumping", "pt-BR": "Lanças - armas do Dragoon, bônus ao pular"},
       "items": [
-        {"id": "weapon_sp001", "name": {"en": "Spear", "pt-BR": "Lança"}, "attack": 26, "price": 600, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Dragoon", "Freelancer"]},
-        {"id": "weapon_sp002", "name": {"en": "Javelin", "pt-BR": "Javelin"}, "attack": 32, "price": 1200, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Dragoon", "Freelancer"]},
-        {"id": "weapon_sp003", "name": {"en": "Trident", "pt-BR": "Tridente"}, "attack": 38, "price": 2000, "element": {"en": "Thunder", "pt-BR": "Trovão"}, "jobs": ["Dragoon", "Freelancer"]},
-        {"id": "weapon_sp004", "name": {"en": "Wind Spear", "pt-BR": "Lança do Vento"}, "attack": 44, "price": 3500, "element": {"en": "Wind", "pt-BR": "Vento"}, "jobs": ["Dragoon", "Freelancer"]},
-        {"id": "weapon_sp005", "name": {"en": "Partisan", "pt-BR": "Partidária"}, "attack": 49, "price": 5000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Dragoon", "Freelancer"]},
-        {"id": "weapon_sp006", "name": {"en": "Holy Lance", "pt-BR": "Lança Sagrada"}, "attack": 64, "price": 10000, "element": {"en": "Holy", "pt-BR": "Sagrado"}, "jobs": ["Dragoon", "Freelancer"]},
-        {"id": "weapon_sp007", "name": {"en": "Dragon Lance", "pt-BR": "Lança Dragão"}, "attack": 72, "price": 15000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Bonus vs dragons", "pt-BR": "Bônus contra dragões"}, "jobs": ["Dragoon", "Freelancer"]}
+        {"id": "weapon_sp001", "name": {"en": "Spear", "pt-BR": "Lança"}, "attack": 25, "price": 100, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Dragoon", "Freelancer"]},
+        {"id": "weapon_sp002", "name": {"en": "Mythril Spear", "pt-BR": "Lança de Mithril"}, "attack": 30, "price": 790, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Dragoon", "Freelancer"]},
+        {"id": "weapon_sp003", "name": {"en": "Trident", "pt-BR": "Tridente"}, "attack": 38, "price": 2700, "element": {"en": "Thunder", "pt-BR": "Trovão"}, "jobs": ["Dragoon", "Freelancer"]},
+        {"id": "weapon_sp004", "name": {"en": "Wind Spear", "pt-BR": "Lança do Vento"}, "attack": 44, "price": 5400, "element": {"en": "Wind", "pt-BR": "Vento"}, "jobs": ["Dragoon", "Freelancer"]},
+        {"id": "weapon_sp005", "name": {"en": "Heavy Lance", "pt-BR": "Lança Pesada"}, "attack": 54, "price": 8100, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Dragoon", "Freelancer"]},
+        {"id": "weapon_sp006", "name": {"en": "Javelin", "pt-BR": "Javelin"}, "attack": 55, "price": 0, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "+1 Strength", "pt-BR": "+1 Força"}, "jobs": ["Dragoon", "Freelancer"]},
+        {"id": "weapon_sp007", "name": {"en": "Partisan", "pt-BR": "Partidária"}, "attack": 62, "price": 10200, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Dragoon", "Freelancer"]},
+        {"id": "weapon_sp008", "name": {"en": "Holy Lance", "pt-BR": "Lança Sagrada"}, "attack": 109, "price": 0, "element": {"en": "Holy", "pt-BR": "Sagrado"}, "special": {"en": "+3 Strength", "pt-BR": "+3 Força"}, "jobs": ["Dragoon", "Freelancer"]},
+        {"id": "weapon_sp009", "name": {"en": "Dragon Lance", "pt-BR": "Lança Dragão"}, "attack": 119, "price": 30000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Bonus vs dragons", "pt-BR": "Bônus contra dragões"}, "jobs": ["Dragoon", "Freelancer"]}
       ]
     },
     "axes": {
-      "description": {"en": "Axes - high damage but inaccurate", "pt-BR": "Machados - alto dano mas imprecisos"},
+      "description": {"en": "Axes and Hammers - high damage but inaccurate", "pt-BR": "Machados e Martelos - alto dano mas imprecisos"},
       "items": [
-        {"id": "weapon_a001", "name": {"en": "Hand Axe", "pt-BR": "Machado de Mão"}, "attack": 35, "price": 500, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Berserker", "Freelancer"]},
-        {"id": "weapon_a002", "name": {"en": "Mythril Hammer", "pt-BR": "Martelo de Mithril"}, "attack": 42, "price": 1800, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Berserker", "Freelancer"]},
-        {"id": "weapon_a003", "name": {"en": "Battle Axe", "pt-BR": "Machado de Batalha"}, "attack": 48, "price": 3200, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Berserker", "Freelancer"]},
-        {"id": "weapon_a004", "name": {"en": "Rune Axe", "pt-BR": "Machado Rúnico"}, "attack": 55, "price": 6000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Uses MP for damage", "pt-BR": "Usa MP para dano"}, "jobs": ["Berserker", "Freelancer"]}
+        {"id": "weapon_a001", "name": {"en": "Battle Axe", "pt-BR": "Machado de Batalha"}, "attack": 23, "price": 650, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Berserker", "Freelancer"]},
+        {"id": "weapon_a002", "name": {"en": "Mythril Hammer", "pt-BR": "Martelo de Mithril"}, "attack": 28, "price": 1050, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Berserker", "Freelancer"]},
+        {"id": "weapon_a003", "name": {"en": "Ogrekiller", "pt-BR": "Matador de Ogro"}, "attack": 33, "price": 3200, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Bonus vs beasts", "pt-BR": "Bônus contra bestas"}, "jobs": ["Berserker", "Freelancer"]},
+        {"id": "weapon_a004", "name": {"en": "Death Sickle", "pt-BR": "Foice da Morte"}, "attack": 43, "price": 0, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "33% chance of death", "pt-BR": "33% de chance de morte"}, "jobs": ["Berserker", "Freelancer"]},
+        {"id": "weapon_a005", "name": {"en": "War Hammer", "pt-BR": "Martelo de Guerra"}, "attack": 38, "price": 6400, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Berserker", "Freelancer"]},
+        {"id": "weapon_a006", "name": {"en": "Poison Axe", "pt-BR": "Machado de Veneno"}, "attack": 48, "price": 9600, "element": {"en": "Poison", "pt-BR": "Veneno"}, "special": {"en": "67% chance of poison", "pt-BR": "67% de chance de veneno"}, "jobs": ["Berserker", "Freelancer"]},
+        {"id": "weapon_a007", "name": {"en": "Gaia Hammer", "pt-BR": "Martelo de Gaia"}, "attack": 58, "price": 12800, "element": {"en": "Earth", "pt-BR": "Terra"}, "special": {"en": "25% chance of Quake", "pt-BR": "25% de chance de Terremoto"}, "jobs": ["Berserker", "Freelancer"]},
+        {"id": "weapon_a008", "name": {"en": "Rune Axe", "pt-BR": "Machado Rúnico"}, "attack": 71, "price": 0, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "+3 Magic", "pt-BR": "+3 Magia"}, "jobs": ["Berserker", "Freelancer"]},
+        {"id": "weapon_a009", "name": {"en": "Thor's Hammer", "pt-BR": "Martelo de Thor"}, "attack": 81, "price": 0, "element": {"en": "Thunder", "pt-BR": "Trovão"}, "special": {"en": "Long range", "pt-BR": "Longo alcance"}, "jobs": ["Berserker", "Freelancer"]},
+        {"id": "weapon_a010", "name": {"en": "Titan's Axe", "pt-BR": "Machado do Titã"}, "attack": 91, "price": 40000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Berserker", "Freelancer"]},
+        {"id": "weapon_a011", "name": {"en": "Earthbreaker", "pt-BR": "Quebrador da Terra"}, "attack": 133, "price": 0, "element": {"en": "Earth", "pt-BR": "Terra"}, "special": {"en": "+5 Strength/Stamina, -5 Agility/Magic", "pt-BR": "+5 Força/Vigor, -5 Agilidade/Magia"}, "jobs": ["Berserker", "Freelancer"]}
       ]
     },
     "daggers": {
       "description": {"en": "Daggers - fast weapons for Thieves and Ninjas", "pt-BR": "Adagas - armas rápidas para Ladrões e Ninjas"},
       "items": [
-        {"id": "weapon_d001", "name": {"en": "Knife", "pt-BR": "Faca"}, "attack": 12, "price": 150, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Thief", "Ninja", "Freelancer"]},
-        {"id": "weapon_d002", "name": {"en": "Dagger", "pt-BR": "Adaga"}, "attack": 17, "price": 350, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Thief", "Ninja", "Freelancer"]},
-        {"id": "weapon_d003", "name": {"en": "Mythril Knife", "pt-BR": "Faca de Mithril"}, "attack": 23, "price": 900, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Thief", "Ninja", "Freelancer"]},
-        {"id": "weapon_d004", "name": {"en": "Main Gauche", "pt-BR": "Main Gauche"}, "attack": 28, "price": 1500, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "+2 Evade", "pt-BR": "+2 Evasão"}, "jobs": ["Thief", "Ninja", "Freelancer"]},
-        {"id": "weapon_d005", "name": {"en": "Air Knife", "pt-BR": "Faca do Ar"}, "attack": 31, "price": 2000, "element": {"en": "Wind", "pt-BR": "Vento"}, "jobs": ["Thief", "Ninja", "Freelancer"]},
-        {"id": "weapon_d006", "name": {"en": "Dancing Dagger", "pt-BR": "Adaga Dançante"}, "attack": 38, "price": 4000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Dance command", "pt-BR": "Comando Dançar"}, "jobs": ["Thief", "Ninja", "Freelancer"]},
-        {"id": "weapon_d007", "name": {"en": "Thief Knife", "pt-BR": "Faca do Ladrão"}, "attack": 34, "price": 3000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Steal command", "pt-BR": "Comando Roubar"}, "jobs": ["Thief", "Ninja", "Freelancer"]}
+        {"id": "weapon_d001", "name": {"en": "Knife", "pt-BR": "Faca"}, "attack": 7, "price": 150, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Thief", "Ninja", "Freelancer"]},
+        {"id": "weapon_d002", "name": {"en": "Dagger", "pt-BR": "Adaga"}, "attack": 14, "price": 300, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Thief", "Ninja", "Freelancer"]},
+        {"id": "weapon_d003", "name": {"en": "Mythril Knife", "pt-BR": "Faca de Mithril"}, "attack": 23, "price": 450, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Thief", "Ninja", "Freelancer"]},
+        {"id": "weapon_d004", "name": {"en": "Main Gauche", "pt-BR": "Main Gauche"}, "attack": 28, "price": 900, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "+2 Evade", "pt-BR": "+2 Evasão"}, "jobs": ["Thief", "Ninja", "Freelancer"]},
+        {"id": "weapon_d005", "name": {"en": "Mage Masher", "pt-BR": "Esmagador de Mago"}, "attack": 31, "price": 900, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Silences enemies", "pt-BR": "Silencia inimigos"}, "jobs": ["Thief", "Ninja", "Freelancer"]},
+        {"id": "weapon_d006", "name": {"en": "Air Knife", "pt-BR": "Faca do Ar"}, "attack": 31, "price": 2000, "element": {"en": "Wind", "pt-BR": "Vento"}, "jobs": ["Thief", "Ninja", "Freelancer"]},
+        {"id": "weapon_d007", "name": {"en": "Thief Knife", "pt-BR": "Faca do Ladrão"}, "attack": 34, "price": 3000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Steal command", "pt-BR": "Comando Roubar"}, "jobs": ["Thief", "Ninja", "Freelancer"]},
+        {"id": "weapon_d008", "name": {"en": "Dancing Dagger", "pt-BR": "Adaga Dançante"}, "attack": 38, "price": 4000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Dance command", "pt-BR": "Comando Dançar"}, "jobs": ["Thief", "Ninja", "Freelancer"]}
       ]
     },
     "rods": {
-      "description": {"en": "Rods - boost magic power", "pt-BR": "Cajados - aumentam poder mágico"},
+      "description": {"en": "Rods - boost magic power", "pt-BR": "Varinhas - aumentam poder mágico"},
       "items": [
-        {"id": "weapon_r001", "name": {"en": "Rod", "pt-BR": "Cajado"}, "attack": 8, "magic_bonus": 1, "price": 250, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Black Mage", "Red Mage", "Time Mage"]},
-        {"id": "weapon_r002", "name": {"en": "Fire Rod", "pt-BR": "Cajado de Fogo"}, "attack": 12, "magic_bonus": 2, "price": 750, "element": {"en": "Fire", "pt-BR": "Fogo"}, "jobs": ["Black Mage", "Red Mage"]},
-        {"id": "weapon_r003", "name": {"en": "Ice Rod", "pt-BR": "Cajado de Gelo"}, "attack": 12, "magic_bonus": 2, "price": 750, "element": {"en": "Ice", "pt-BR": "Gelo"}, "jobs": ["Black Mage", "Red Mage"]},
-        {"id": "weapon_r004", "name": {"en": "Thunder Rod", "pt-BR": "Cajado de Trovão"}, "attack": 12, "magic_bonus": 2, "price": 750, "element": {"en": "Thunder", "pt-BR": "Trovão"}, "jobs": ["Black Mage", "Red Mage"]},
-        {"id": "weapon_r005", "name": {"en": "Poison Rod", "pt-BR": "Cajado de Veneno"}, "attack": 15, "magic_bonus": 2, "price": 1000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Induces Poison", "pt-BR": "Causa Veneno"}, "jobs": ["Black Mage", "Red Mage"]},
-        {"id": "weapon_r006", "name": {"en": "Lilith Rod", "pt-BR": "Cajado de Lilith"}, "attack": 18, "magic_bonus": 3, "price": 2500, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Drains MP", "pt-BR": "Drena MP"}, "jobs": ["Black Mage", "Red Mage"]},
-        {"id": "weapon_r007", "name": {"en": "Gravity Rod", "pt-BR": "Cajado de Gravidade"}, "attack": 22, "magic_bonus": 3, "price": 4000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Time Mage"]},
-        {"id": "weapon_r008", "name": {"en": "Wonder Rod", "pt-BR": "Cajado Maravilha"}, "attack": 25, "magic_bonus": 4, "price": 8000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Casts random spell", "pt-BR": "Lança magia aleatória"}, "jobs": ["Black Mage", "Red Mage"]}
+        {"id": "weapon_r001", "name": {"en": "Rod", "pt-BR": "Varinha"}, "attack": 8, "magic_bonus": 1, "price": 200, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Black Mage", "Red Mage", "Time Mage"]},
+        {"id": "weapon_r002", "name": {"en": "Fire Rod", "pt-BR": "Varinha de Fogo"}, "attack": 16, "magic_bonus": 2, "price": 750, "element": {"en": "Fire", "pt-BR": "Fogo"}, "special": {"en": "Casts Firaga", "pt-BR": "Lança Firaga"}, "jobs": ["Black Mage", "Red Mage"]},
+        {"id": "weapon_r003", "name": {"en": "Ice Rod", "pt-BR": "Varinha de Gelo"}, "attack": 16, "magic_bonus": 2, "price": 750, "element": {"en": "Ice", "pt-BR": "Gelo"}, "special": {"en": "Casts Blizzaga", "pt-BR": "Lança Blizzaga"}, "jobs": ["Black Mage", "Red Mage"]},
+        {"id": "weapon_r004", "name": {"en": "Thunder Rod", "pt-BR": "Varinha de Trovão"}, "attack": 16, "magic_bonus": 2, "price": 750, "element": {"en": "Thunder", "pt-BR": "Trovão"}, "special": {"en": "Casts Thundaga", "pt-BR": "Lança Thundaga"}, "jobs": ["Black Mage", "Red Mage"]},
+        {"id": "weapon_r005", "name": {"en": "Poison Rod", "pt-BR": "Varinha de Veneno"}, "attack": 15, "magic_bonus": 2, "price": 1000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Induces Poison", "pt-BR": "Causa Veneno"}, "jobs": ["Black Mage", "Red Mage"]},
+        {"id": "weapon_r006", "name": {"en": "Lilith Rod", "pt-BR": "Varinha de Lilith"}, "attack": 18, "magic_bonus": 3, "price": 2500, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Drains MP", "pt-BR": "Drena MP"}, "jobs": ["Black Mage", "Red Mage"]},
+        {"id": "weapon_r007", "name": {"en": "Gravity Rod", "pt-BR": "Varinha de Gravidade"}, "attack": 22, "magic_bonus": 3, "price": 4000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Time Mage"]},
+        {"id": "weapon_r008", "name": {"en": "Wonder Rod", "pt-BR": "Varinha Maravilha"}, "attack": 25, "magic_bonus": 4, "price": 8000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Casts random spell", "pt-BR": "Lança magia aleatória"}, "jobs": ["Black Mage", "Red Mage"]},
+        {"id": "weapon_r009", "name": {"en": "Faerie Rod", "pt-BR": "Varinha das Fadas"}, "attack": 30, "magic_bonus": 5, "price": 0, "element": {"en": "Holy", "pt-BR": "Sagrado"}, "special": {"en": "Casts Holy", "pt-BR": "Lança Sanctus"}, "jobs": ["Black Mage", "Red Mage"]}
       ]
     },
     "staves": {
       "description": {"en": "Staves - boost healing magic", "pt-BR": "Bastões - aumentam magia de cura"},
       "items": [
-        {"id": "weapon_st001", "name": {"en": "Staff", "pt-BR": "Bastão"}, "attack": 10, "magic_bonus": 1, "price": 200, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["White Mage", "Red Mage"]},
+        {"id": "weapon_st001", "name": {"en": "Staff", "pt-BR": "Bastão"}, "attack": 9, "magic_bonus": 1, "price": 200, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["White Mage", "Red Mage"]},
         {"id": "weapon_st002", "name": {"en": "Mythril Staff", "pt-BR": "Bastão de Mithril"}, "attack": 16, "magic_bonus": 1, "price": 800, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["White Mage", "Red Mage"]},
-        {"id": "weapon_st003", "name": {"en": "Power Staff", "pt-BR": "Bastão de Poder"}, "attack": 20, "magic_bonus": 2, "price": 1500, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["White Mage", "Red Mage"]},
-        {"id": "weapon_st004", "name": {"en": "Healing Staff", "pt-BR": "Bastão de Cura"}, "attack": 22, "magic_bonus": 2, "price": 2500, "element": {"en": "Holy", "pt-BR": "Sagrado"}, "special": {"en": "Heals when used", "pt-BR": "Cura quando usado"}, "jobs": ["White Mage", "Red Mage"]},
-        {"id": "weapon_st005", "name": {"en": "Sage's Staff", "pt-BR": "Bastão do Sábio"}, "attack": 28, "magic_bonus": 3, "price": 5000, "element": {"en": "Holy", "pt-BR": "Sagrado"}, "jobs": ["White Mage"]},
-        {"id": "weapon_st006", "name": {"en": "Staff of Light", "pt-BR": "Bastão de Luz"}, "attack": 35, "magic_bonus": 4, "price": 12000, "element": {"en": "Holy", "pt-BR": "Sagrado"}, "jobs": ["White Mage"]}
+        {"id": "weapon_st003", "name": {"en": "Power Staff", "pt-BR": "Bastão de Poder"}, "attack": 0, "magic_bonus": 2, "price": 900, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Drives berserk", "pt-BR": "Enlouquece"}, "jobs": ["White Mage", "Red Mage"]},
+        {"id": "weapon_st004", "name": {"en": "Healing Staff", "pt-BR": "Bastão de Cura"}, "attack": 0, "magic_bonus": 2, "price": 450, "element": {"en": "Holy", "pt-BR": "Sagrado"}, "special": {"en": "Heals when used", "pt-BR": "Cura quando usado"}, "jobs": ["White Mage", "Red Mage"]},
+        {"id": "weapon_st005", "name": {"en": "Flail", "pt-BR": "Mangual"}, "attack": 16, "magic_bonus": 1, "price": 780, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["White Mage", "Red Mage"]},
+        {"id": "weapon_st006", "name": {"en": "Staff of Light", "pt-BR": "Bastão de Luz"}, "attack": 30, "magic_bonus": 2, "price": 0, "element": {"en": "Holy", "pt-BR": "Sagrado"}, "special": {"en": "Casts Holy", "pt-BR": "Lança Sanctus"}, "jobs": ["White Mage"]},
+        {"id": "weapon_st007", "name": {"en": "Morning Star", "pt-BR": "Estrela da Manhã"}, "attack": 50, "magic_bonus": 3, "price": 7800, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["White Mage"]},
+        {"id": "weapon_st008", "name": {"en": "Sage's Staff", "pt-BR": "Bastão do Sábio"}, "attack": 45, "magic_bonus": 4, "price": 0, "element": {"en": "Holy", "pt-BR": "Sagrado"}, "special": {"en": "Boosts Holy, casts Raise", "pt-BR": "Aumenta Sanctus, lança Ressurreição"}, "jobs": ["White Mage"]},
+        {"id": "weapon_st009", "name": {"en": "Judgment Staff", "pt-BR": "Bastão do Juízo"}, "attack": 45, "magic_bonus": 3, "price": 0, "element": {"en": "Holy", "pt-BR": "Sagrado"}, "special": {"en": "Casts Dispel", "pt-BR": "Lança Dispel"}, "jobs": ["White Mage"]},
+        {"id": "weapon_st010", "name": {"en": "Mace of Zeus", "pt-BR": "Cetro de Zeus"}, "attack": 78, "magic_bonus": 3, "price": 0, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["White Mage"]}
       ]
     },
     "bells": {
@@ -97,49 +118,70 @@
       "items": [
         {"id": "weapon_b001", "name": {"en": "Bell", "pt-BR": "Sino"}, "attack": 15, "price": 500, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Geomancer"]},
         {"id": "weapon_b002", "name": {"en": "Earth Bell", "pt-BR": "Sino da Terra"}, "attack": 22, "price": 1500, "element": {"en": "Earth", "pt-BR": "Terra"}, "jobs": ["Geomancer"]},
-        {"id": "weapon_b003", "name": {"en": "Tinkle Bell", "pt-BR": "Sino Tinkle"}, "attack": 30, "price": 3500, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Geomancer"]}
+        {"id": "weapon_b003", "name": {"en": "Tinkle Bell", "pt-BR": "Sino Tinkle"}, "attack": 30, "price": 3500, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Geomancer"]},
+        {"id": "weapon_b004", "name": {"en": "Gaia Bell", "pt-BR": "Sino de Gaia"}, "attack": 45, "price": 0, "element": {"en": "Earth", "pt-BR": "Terra"}, "special": {"en": "Earth damage", "pt-BR": "Dano de terra"}, "jobs": ["Geomancer"]}
       ]
     },
     "whips": {
       "description": {"en": "Whips - Beastmaster weapons", "pt-BR": "Chicotes - armas do Domador"},
       "items": [
-        {"id": "weapon_w001", "name": {"en": "Whip", "pt-BR": "Chicote"}, "attack": 25, "price": 800, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Beastmaster"]},
-        {"id": "weapon_w002", "name": {"en": "Chain Whip", "pt-BR": "Chicote de Corrente"}, "attack": 35, "price": 2000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Beastmaster"]},
-        {"id": "weapon_w003", "name": {"en": "Fire Lash", "pt-BR": "Chicote de Fogo"}, "attack": 45, "price": 5000, "element": {"en": "Fire", "pt-BR": "Fogo"}, "jobs": ["Beastmaster"]}
+        {"id": "weapon_w001", "name": {"en": "Whip", "pt-BR": "Chicote"}, "attack": 26, "price": 1100, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Chance of Tame", "pt-BR": "Chance de Aplainar"}, "jobs": ["Beastmaster"]},
+        {"id": "weapon_w002", "name": {"en": "Shock Whip", "pt-BR": "Chicote de Choque"}, "attack": 42, "price": 2200, "element": {"en": "Thunder", "pt-BR": "Trovão"}, "special": {"en": "Chance of Bolt", "pt-BR": "Chance de Trovão"}, "jobs": ["Beastmaster"]},
+        {"id": "weapon_w003", "name": {"en": "Chain Whip", "pt-BR": "Chicote de Corrente"}, "attack": 52, "price": 3300, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Chance of Tame", "pt-BR": "Chance de Aplainar"}, "jobs": ["Beastmaster"]},
+        {"id": "weapon_w004", "name": {"en": "Beast Killer", "pt-BR": "Matador de Bestas"}, "attack": 72, "price": 15000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Bonus vs creatures", "pt-BR": "Bônus contra criaturas"}, "jobs": ["Beastmaster"]},
+        {"id": "weapon_w005", "name": {"en": "Fire Lash", "pt-BR": "Chicote de Fogo"}, "attack": 82, "price": 0, "element": {"en": "Fire", "pt-BR": "Fogo"}, "special": {"en": "+2 Vigor, +2 Speed, casts Firaga", "pt-BR": "+2 Vigor, +2 Velocidade, lança Firaga"}, "jobs": ["Beastmaster"]}
       ]
     },
     "bows": {
       "description": {"en": "Bows - Ranger weapons, need arrows", "pt-BR": "Arcos - armas do Arqueiro, precisam de flechas"},
       "items": [
-        {"id": "weapon_bw001", "name": {"en": "Short Bow", "pt-BR": "Arco Curto"}, "attack": 22, "price": 400, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ranger"]},
-        {"id": "weapon_bw002", "name": {"en": "Long Bow", "pt-BR": "Arco Longo"}, "attack": 30, "price": 1000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ranger"]},
-        {"id": "weapon_bw003", "name": {"en": "Elven Bow", "pt-BR": "Arco Élfico"}, "attack": 38, "price": 2500, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ranger"]},
-        {"id": "weapon_bw004", "name": {"en": "Killer Bow", "pt-BR": "Arco Matador"}, "attack": 46, "price": 5000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ranger"]},
-        {"id": "weapon_bw005", "name": {"en": "Rune Bow", "pt-BR": "Arco Rúnico"}, "attack": 55, "price": 8000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ranger"]},
-        {"id": "weapon_bw006", "name": {"en": "Artemis Bow", "pt-BR": "Arco de Ártemis"}, "attack": 68, "price": 15000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ranger"]}
+        {"id": "weapon_bw001", "name": {"en": "Silver Bow", "pt-BR": "Arco de Prata"}, "attack": 38, "price": 1500, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ranger"]},
+        {"id": "weapon_bw002", "name": {"en": "Fire Bow", "pt-BR": "Arco de Fogo"}, "attack": 39, "price": 2500, "element": {"en": "Fire", "pt-BR": "Fogo"}, "jobs": ["Ranger"]},
+        {"id": "weapon_bw003", "name": {"en": "Lightning Bow", "pt-BR": "Arco de Trovão"}, "attack": 39, "price": 2500, "element": {"en": "Thunder", "pt-BR": "Trovão"}, "jobs": ["Ranger"]},
+        {"id": "weapon_bw004", "name": {"en": "Ice Bow", "pt-BR": "Arco de Gelo"}, "attack": 39, "price": 2500, "element": {"en": "Ice", "pt-BR": "Gelo"}, "jobs": ["Ranger"]},
+        {"id": "weapon_bw005", "name": {"en": "Dark Bow", "pt-BR": "Arco Negro"}, "attack": 43, "price": 3800, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Blinds enemies", "pt-BR": "Cega inimigos"}, "jobs": ["Ranger"]},
+        {"id": "weapon_bw006", "name": {"en": "Crossbow", "pt-BR": "Besta"}, "attack": 49, "price": 5000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Doom chance", "pt-BR": "Chance de Morte"}, "jobs": ["Ranger"]},
+        {"id": "weapon_bw007", "name": {"en": "Elven Bow", "pt-BR": "Arco Élfico"}, "attack": 56, "price": 7500, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Critical hit chance", "pt-BR": "Chance de acerto crítico"}, "jobs": ["Ranger"]},
+        {"id": "weapon_bw008", "name": {"en": "Gale Bow", "pt-BR": "Arco da Tempestade"}, "attack": 69, "price": 8500, "element": {"en": "Wind", "pt-BR": "Vento"}, "special": {"en": "X-Fight chance", "pt-BR": "Chance de X-Ataque"}, "jobs": ["Ranger"]},
+        {"id": "weapon_bw009", "name": {"en": "Magic Bow", "pt-BR": "Arco Mágico"}, "attack": 0, "price": 10000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Silences enemies", "pt-BR": "Silencia inimigos"}, "jobs": ["Ranger"]},
+        {"id": "weapon_bw010", "name": {"en": "Killer Bow", "pt-BR": "Arco Matador"}, "attack": 60, "price": 8000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ranger"]},
+        {"id": "weapon_bw011", "name": {"en": "Rune Bow", "pt-BR": "Arco Rúnico"}, "attack": 75, "price": 12000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ranger"]},
+        {"id": "weapon_bw012", "name": {"en": "Artemis Bow", "pt-BR": "Arco de Ártemis"}, "attack": 111, "price": 0, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Strong vs creatures", "pt-BR": "Forte contra criaturas"}, "jobs": ["Ranger"]},
+        {"id": "weapon_bw013", "name": {"en": "Yoichi Bow", "pt-BR": "Arco Yoichi"}, "attack": 101, "price": 0, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "+3 Vigor, +3 Speed, critical hit", "pt-BR": "+3 Vigor, +3 Velocidade, acerto crítico"}, "jobs": ["Ranger"]}
       ]
     },
     "harp": {
       "description": {"en": "Harps - Bard weapons", "pt-BR": "Harpa - armas do Bardo"},
       "items": [
-        {"id": "weapon_h001", "name": {"en": "Lamia Harp", "pt-BR": "Harpa Lâmia"}, "attack": 20, "price": 1000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Confuses enemies", "pt-BR": "Confunde inimigos"}, "jobs": ["Bard"]},
-        {"id": "weapon_h002", "name": {"en": "Dream Harp", "pt-BR": "Harpa dos Sonhos"}, "attack": 28, "price": 2500, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Puts enemies to sleep", "pt-BR": "Coloca inimigos para dormir"}, "jobs": ["Bard"]}
+        {"id": "weapon_h001", "name": {"en": "Silver Harp", "pt-BR": "Harpa de Prata"}, "attack": 15, "price": 400, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Damages 1/16 max HP", "pt-BR": "Dano 1/16 HP máximo"}, "jobs": ["Bard"]},
+        {"id": "weapon_h002", "name": {"en": "Dream Harp", "pt-BR": "Harpa dos Sonhos"}, "attack": 25, "price": 800, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Sleep chance, 2/16 max HP", "pt-BR": "Chance de Sono, 2/16 HP máximo"}, "jobs": ["Bard"]},
+        {"id": "weapon_h003", "name": {"en": "Lamia Harp", "pt-BR": "Harpa Lâmia"}, "attack": 35, "price": 1600, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Confuse chance, 3/16 max HP", "pt-BR": "Chance de Confusão, 3/16 HP máximo"}, "jobs": ["Bard"]},
+        {"id": "weapon_h004", "name": {"en": "Apollo Harp", "pt-BR": "Harpa de Apolo"}, "attack": 45, "price": 0, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Strong vs dragons and undead", "pt-BR": "Forte contra dragões e mortos-vivos"}, "jobs": ["Bard"]}
       ]
     },
     "fists": {
       "description": {"en": "Fist weapons - Monk/Black Belt", "pt-BR": "Armas de punho - Monge"},
       "items": [
-        {"id": "weapon_f001", "name": {"en": "Kaiser Knuckles", "pt-BR": "Soqueira Kaiser"}, "attack": 35, "price": 2000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Monk", "Freelancer"]},
+        {"id": "weapon_f001", "name": {"en": "Kaiser Knuckles", "pt-BR": "Soqueira Kaiser"}, "attack": 35, "price": 2000, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "+5 Strength", "pt-BR": "+5 Força"}, "jobs": ["Monk", "Freelancer"]},
         {"id": "weapon_f002", "name": {"en": "Cat Claws", "pt-BR": "Garras de Gato"}, "attack": 42, "price": 4000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Monk", "Freelancer"]},
         {"id": "weapon_f003", "name": {"en": "Chimera Claws", "pt-BR": "Garras de Quimera"}, "attack": 50, "price": 7000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Monk", "Freelancer"]}
+      ]
+    },
+    "boomerangs": {
+      "description": {"en": "Boomerangs - ranged weapons for back row", "pt-BR": "Bumerangues - armas de longo alcance"},
+      "items": [
+        {"id": "weapon_bm001", "name": {"en": "Moonring Blade", "pt-BR": "Lâmina Lunar"}, "attack": 35, "price": 1100, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Thief", "Ninja", "Ranger", "Freelancer"]},
+        {"id": "weapon_bm002", "name": {"en": "Rising Sun", "pt-BR": "Sol Nascente"}, "attack": 71, "price": 11000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Thief", "Ninja", "Ranger", "Freelancer"]},
+        {"id": "weapon_bm003", "name": {"en": "Twin Lance", "pt-BR": "Lança Dupla"}, "attack": 61, "price": 10800, "element": {"en": "None", "pt-BR": "Nenhum"}, "special": {"en": "Hits twice", "pt-BR": "Acerta duas vezes"}, "jobs": ["Knight", "Dragoon", "Freelancer"]}
       ]
     },
     "throwing": {
       "description": {"en": "Throwing weapons - Ninja specialty", "pt-BR": "Armas arremessáveis - especialidade do Ninja"},
       "items": [
-        {"id": "weapon_t001", "name": {"en": "Shuriken", "pt-BR": "Shuriken"}, "attack": 40, "price": 200, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ninja"]},
-        {"id": "weapon_t002", "name": {"en": "Fuma Shuriken", "pt-BR": "Fuma Shuriken"}, "attack": 65, "price": 800, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ninja"]},
-        {"id": "weapon_t003", "name": {"en": "Wind Slash", "pt-BR": "Corte do Vento"}, "attack": 55, "price": 1500, "element": {"en": "Wind", "pt-BR": "Vento"}, "jobs": ["Ninja"]}
+        {"id": "weapon_t001", "name": {"en": "Ash", "pt-BR": "Cinzas"}, "attack": 25, "price": 1, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ninja"]},
+        {"id": "weapon_t002", "name": {"en": "Shuriken", "pt-BR": "Shuriken"}, "attack": 50, "price": 2500, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ninja"]},
+        {"id": "weapon_t003", "name": {"en": "Fuma Shuriken", "pt-BR": "Fuma Shuriken"}, "attack": 117, "price": 25000, "element": {"en": "None", "pt-BR": "Nenhum"}, "jobs": ["Ninja"]},
+        {"id": "weapon_t004", "name": {"en": "Wind Slash", "pt-BR": "Corte do Vento"}, "attack": 55, "price": 1500, "element": {"en": "Wind", "pt-BR": "Vento"}, "jobs": ["Ninja"]}
       ]
     }
   },
@@ -148,89 +190,119 @@
     "shields": {
       "description": {"en": "Shields - increase evasion", "pt-BR": "Escudos - aumentam evasão"},
       "items": [
-        {"id": "armor_sh001", "name": {"en": "Leather Shield", "pt-BR": "Escudo de Couro"}, "defense": 4, "evasion": 10, "price": 150, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
-        {"id": "armor_sh002", "name": {"en": "Iron Shield", "pt-BR": "Escudo de Ferro"}, "defense": 6, "evasion": 12, "price": 400, "jobs": ["Knight", "Mystic Knight"]},
-        {"id": "armor_sh003", "name": {"en": "Mythril Shield", "pt-BR": "Escudo de Mithril"}, "defense": 9, "evasion": 15, "price": 1200, "jobs": ["Knight", "Mystic Knight"]},
-        {"id": "armor_sh004", "name": {"en": "Golden Shield", "pt-BR": "Escudo Dourado"}, "defense": 12, "evasion": 18, "price": 3000, "jobs": ["Knight", "Mystic Knight"]},
-        {"id": "armor_sh005", "name": {"en": "Aegis Shield", "pt-BR": "Escudo Égide"}, "defense": 15, "evasion": 22, "price": 6000, "special": {"en": "Blocks petrify", "pt-BR": "Bloqueia petrificação"}, "jobs": ["Knight", "Mystic Knight"]},
-        {"id": "armor_sh006", "name": {"en": "Diamond Shield", "pt-BR": "Escudo de Diamante"}, "defense": 18, "evasion": 25, "price": 10000, "jobs": ["Knight", "Mystic Knight"]},
-        {"id": "armor_sh007", "name": {"en": "Flame Shield", "pt-BR": "Escudo de Chamas"}, "defense": 16, "evasion": 20, "price": 8000, "element": {"en": "Fire absorb", "pt-BR": "Absorve Fogo"}, "jobs": ["Knight", "Mystic Knight"]},
-        {"id": "armor_sh008", "name": {"en": "Ice Shield", "pt-BR": "Escudo de Gelo"}, "defense": 16, "evasion": 20, "price": 8000, "element": {"en": "Ice absorb", "pt-BR": "Absorve Gelo"}, "jobs": ["Knight", "Mystic Knight"]},
-        {"id": "armor_sh009", "name": {"en": "Genji Shield", "pt-BR": "Escudo Genji"}, "defense": 20, "evasion": 28, "price": 0, "jobs": ["Knight", "Mystic Knight"]}
+        {"id": "armor_sh001", "name": {"en": "Leather Shield", "pt-BR": "Escudo de Couro"}, "defense": 0, "evasion": 10, "price": 90, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "armor_sh002", "name": {"en": "Bronze Shield", "pt-BR": "Escudo de Bronze"}, "defense": 1, "evasion": 15, "price": 290, "jobs": ["Knight", "Mystic Knight", "Freelancer"]},
+        {"id": "armor_sh003", "name": {"en": "Iron Shield", "pt-BR": "Escudo de Ferro"}, "defense": 2, "evasion": 20, "price": 390, "jobs": ["Knight", "Mystic Knight"]},
+        {"id": "armor_sh004", "name": {"en": "Mythril Shield", "pt-BR": "Escudo de Mithril"}, "defense": 3, "evasion": 25, "price": 590, "jobs": ["Knight", "Mystic Knight"]},
+        {"id": "armor_sh005", "name": {"en": "Gold Shield", "pt-BR": "Escudo Dourado"}, "defense": 4, "evasion": 30, "price": 3000, "jobs": ["Knight", "Mystic Knight"]},
+        {"id": "armor_sh006", "name": {"en": "Aegis Shield", "pt-BR": "Escudo Égide"}, "defense": 5, "evasion": 33, "price": 4500, "special": {"en": "Blocks petrify, magic avoid", "pt-BR": "Bloqueia petrificação, evita magia"}, "jobs": ["Knight", "Mystic Knight"]},
+        {"id": "armor_sh007", "name": {"en": "Diamond Shield", "pt-BR": "Escudo de Diamante"}, "defense": 6, "evasion": 35, "price": 6000, "element": {"en": "Resist Thunder", "pt-BR": "Resiste Trovão"}, "jobs": ["Knight", "Mystic Knight"]},
+        {"id": "armor_sh008", "name": {"en": "Flame Shield", "pt-BR": "Escudo de Chamas"}, "defense": 7, "evasion": 40, "price": 20000, "element": {"en": "Absorb Fire", "pt-BR": "Absorve Fogo"}, "jobs": ["Knight", "Mystic Knight"]},
+        {"id": "armor_sh009", "name": {"en": "Ice Shield", "pt-BR": "Escudo de Gelo"}, "defense": 7, "evasion": 40, "price": 20000, "element": {"en": "Absorb Ice", "pt-BR": "Absorve Gelo"}, "jobs": ["Knight", "Mystic Knight"]},
+        {"id": "armor_sh010", "name": {"en": "Crystal Shield", "pt-BR": "Escudo de Cristal"}, "defense": 8, "evasion": 45, "price": 9000, "jobs": ["Knight", "Mystic Knight"]},
+        {"id": "armor_sh011", "name": {"en": "Genji Shield", "pt-BR": "Escudo Genji"}, "defense": 12, "evasion": 50, "price": 0, "special": {"en": "+1 Magic Defense", "pt-BR": "+1 Defesa Mágica"}, "jobs": ["Knight", "Mystic Knight"]}
       ]
     },
     "helmets": {
       "description": {"en": "Helmets - protect head", "pt-BR": "Elmos - protegem a cabeça"},
       "items": [
-        {"id": "armor_h001", "name": {"en": "Leather Cap", "pt-BR": "Capacete de Couro"}, "defense": 2, "magic_defense": 1, "price": 100, "jobs": ["All"]},
-        {"id": "armor_h002", "name": {"en": "Iron Helm", "pt-BR": "Elmo de Ferro"}, "defense": 4, "magic_defense": 2, "price": 350, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
-        {"id": "armor_h003", "name": {"en": "Mythril Helm", "pt-BR": "Elmo de Mithril"}, "defense": 6, "magic_defense": 3, "price": 1000, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
-        {"id": "armor_h004", "name": {"en": "Golden Helm", "pt-BR": "Elmo Dourado"}, "defense": 8, "magic_defense": 4, "price": 2500, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
-        {"id": "armor_h005", "name": {"en": "Diamond Helm", "pt-BR": "Elmo de Diamante"}, "defense": 10, "magic_defense": 6, "price": 8000, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
-        {"id": "armor_h006", "name": {"en": "Crystal Helm", "pt-BR": "Elmo de Cristal"}, "defense": 12, "magic_defense": 8, "price": 12000, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
-        {"id": "armor_h007", "name": {"en": "Genji Helm", "pt-BR": "Elmo Genji"}, "defense": 11, "magic_defense": 7, "price": 0, "jobs": ["Knight", "Mystic Knight", "Samurai"]},
-        {"id": "armor_h008", "name": {"en": "Twist Headband", "pt-BR": "Tiara"}, "defense": 5, "magic_defense": 3, "price": 1500, "special": {"en": "+2 Strength", "pt-BR": "+2 Força"}, "jobs": ["Monk", "Berserker"]},
-        {"id": "armor_h009", "name": {"en": "Tiara", "pt-BR": "Tiara Mágica"}, "defense": 4, "magic_defense": 5, "price": 2000, "jobs": ["White Mage", "Black Mage", "Time Mage", "Summoner"]},
-        {"id": "armor_h010", "name": {"en": "Ribbon", "pt-BR": "Laço"}, "defense": 3, "magic_defense": 8, "price": 0, "special": {"en": "Protects from all status", "pt-BR": "Protege de todos os status"}, "jobs": ["All"]}
+        {"id": "armor_h001", "name": {"en": "Leather Cap", "pt-BR": "Capacete de Couro"}, "defense": 1, "magic_defense": 1, "price": 50, "jobs": ["All"]},
+        {"id": "armor_h002", "name": {"en": "Bronze Helm", "pt-BR": "Elmo de Bronze"}, "defense": 2, "magic_defense": 2, "price": 250, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_h003", "name": {"en": "Plumed Hat", "pt-BR": "Chapéu Emplumado"}, "defense": 2, "magic_defense": 2, "price": 350, "jobs": ["Thief", "Ranger", "Beastmaster", "Bard"]},
+        {"id": "armor_h004", "name": {"en": "Iron Helm", "pt-BR": "Elmo de Ferro"}, "defense": 4, "magic_defense": 2, "price": 350, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_h005", "name": {"en": "Mythril Helm", "pt-BR": "Elmo de Mithril"}, "defense": 6, "magic_defense": 2, "price": 550, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_h006", "name": {"en": "Gold Helm", "pt-BR": "Elmo Dourado"}, "defense": 8, "magic_defense": 2, "price": 3500, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_h007", "name": {"en": "Diamond Helm", "pt-BR": "Elmo de Diamante"}, "defense": 10, "magic_defense": 2, "price": 7000, "element": {"en": "Resist Thunder", "pt-BR": "Resiste Trovão"}, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_h008", "name": {"en": "Crystal Helm", "pt-BR": "Elmo de Cristal"}, "defense": 13, "magic_defense": 2, "price": 10500, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_h009", "name": {"en": "Genji Helm", "pt-BR": "Elmo Genji"}, "defense": 15, "magic_defense": 2, "price": 0, "jobs": ["Knight", "Mystic Knight", "Samurai"]},
+        {"id": "armor_h010", "name": {"en": "Hypno Crown", "pt-BR": "Coroa Hipnótica"}, "defense": 5, "magic_defense": 4, "price": 0, "special": {"en": "+1 Magic, raises Control success", "pt-BR": "+1 Magia, aumenta sucesso de Controle"}, "jobs": ["Geomancer", "Bard", "Time Mage"]},
+        {"id": "armor_h011", "name": {"en": "Twist Headband", "pt-BR": "Tiara de Luta"}, "defense": 5, "magic_defense": 3, "price": 1500, "special": {"en": "+2 Strength", "pt-BR": "+2 Força"}, "jobs": ["Monk", "Berserker"]},
+        {"id": "armor_h012", "name": {"en": "Wizard Hat", "pt-BR": "Chapéu de Mago"}, "defense": 4, "magic_defense": 2, "price": 1500, "special": {"en": "+1 Magic Power", "pt-BR": "+1 Poder Mágico"}, "jobs": ["Black Mage", "Time Mage", "Summoner"]},
+        {"id": "armor_h013", "name": {"en": "Sage's Miter", "pt-BR": "Mitra do Sábio"}, "defense": 6, "magic_defense": 2, "price": 3000, "special": {"en": "+2 Magic, immune to Silence", "pt-BR": "+2 Magia, imune a Silêncio"}, "jobs": ["White Mage", "Black Mage", "Time Mage", "Summoner"]},
+        {"id": "armor_h014", "name": {"en": "Circlet", "pt-BR": "Diadema"}, "defense": 10, "magic_defense": 2, "price": 4500, "special": {"en": "+3 Magic Power", "pt-BR": "+3 Poder Mágico"}, "jobs": ["White Mage", "Black Mage", "Time Mage", "Summoner"]},
+        {"id": "armor_h015", "name": {"en": "Lamia's Tiara", "pt-BR": "Tiara da Lamia"}, "defense": 3, "magic_defense": 7, "price": 2500, "special": {"en": "+3 Magic, immune to Confuse", "pt-BR": "+3 Magia, imune a Confusão"}, "jobs": ["White Mage", "Black Mage", "Time Mage", "Summoner", "Bard"]},
+        {"id": "armor_h016", "name": {"en": "Tiara", "pt-BR": "Tiara Mágica"}, "defense": 4, "magic_defense": 5, "price": 2000, "jobs": ["White Mage", "Black Mage", "Time Mage", "Summoner"]},
+        {"id": "armor_h017", "name": {"en": "Gold Hairpin", "pt-BR": "Presilha Dourada"}, "defense": 0, "magic_defense": 2, "price": 30000, "special": {"en": "Halves MP cost", "pt-BR": "Reduz custo de MP pela metade"}, "jobs": ["White Mage", "Black Mage", "Time Mage", "Summoner"]},
+        {"id": "armor_h018", "name": {"en": "Ribbon", "pt-BR": "Laço"}, "defense": 3, "magic_defense": 8, "price": 0, "special": {"en": "Protects from all status", "pt-BR": "Protege de todos os status"}, "jobs": ["All"]}
       ]
     },
     "armor_body": {
       "description": {"en": "Body armor - main defense", "pt-BR": "Armadura corporal - defesa principal"},
       "items": [
-        {"id": "armor_a001", "name": {"en": "Clothes", "pt-BR": "Roupa"}, "defense": 2, "magic_defense": 1, "price": 50, "jobs": ["All"]},
-        {"id": "armor_a002", "name": {"en": "Leather Armor", "pt-BR": "Armadura de Couro"}, "defense": 4, "magic_defense": 1, "price": 200, "jobs": ["Thief", "Ranger", "Beastmaster", "Bard"]},
-        {"id": "armor_a003", "name": {"en": "Iron Armor", "pt-BR": "Armadura de Ferro"}, "defense": 8, "magic_defense": 2, "price": 600, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
-        {"id": "armor_a004", "name": {"en": "Mythril Armor", "pt-BR": "Armadura de Mithril"}, "defense": 12, "magic_defense": 4, "price": 1800, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
-        {"id": "armor_a005", "name": {"en": "Golden Armor", "pt-BR": "Armadura Dourada"}, "defense": 16, "magic_defense": 5, "price": 4500, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
-        {"id": "armor_a006", "name": {"en": "Diamond Armor", "pt-BR": "Armadura de Diamante"}, "defense": 22, "magic_defense": 8, "price": 15000, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
-        {"id": "armor_a007", "name": {"en": "Crystal Armor", "pt-BR": "Armadura de Cristal"}, "defense": 25, "magic_defense": 10, "price": 25000, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
-        {"id": "armor_a008", "name": {"en": "Flame Mail", "pt-BR": "Armadura de Chamas"}, "defense": 18, "magic_defense": 7, "price": 12000, "element": {"en": "Fire resist", "pt-BR": "Resiste Fogo"}, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
-        {"id": "armor_a009", "name": {"en": "Ice Mail", "pt-BR": "Armadura de Gelo"}, "defense": 18, "magic_defense": 7, "price": 12000, "element": {"en": "Ice resist", "pt-BR": "Resiste Gelo"}, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
-        {"id": "armor_a010", "name": {"en": "Genji Armor", "pt-BR": "Armadura Genji"}, "defense": 24, "magic_defense": 9, "price": 0, "jobs": ["Knight", "Mystic Knight", "Samurai"]},
-        {"id": "armor_a011", "name": {"en": "Kenpo Gi", "pt-BR": "Quimono"}, "defense": 10, "magic_defense": 3, "price": 2500, "jobs": ["Monk", "Berserker"]},
-        {"id": "armor_a012", "name": {"en": "Black Garb", "pt-BR": "Vestimenta Negra"}, "defense": 14, "magic_defense": 6, "price": 5000, "jobs": ["Ninja", "Thief"]},
-        {"id": "armor_a013", "name": {"en": "Light Robe", "pt-BR": "Manto Leve"}, "defense": 6, "magic_defense": 8, "price": 2000, "jobs": ["White Mage", "Black Mage", "Time Mage", "Summoner", "Blue Mage"]},
-        {"id": "armor_a014", "name": {"en": "Wizard Robe", "pt-BR": "Manto do Mago"}, "defense": 8, "magic_defense": 12, "price": 5000, "special": {"en": "+2 Magic", "pt-BR": "+2 Magia"}, "jobs": ["White Mage", "Black Mage", "Time Mage", "Summoner", "Blue Mage"]},
-        {"id": "armor_a015", "name": {"en": "White Robe", "pt-BR": "Manto Branco"}, "defense": 10, "magic_defense": 15, "price": 10000, "special": {"en": "+3 Magic, Heal bonus", "pt-BR": "+3 Magia, Bônus de cura"}, "jobs": ["White Mage", "Summoner"]},
-        {"id": "armor_a016", "name": {"en": "Black Robe", "pt-BR": "Manto Negro"}, "defense": 10, "magic_defense": 15, "price": 10000, "special": {"en": "+3 Magic, Attack bonus", "pt-BR": "+3 Magia, Bônus de ataque"}, "jobs": ["Black Mage", "Time Mage"]},
-        {"id": "armor_a017", "name": {"en": "Mirage Vest", "pt-BR": "Colete Miragem"}, "defense": 12, "magic_defense": 10, "price": 8000, "special": {"en": "Auto-Blink", "pt-BR": "Auto-Piscar"}, "jobs": ["All"]}
+        {"id": "armor_a001", "name": {"en": "Clothes", "pt-BR": "Roupa"}, "defense": 1, "magic_defense": 1, "price": 40, "jobs": ["All"]},
+        {"id": "armor_a002", "name": {"en": "Leather Armor", "pt-BR": "Armadura de Couro"}, "defense": 1, "magic_defense": 1, "price": 40, "jobs": ["Thief", "Ranger", "Beastmaster", "Bard"]},
+        {"id": "armor_a003", "name": {"en": "Bronze Armor", "pt-BR": "Armadura de Bronze"}, "defense": 4, "magic_defense": 2, "price": 400, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_a004", "name": {"en": "Copper Cuirass", "pt-BR": "Couraça de Cobre"}, "defense": 3, "magic_defense": 2, "price": 350, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_a005", "name": {"en": "Iron Armor", "pt-BR": "Armadura de Ferro"}, "defense": 6, "magic_defense": 2, "price": 400, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_a006", "name": {"en": "Silver Plate", "pt-BR": "Placa de Prata"}, "defense": 7, "magic_defense": 2, "price": 600, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_a007", "name": {"en": "Mythril Armor", "pt-BR": "Armadura de Mithril"}, "defense": 9, "magic_defense": 2, "price": 700, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_a008", "name": {"en": "Gold Armor", "pt-BR": "Armadura Dourada"}, "defense": 12, "magic_defense": 2, "price": 4000, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_a009", "name": {"en": "Diamond Armor", "pt-BR": "Armadura de Diamante"}, "defense": 15, "magic_defense": 2, "price": 8000, "element": {"en": "Resist Thunder", "pt-BR": "Resiste Trovão"}, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_a010", "name": {"en": "Crystal Armor", "pt-BR": "Armadura de Cristal"}, "defense": 20, "magic_defense": 2, "price": 12000, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_a011", "name": {"en": "Genji Armor", "pt-BR": "Armadura Genji"}, "defense": 22, "magic_defense": 2, "price": 0, "jobs": ["Knight", "Mystic Knight", "Samurai"]},
+        {"id": "armor_a012", "name": {"en": "Flame Mail", "pt-BR": "Armadura de Chamas"}, "defense": 18, "magic_defense": 5, "price": 0, "element": {"en": "Absorb Fire", "pt-BR": "Absorve Fogo"}, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_a013", "name": {"en": "Ice Mail", "pt-BR": "Armadura de Gelo"}, "defense": 18, "magic_defense": 5, "price": 0, "element": {"en": "Absorb Ice", "pt-BR": "Absorve Gelo"}, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_a014", "name": {"en": "Kenpo Gi", "pt-BR": "Quimono"}, "defense": 5, "magic_defense": 2, "price": 450, "special": {"en": "+1 Strength", "pt-BR": "+1 Força"}, "jobs": ["Monk", "Berserker"]},
+        {"id": "armor_a015", "name": {"en": "Ninja Suit", "pt-BR": "Vestimenta Ninja"}, "defense": 9, "magic_defense": 2, "price": 3000, "special": {"en": "+1 Speed", "pt-BR": "+1 Velocidade"}, "jobs": ["Ninja", "Thief"]},
+        {"id": "armor_a016", "name": {"en": "Power Sash", "pt-BR": "Cinto de Poder"}, "defense": 11, "magic_defense": 0, "price": 4500, "special": {"en": "+3 Strength", "pt-BR": "+3 Força"}, "jobs": ["Monk", "Berserker"]},
+        {"id": "armor_a017", "name": {"en": "Diamond Plate", "pt-BR": "Placa de Diamante"}, "defense": 13, "magic_defense": 2, "price": 6000, "element": {"en": "Resist Thunder", "pt-BR": "Resiste Trovão"}, "jobs": ["Knight", "Mystic Knight", "Dragoon"]},
+        {"id": "armor_a018", "name": {"en": "Black Garb", "pt-BR": "Vestimenta Negra"}, "defense": 17, "magic_defense": 2, "price": 9000, "special": {"en": "+1 Strength, +1 Speed", "pt-BR": "+1 Força, +1 Velocidade"}, "jobs": ["Ninja", "Thief"]},
+        {"id": "armor_a019", "name": {"en": "Mirage Vest", "pt-BR": "Colete Miragem"}, "defense": 14, "magic_defense": 4, "price": 0, "special": {"en": "Auto-Blink", "pt-BR": "Auto-Piscar"}, "jobs": ["All"]},
+        {"id": "armor_a020", "name": {"en": "Cotton Robe", "pt-BR": "Manto de Algodão"}, "defense": 2, "magic_defense": 4, "price": 350, "jobs": ["White Mage", "Black Mage", "Time Mage", "Summoner", "Blue Mage"]},
+        {"id": "armor_a021", "name": {"en": "Silk Robe", "pt-BR": "Manto de Seda"}, "defense": 4, "magic_defense": 6, "price": 500, "jobs": ["White Mage", "Black Mage", "Time Mage", "Summoner", "Blue Mage"]},
+        {"id": "armor_a022", "name": {"en": "Gaia Gear", "pt-BR": "Vestimenta Gaia"}, "defense": 8, "magic_defense": 2, "price": 0, "special": {"en": "+Earth magic power", "pt-BR": "+Poder mágico de terra"}, "jobs": ["Geomancer", "White Mage", "Black Mage", "Time Mage", "Summoner"]},
+        {"id": "armor_a023", "name": {"en": "Bard Tunic", "pt-BR": "Túnica do Bardo"}, "defense": 6, "magic_defense": 8, "price": 0, "special": {"en": "+Bard abilities", "pt-BR": "+Habilidades do Bardo"}, "jobs": ["Bard"]},
+        {"id": "armor_a024", "name": {"en": "Lumina Robe", "pt-BR": "Manto Luminoso"}, "defense": 11, "magic_defense": 12, "price": 0, "special": {"en": "+2 Magic Power", "pt-BR": "+2 Poder Mágico"}, "jobs": ["White Mage", "Black Mage", "Time Mage", "Summoner", "Blue Mage"]},
+        {"id": "armor_a025", "name": {"en": "Light Robe", "pt-BR": "Manto Leve"}, "defense": 12, "magic_defense": 14, "price": 4000, "jobs": ["White Mage", "Black Mage", "Time Mage", "Summoner", "Blue Mage"]},
+        {"id": "armor_a026", "name": {"en": "Wizard Robe", "pt-BR": "Manto do Mago"}, "defense": 14, "magic_defense": 14, "price": 5000, "special": {"en": "+5 Magic Power", "pt-BR": "+5 Poder Mágico"}, "jobs": ["White Mage", "Black Mage", "Time Mage", "Summoner", "Blue Mage"]},
+        {"id": "armor_a027", "name": {"en": "White Robe", "pt-BR": "Manto Branco"}, "defense": 14, "magic_defense": 14, "price": 8000, "special": {"en": "+3 Magic, +Vitality", "pt-BR": "+3 Magia, +Vitalidade"}, "jobs": ["White Mage", "Summoner"]},
+        {"id": "armor_a028", "name": {"en": "Black Robe", "pt-BR": "Manto Negro"}, "defense": 14, "magic_defense": 14, "price": 0, "special": {"en": "+5 Magic Power", "pt-BR": "+5 Poder Mágico"}, "jobs": ["Black Mage", "Time Mage"]},
+        {"id": "armor_a029", "name": {"en": "Strength Suit", "pt-BR": "Traje de Força"}, "defense": 11, "magic_defense": 0, "price": 0, "special": {"en": "+3 Strength", "pt-BR": "+3 Força"}, "jobs": ["Monk", "Berserker"]},
+        {"id": "armor_a030", "name": {"en": "Angel Gown", "pt-BR": "Vestido Angelical"}, "defense": 10, "magic_defense": 11, "price": 0, "special": {"en": "+5 Vitality, immune to most status", "pt-BR": "+5 Vitalidade, imune a maioria dos status"}, "jobs": ["White Mage", "Summoner"]},
+        {"id": "armor_a031", "name": {"en": "Rainbow Dress", "pt-BR": "Vestido Arco-Íris"}, "defense": 18, "magic_defense": 3, "price": 0, "special": {"en": "Sword Dance chance", "pt-BR": "Chance de Dança da Espada"}, "jobs": ["Dancer"]}
       ]
     },
     "accessories": {
       "description": {"en": "Accessories - provide various bonuses", "pt-BR": "Acessórios - fornecem vários bônus"},
       "items": [
-        {"id": "acc_001", "name": {"en": "Coral Ring", "pt-BR": "Anel de Coral"}, "effect": {"en": "Absorbs Thunder", "pt-BR": "Absorve Trovão"}, "price": 5000},
-        {"id": "acc_002", "name": {"en": "Flame Ring", "pt-BR": "Anel de Chamas"}, "effect": {"en": "Absorbs Fire", "pt-BR": "Absorve Fogo"}, "price": 5000},
-        {"id": "acc_003", "name": {"en": "Angel Ring", "pt-BR": "Anel do Anjo"}, "effect": {"en": "Auto-Float, Auto-Regen", "pt-BR": "Auto-Flutuar, Auto-Regenerar"}, "price": 8000},
-        {"id": "acc_004", "name": {"en": "Elf Cloak", "pt-BR": "Capa Élfica"}, "effect": {"en": "+15% Evade", "pt-BR": "+15% Evasão"}, "price": 3000},
-        {"id": "acc_005", "name": {"en": "Hermes Sandals", "pt-BR": "Sandálias de Hermes"}, "effect": {"en": "Auto-Haste", "pt-BR": "Auto-Haste"}, "price": 15000},
+        {"id": "acc_001", "name": {"en": "Coral Ring", "pt-BR": "Anel de Coral"}, "effect": {"en": "Absorb Water, nullify Fire, weak to Thunder", "pt-BR": "Absorve Água, anula Fogo, fraco a Trovão"}, "price": 25000},
+        {"id": "acc_002", "name": {"en": "Flame Ring", "pt-BR": "Anel de Chamas"}, "effect": {"en": "Absorb Fire, nullify Ice, weak to Water", "pt-BR": "Absorve Fogo, anula Gelo, fraco a Água"}, "price": 25000},
+        {"id": "acc_003", "name": {"en": "Angel Ring", "pt-BR": "Anel do Anjo"}, "effect": {"en": "Immune to Zombie and Old", "pt-BR": "Imune a Zumbi e Velhice"}, "price": 25000},
+        {"id": "acc_004", "name": {"en": "Elf Cloak", "pt-BR": "Capa Élfica"}, "effect": {"en": "+1 Speed, +1 Magic, avoid physical", "pt-BR": "+1 Velocidade, +1 Magia, evita físico"}, "price": 4000},
+        {"id": "acc_005", "name": {"en": "Hermes Sandals", "pt-BR": "Sandálias de Hermes"}, "effect": {"en": "Auto-Haste, immune to Stop/Slow/Sleep/Paralyze", "pt-BR": "Auto-Haste, imune a Parar/Deslizar/Sono/Paralisia"}, "price": 50000},
         {"id": "acc_006", "name": {"en": "Reflect Ring", "pt-BR": "Anel Refletor"}, "effect": {"en": "Auto-Reflect", "pt-BR": "Auto-Refletir"}, "price": 10000},
         {"id": "acc_007", "name": {"en": "Sprint Shoes", "pt-BR": "Sapatos Velozes"}, "effect": {"en": "Faster walk speed", "pt-BR": "Velocidade de caminhada"}, "price": 500},
         {"id": "acc_008", "name": {"en": "Gaia Drum", "pt-BR": "Tambor de Gaia"}, "effect": {"en": "Earth damage when used", "pt-BR": "Dano de terra quando usado"}, "price": 2000},
-        {"id": "acc_009", "name": {"en": "Tiger Mask", "pt-BR": "Máscara do Tigre"}, "effect": {"en": "+5 Strength", "pt-BR": "+5 Força"}, "price": 6000},
+        {"id": "acc_009", "name": {"en": "Tiger Mask", "pt-BR": "Máscara do Tigre"}, "effect": {"en": "+5 Strength", "pt-BR": "+5 Força"}, "price": 10000},
         {"id": "acc_010", "name": {"en": "Black Belt", "pt-BR": "Faixa Preta"}, "effect": {"en": "Counter attack", "pt-BR": "Contra-ataque"}, "price": 4000},
         {"id": "acc_011", "name": {"en": "Muscle Belt", "pt-BR": "Cinto Muscular"}, "effect": {"en": "+20% Max HP", "pt-BR": "+20% HP Máximo"}, "price": 5000},
         {"id": "acc_012", "name": {"en": "Bone Mail", "pt-BR": "Armadura de Ossos"}, "effect": {"en": "High defense, undead status", "pt-BR": "Alta defesa, status morto-vivo"}, "price": 0},
         {"id": "acc_013", "name": {"en": "Thornlet", "pt-BR": "Coroa de Espinhos"}, "effect": {"en": "+Strength, damages wearer", "pt-BR": "+Força, dano ao usuário"}, "price": 0},
         {"id": "acc_014", "name": {"en": "Cursed Ring", "pt-BR": "Anel Amaldiçoado"}, "effect": {"en": "Cursed until removed", "pt-BR": "Amaldiçoado até remover"}, "price": 0},
-        {"id": "acc_015", "name": {"en": "Charm Bangle", "pt-BR": "Pingente de Encanto"}, "effect": {"en": "Reduces random encounters", "pt-BR": "Reduz encontros aleatórios"}, "price": 3000}
+        {"id": "acc_015", "name": {"en": "Charm Bangle", "pt-BR": "Pingente de Encanto"}, "effect": {"en": "Reduces random encounters", "pt-BR": "Reduz encontros aleatórios"}, "price": 3000},
+        {"id": "acc_016", "name": {"en": "Mythril Glove", "pt-BR": "Luva de Mithril"}, "effect": {"en": "+3 Defense", "pt-BR": "+3 Defesa"}, "price": 600},
+        {"id": "acc_017", "name": {"en": "Gauntlet", "pt-BR": "Manopla"}, "effect": {"en": "+6 Defense, +1 Magic Defense", "pt-BR": "+6 Defesa, +1 Defesa Mágica"}, "price": 3000},
+        {"id": "acc_018", "name": {"en": "Giant's Glove", "pt-BR": "Luva do Gigante"}, "effect": {"en": "+5 Strength/Stamina, -5 Speed/Magic, immune to Mini", "pt-BR": "+5 Força/Vigor, -5 Velocidade/Magia, imune a Reduzir"}, "price": 0},
+        {"id": "acc_019", "name": {"en": "Wall Ring", "pt-BR": "Anel de Barreira"}, "effect": {"en": "Auto-Wall", "pt-BR": "Auto-Barreira"}, "price": 10000},
+        {"id": "acc_020", "name": {"en": "Red Shoes", "pt-BR": "Sapatos Vermelhos"}, "effect": {"en": "+11 Defense, +2 Magic Defense, Sword Dance chance", "pt-BR": "+11 Defesa, +2 Defesa Mágica, chance de Dança da Espada"}, "price": 0},
+        {"id": "acc_021", "name": {"en": "Silver Glasses", "pt-BR": "Óculos de Prata"}, "effect": {"en": "Immune to Blind", "pt-BR": "Imune a Cegueira"}, "price": 250}
       ]
     }
   },
   "legendary_weapons": {
     "description": {"en": "The 12 Legendary Weapons sealed in the Sealed Castle", "pt-BR": "As 12 Armas Lendárias seladas no Castelo Selado"},
     "items": [
-      {"id": "legend_001", "name": {"en": "Excalibur", "pt-BR": "Excalibur"}, "type": "Sword", "attack": 82, "special": {"en": "Holy element, +5 Strength", "pt-BR": "Elemento Sagrado, +5 Força"}},
+      {"id": "legend_001", "name": {"en": "Excalibur", "pt-BR": "Excalibur"}, "type": "Sword", "attack": 110, "special": {"en": "Holy element, +5 Strength", "pt-BR": "Elemento Sagrado, +5 Força"}},
       {"id": "legend_002", "name": {"en": "Masamune", "pt-BR": "Masamune"}, "type": "Katana", "attack": 82, "special": {"en": "First strike", "pt-BR": "Ataque primeiro"}},
-      {"id": "legend_003", "name": {"en": "Ragnarok", "pt-BR": "Ragnarok"}, "type": "Sword", "attack": 75, "special": {"en": "Cast Flare", "pt-BR": "Lança Flare"}},
-      {"id": "legend_004", "name": {"en": "Holy Lance", "pt-BR": "Lança Sagrada"}, "type": "Spear", "attack": 64, "special": {"en": "Holy element", "pt-BR": "Elemento Sagrado"}},
-      {"id": "legend_005", "name": {"en": "Dragon Lance", "pt-BR": "Lança Dragão"}, "type": "Spear", "attack": 72, "special": {"en": "Bonus vs dragons", "pt-BR": "Bônus contra dragões"}},
+      {"id": "legend_003", "name": {"en": "Ragnarok", "pt-BR": "Ragnarok"}, "type": "Sword", "attack": 140, "special": {"en": "Cast Flare", "pt-BR": "Lança Flare"}},
+      {"id": "legend_004", "name": {"en": "Holy Lance", "pt-BR": "Lança Sagrada"}, "type": "Spear", "attack": 109, "special": {"en": "Holy element, +3 Strength", "pt-BR": "Elemento Sagrado, +3 Força"}},
+      {"id": "legend_005", "name": {"en": "Dragon Lance", "pt-BR": "Lança Dragão"}, "type": "Spear", "attack": 119, "special": {"en": "Bonus vs dragons", "pt-BR": "Bônus contra dragões"}},
       {"id": "legend_006", "name": {"en": "Assassin Dagger", "pt-BR": "Adaga do Assassino"}, "type": "Dagger", "attack": 56, "special": {"en": "Instant death chance", "pt-BR": "Chance de morte instantânea"}},
-      {"id": "legend_007", "name": {"en": "Sasuke's Katana", "pt-BR": "Katana de Sasuke"}, "type": "Ninja Blade", "attack": 68, "special": {"en": "High speed", "pt-BR": "Alta velocidade"}},
-      {"id": "legend_008", "name": {"en": "Yoichi Bow", "pt-BR": "Arco Yoichi"}, "type": "Bow", "attack": 65, "special": {"en": "High accuracy", "pt-BR": "Alta precisão"}},
-      {"id": "legend_009", "name": {"en": "Artemis Bow", "pt-BR": "Arco de Ártemis"}, "type": "Bow", "attack": 68, "special": {"en": "Best bow", "pt-BR": "Melhor arco"}},
-      {"id": "legend_010", "name": {"en": "Faerie Rod", "pt-BR": "Cajado das Fadas"}, "type": "Rod", "attack": 30, "special": {"en": "Cast Holy", "pt-BR": "Lança Sanctus"}},
-      {"id": "legend_011", "name": {"en": "Apollo Harp", "pt-BR": "Harpa de Apolo"}, "type": "Harp", "attack": 40, "special": {"en": "Damages undead", "pt-BR": "Dano a mortos-vivos"}},
+      {"id": "legend_007", "name": {"en": "Sasuke's Katana", "pt-BR": "Katana de Sasuke"}, "type": "Katana", "attack": 68, "special": {"en": "High speed", "pt-BR": "Alta velocidade"}},
+      {"id": "legend_008", "name": {"en": "Yoichi Bow", "pt-BR": "Arco Yoichi"}, "type": "Bow", "attack": 101, "special": {"en": "+3 Vigor, +3 Speed, critical hit", "pt-BR": "+3 Vigor, +3 Velocidade, acerto crítico"}},
+      {"id": "legend_009", "name": {"en": "Artemis Bow", "pt-BR": "Arco de Ártemis"}, "type": "Bow", "attack": 111, "special": {"en": "Strong vs creatures", "pt-BR": "Forte contra criaturas"}},
+      {"id": "legend_010", "name": {"en": "Faerie Rod", "pt-BR": "Varinha das Fadas"}, "type": "Rod", "attack": 30, "special": {"en": "Cast Holy", "pt-BR": "Lança Sanctus"}},
+      {"id": "legend_011", "name": {"en": "Apollo Harp", "pt-BR": "Harpa de Apolo"}, "type": "Harp", "attack": 45, "special": {"en": "Damages undead and dragons", "pt-BR": "Dano a mortos-vivos e dragões"}},
       {"id": "legend_012", "name": {"en": "Gaia Bell", "pt-BR": "Sino de Gaia"}, "type": "Bell", "attack": 45, "special": {"en": "Earth damage", "pt-BR": "Dano de terra"}}
     ]
   }

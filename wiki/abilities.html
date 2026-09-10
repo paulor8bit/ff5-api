@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habilidades · FFV Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="abilities.html">
+
+  <header class="wiki-nav" id="wiki-nav"></header>
+
+  <main class="wiki-main">
+    <div class="page-head">
+      <span class="icon">💪</span>
+      <h1>Habilidades <span class="en">Commands · Support · Innate</span></h1>
+      <p>Ações de comando, habilidades de suporte e habilidades inatas dos jobs.</p>
+    </div>
+
+    <div class="tabs" id="tabs"></div>
+    <div id="panes"></div>
+  </main>
+
+  <footer>
+    Final Fantasy V © Square Enix · Wiki lê os arquivos estáticos <code>json/*.json</code> e <code>images/*</code>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    const CATS = [
+      ['command_abilities', '⚡ Comando'],
+      ['support_abilities', '🛡️ Suporte'],
+      ['job_innate_abilities', '✨ Inatas'],
+    ];
+
+    function card(a) {
+      const cost = a.abp_cost != null ? `ABP ${fmt(a.abp_cost)}` : null;
+      const source = a.source_en || a.job;
+      return `
+      <div class="card">
+        <div class="card-top">
+          <h3>${esc(a.name_en || a.name || '')}</h3>
+          ${cost ? `<span class="chip summon">${cost}</span>` : ''}
+        </div>
+        ${source ? `<div class="sub">${esc(source)}</div>` : '<div class="sub">&nbsp;</div>'}
+        <div class="desc" style="margin-top:6px;">${esc(a.description_en || a.description || '')}</div>
+      </div>`;
+    }
+
+    (async () => {
+      const tabsEl = $('#tabs');
+      const panesEl = $('#panes');
+      showSpinner(panesEl, 'Carregando habilidades...');
+      try {
+        const data = await API.get('abilities.json');
+
+        let active = CATS[0][0];
+        const switchTab = (key) => {
+          active = key;
+          tabsEl.querySelectorAll('.tab').forEach((t) => t.classList.toggle('active', t.dataset.tab === key));
+          panesEl.querySelectorAll('.tab-pane').forEach((p) => p.classList.toggle('active', p.dataset.pane === key));
+        };
+
+        tabsEl.innerHTML = CATS.map(([key, label]) => {
+          const arr = (data[key] && data[key].abilities) || [];
+          return `<span class="tab ${key === active ? 'active' : ''}" data-tab="${key}">${esc(label)} <span style="opacity:.6">(${arr.length})</span></span>`;
+        }).join('');
+
+        panesEl.innerHTML = CATS.map(([key, label]) => {
+          const arr = (data[key] && data[key].abilities) || [];
+          return `
+          <div class="tab-pane ${key === active ? 'active' : ''}" data-pane="${key}">
+            <div class="grid wide">${arr.map(card).join('') || '<div class="loading">Sem habilidades nesta categoria.</div>'}</div>
+          </div>`;
+        }).join('');
+
+        tabsEl.querySelectorAll('.tab').forEach((t) => t.addEventListener('click', () => switchTab(t.dataset.tab)));
+      } catch (err) { showError(panesEl, err); }
+    })();
+  </script>
+</body>
+</html>

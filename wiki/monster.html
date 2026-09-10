@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhe · FFV Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="bestiary.html">
+
+  <header class="wiki-nav" id="wiki-nav"></header>
+
+  <main class="wiki-main" id="main">
+    <div class="loading"><span class="spinner"></span>Carregando monstro...</div>
+  </main>
+
+  <footer>
+    Final Fantasy V © Square Enix · Wiki lê os arquivos estáticos <code>json/*.json</code> e <code>images/*</code>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    const MAX_BAR = { hp: 99999, mp: 9999, attack: 255, defense: 255, mdef: 255, speed: 255 };
+
+    function bar(label, value, max, color) {
+      const v = value == null ? 0 : value;
+      const pct = Math.min(100, Math.round((v / max) * 100));
+      return `
+        <div class="statbar"><div class="row">
+          <span class="label">${label}</span><span class="track"><span class="fill" style="width:${Math.max(2, pct)}%;${color ? `background:${color}` : ''}"></span></span><span class="value">${fmt(v)}</span>
+        </div></div>`;
+    }
+
+    function chipItem(label, value) {
+      if (value == null || value === '' || value === '---') return `<span class="chip">${esc(label)}: —</span>`;
+      return `<span class="chip one">${esc(label)}: ${esc(value)}</span>`;
+    }
+
+    function renderDetail(m, index, total, prevNext) {
+      const [label, cls] = badgeFor(m._cat);
+      const pk = String(m.id || '').replace(/[^0-9]/g, '');
+      const loc = locationOf(m);
+      const weak = weaknessOf(m);
+
+      $('#main').innerHTML = `
+        <div class="page-head">
+          <span class="icon">👹</span>
+          <h1>Detalhe <span class="en">#${esc(pk)}</span></h1>
+          <p>Índice ${fmt(index + 1)} de ${fmt(total)} nesta categoria</p>
+        </div>
+
+        <div class="monster-hero">
+          <div class="monster-panel">
+            <img class="monster-art" src="${imURL(m)}" alt="${esc(nameOf(m))}" data-fb="${elementSlug(weak) || '❓'}" onerror="if(this.dataset.fb)this.parentNode.innerHTML='<div class=monster-glyph>'+this.dataset.fb+'</div>'">
+          </div>
+          <div>
+            <div class="monster-title">
+              <h2>${esc(nameOf(m))}</h2>
+              <span class="chip ${cls}">${esc(label)}</span>
+              ${loc ? `<span class="chip two">📍 ${esc(loc)}</span>` : ''}
+            </div>
+            <div class="monster-desc">
+              Mundo: ${m._world ? esc('Mundo ' + m._world) : '—'} · ID: <code>${esc(m.id)}</code>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat"><div class="k">Nível</div><div class="v">${m.level != null ? m.level : '—'}</div></div>
+              <div class="hero-stat"><div class="k">Gil</div><div class="v">${fmt(m.gil)}</div></div>
+              <div class="hero-stat"><div class="k">EXP</div><div class="v">${fmt(m.exp)}</div></div>
+              <div class="hero-stat"><div class="k">Velocidade</div><div class="v">${fmt(m.speed)}</div></div>
+              ${m.attack_multiplier != null ? `<div class="hero-stat"><div class="k">ATK mult.</div><div class="v">×${m.attack_multiplier}</div></div>` : ''}
+            </div>
+
+            <div style="margin-top:16px;">
+              ${bar('HP', m.hp, MAX_BAR.hp)}
+              ${bar('MP', m.mp, MAX_BAR.mp, 'linear-gradient(90deg,#b48cff,#7aa2ff)')}
+              ${bar('ATK', m.attack, MAX_BAR.attack, 'linear-gradient(90deg,#ff6b6b,#ffb347)')}
+              ${bar('DEF', m.defense, MAX_BAR.defense, 'linear-gradient(90deg,#4ecdc4,#57e389)')}
+              ${bar('MDEF', m.mdef, MAX_BAR.mdef, 'linear-gradient(90deg,#b48cff,#ff9cf0)')}
+              ${bar('VEL', m.speed, MAX_BAR.speed, 'linear-gradient(90deg,#ffd700,#ffc390)')}
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">🧾 Informações de batalha</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;">
+            <span class="chip boss">❤️ ${fmt(m.hp)} HP</span>
+            <span class="chip one">💧 ${fmt(m.mp)} MP</span>
+            <span class="chip">⚠️ Fraqueza: ${esc(weak)}</span>
+            <span class="chip special">💰 ${fmt(m.gil)} gil</span>
+            <span class="chip two">⭐ ${fmt(m.exp)} exp</span>
+          </div>
+
+          <table class="kv">
+            <tr><td>Steal (normal)</td><td>${m.steal ? esc(m.steal) : '—'}</td></tr>
+            <tr><td>Steal (raro)</td><td>${m.rare_steal ? esc(m.rare_steal) : '—'}</td></tr>
+            <tr><td>Drop</td><td>${m.drop ? esc(m.drop) : '—'}</td></tr>
+            <tr><td>Localização</td><td>${loc ? esc(loc) : '—'}</td></tr>
+            <tr><td>ID interno</td><td><code>${esc(m.id)}</code></td></tr>
+          </table>
+        </div>
+
+        <div class="detail-nav">
+          ${index > 0 ? `<a href="monster.html?id=${esc(prevNext[index - 1]?.id)}">← ${esc(nameOf(prevNext[index - 1]))}</a>` : `<span></span>`}
+          ${index < total - 1 ? `<a href="monster.html?id=${esc(prevNext[index + 1]?.id)}">${esc(nameOf(prevNext[index + 1]))} →</a>` : `<span></span>`}
+        </div>
+      `;
+    }
+
+    (async () => {
+      const main = $('#main');
+      const id = new URLSearchParams(location.search).get('id');
+      if (!id) { $(main).innerHTML = '<div class="error">Nenhum id informado. Volte ao <a href="bestiary.html">bestiário</a>.</div>'; return; }
+      showSpinner(main, 'Carregando monstro...');
+      try {
+        const list = await loadAllMonsters();
+        const idx = list.findIndex((m) => m.id === id);
+        if (idx === -1) {
+          main.innerHTML = `<div class="error">Monstro <code>${esc(id)}</code> não encontrado. <a href="bestiary.html">Voltar</a></div>`;
+          return;
+        }
+        renderDetail(list[idx], idx, list.length, list);
+        document.title = `${nameOf(list[idx])} · FFV Wiki`;
+      } catch (err) { showError(main, err); }
+    })();
+  </script>
+</body>
+</html>
