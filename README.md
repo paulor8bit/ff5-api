@@ -28,6 +28,133 @@ API REST completa com todos os dados do jogo **Final Fantasy V** (SNES/GBA/Mobil
 
 ## 🚀 Instalação
 
+### Protótipo roguelike: Caminho dos Cristais
+
+Com o servidor rodando, abra `http://localhost:3000/roguelike/`.
+Uma run tem 12 encontros e quatro guardiões de cristal. Na primeira jornada,
+Bartz começa solo como Aventureiro. Encontros de aliado no mapa permitem recrutar
+Lenna, Faris e Krile, até quatro integrantes. Cada um tem HP, MP, ATB e job próprios.
+A vez passa automaticamente ao próximo personagem pronto após concluir uma ação.
+
+Guardiões revelam jobs: descobrir não significa aprender. Batalhas rendem 5 Pontos
+de Job (PJ), elites 8 e guardiões 15. No menu Aprender jobs / Vagas, compre jobs
+por 20, 35, 50 ou 70 PJ conforme a etapa do cristal. O aprendizado é individual: Bartz aprender um job não o libera para Lenna.
+Selecione o personagem no treinamento e pague PJ separadamente para cada um.
+Jobs aprendidos permanecem para aquele personagem entre jornadas e podem ser escolhidos antes de iniciar uma nova run.
+Aliados recrutados ficam registrados permanentemente; comprar as vagas iniciais
+2, 3 e 4 custa 80, 140 e 220 PJ e permite começar com mais integrantes.
+PJ, jobs aprendidos, registro de aliados e vagas são salvos separadamente da run.
+Itens, gil, equipamentos e ABP reiniciam na nova jornada. ABP aprende comandos:
+após 30 ABP, um personagem pode levar aquele comando para outro job na mesma run.
+
+Cada job começa com uma magia ou habilidade. Mago Branco e Mago Vermelho
+começam com Cura, Mago Negro com Fogo, Mago do Tempo com Haste e Invocador
+com Chocobo. Os outros jobs começam com seu comando próprio, como Roubar ou
+Golpe de espada. A magia inicial é concedida gratuitamente ao iniciar ou trocar
+para o job e fica no repertório compartilhado daquela run.
+
+Outras magias são aprendidas durante a run, para todo o grupo: compre pergaminhos com gil
+na aba Magias das lojas ou escolha um pergaminho nas recompensas. Uma compra
+libera a magia para todos os personagens com job/comando herdado compatível,
+inclusive aliados recrutados depois. Mago Branco usa Branca, Mago Negro usa Negra,
+Mago Vermelho usa Branca/Negra básica e intermediária, Mago do Tempo usa Tempo e
+Invocador usa invocações. Magias reiniciam na próxima run. A aba Magias no menu
+do grupo mostra o repertório e a compatibilidade do personagem selecionado.
+O repertório jogável tem 22 magias; o glossário também contém registros da base
+completa ainda sem implementação de combate.
+
+Aventureiro equipa somente peças básicas, mesmo que receba espólios avançados:
+até 22 de ataque, 4 de defesa, 1 de bônus mágico e 500 gil, sem acessórios ou
+bônus especiais de atributos/Auto-Acelerar. Outros jobs seguem suas categorias.
+Peças incompatíveis em saves antigos voltam à mochila; jobs já equipados nesses
+saves são preservados como aprendidos na migração.
+
+O Glossário, acessível pelo título e pela pausa, tem busca e detalhes de sistemas,
+jobs, personagens, magias, habilidades, equipamentos, itens, monstros e relíquias.
+Os sistemas descrevem a adaptação; os demais registros incluem os dados de FF5,
+com valores e efeitos originais que podem diferir da implementação do roguelike.
+
+Este protótipo usa os dados e sprites existentes, com fórmulas simplificadas
+e um conjunto de comandos representativos. Não reproduz todas as mecânicas
+do FFV. Ataque, Magia e Item pedem confirmação do alvo; itens de cura podem
+ser usados em outro aliado e Cauda de Fênix revive integrantes nocauteados;
+acampamentos recuperam todo o grupo e revivem aliados nocauteados.
+
+Vitórias concedem gil, ABP e um item, além de uma escolha entre arma,
+proteção e consumíveis. Guardiões concedem equipamento junto da descoberta
+de jobs. A etapa da run define uma faixa de potência para os equipamentos sorteados,
+excluindo peças iniciais das recompensas avançadas. Elites e guardiões elevam
+essa faixa; lojas seguem a mesma progressão. O sorteio considera ataque, magia,
+defesa, esquiva, agilidade e Auto-Acelerar, mantém variedade de categorias e
+evita repetir peças obtidas quando existem alternativas compatíveis.
+Abra Item / Equipamento pelo menu de pausa, pelo mapa ou pela tecla I.
+Na aba Status, consulte HP, MP, ataque, defesa, magia, agilidade, esquiva
+e velocidade ATB de cada personagem, com a origem dos bônus.
+Escolha um personagem e uma das cinco posições para equipar ou remover peças.
+Antes de equipar ou remover uma peça, a comparação mostra os valores atuais
+e futuros: ganhos em verde, perdas em vermelho e efeitos como Auto-Acelerar.
+O cursor e o mouse atualizam a prévia; a troca só acontece ao confirmar.
+Voltar ou Esc retorna uma etapa, sem alterar atributos ou inventário.
+Na batalha, a vez passa automaticamente ao próximo integrante com ATB pronto
+após concluir a ação. Se ninguém estiver pronto, o tempo volta a correr.
+Cada cópia pertence à mochila ou a um único personagem; mudar de job devolve
+peças incompatíveis à mochila. Ataque, defesa, magia, agilidade, esquiva e
+Auto-Acelerar têm efeito no combate. Efeitos especiais de armas do FFV não
+são reproduzidos. Itens de recuperação também podem ser usados entre encontros;
+itens sem efeito não são consumidos fora da batalha. O inventário e equipamentos
+persistem no save, preservando as poções de jornadas antigas.
+Na batalha, Item abre a lista da mochila. Selecionar um item não gasta o turno;
+o recurso só é consumido após confirmar um alvo válido. Esc cancela a seleção.
+
+Validação do ciclo de combate e progressão: `npm run test:roguelike`.
+
+A postura padrão usa um frame estático de victory.gif. Durante as ações,
+os personagens usam os sprites de ataque ou conjuração. Os efeitos destacam
+o atacante, o alvo atingido e o dano ou recuperação efetivos. Inimigos também
+têm indicação de ataque; impactos em área aparecem em todos os alvos.
+As ações são exibidas em sequência antes de liberar o próximo comando ou a
+tela de vitória. Pausa e consulta aos menus suspendem a reprodução; a opção
+de animações reduzidas mantém a indicação de origem, alvo e números.
+
+A apresentação usa um campo de batalha em 4:3, sprites de personagens,
+janelas azuis de comandos/status e seleção de alvos. Setas e Enter navegam os
+comandos, J abre jobs entre encontros, e Esc fecha esse menu. Há modo de tela cheia.
+O estilo das janelas toma [Final-Fantasy-CSS](https://github.com/cafeTechne/Final-Fantasy-CSS)
+como referência, com CSS próprio adaptado ao layout SNES. A fonte local VT323
+é distribuída com sua licença OFL em `public/roguelike/assets/OFL.txt`.
+Os encontros usam os GIFs de monstros verificados como válidos; muitos arquivos
+antigos dessa pasta contêm HTML. Saves antigos com sprites indisponíveis usam
+uma silhueta, evitando mostrar a imagem de outro monstro.
+
+O mapa da run gera rotas ramificadas com batalhas, elites, acampamentos,
+lojas, eventos, tesouros e quatro guardiões. As lojas têm estoque persistente de
+consumíveis, equipamentos e relíquias, venda de peças da mochila e um serviço
+limitado de cura. Compras exigem gil suficiente; equipamentos equipados não
+podem ser vendidos. Quatro eventos originais permitem recuperar HP/MP, oferecer
+vitalidade por uma relíquia, treinar ataque ou trocar suprimentos por gil.
+As consequências aparecem antes da escolha, com opções indisponíveis quando
+faltam recursos. Cada evento ou tesouro só pode ser resolvido uma vez.
+Tesouros oferecem relíquias que concedem ataque, defesa ou magia/agilidade a
+todo o grupo durante a run; consulte os efeitos na aba Status.
+Estoque, resultados e relíquias persistem no save. Mapas anteriores recebem
+os novos tipos apenas nos encontros futuros, preservando o trajeto percorrido,
+o encontro atual e as conexões. Somente nós conectados ao encontro anterior podem ser escolhidos.
+O trajeto e o mapa persistem no save; saves anteriores são migrados automaticamente.
+O botão Mapa (ou M) permite consultar as rotas durante a batalha, pausando o ATB.
+
+Os menus têm sons sintetizados originais de navegação, confirmação, retorno e
+recompensa. O áudio começa após a primeira interação e pode ser silenciado pelo
+botão Som; essa preferência é salva no navegador. Não há gravações extraídas do FFV.
+Para trocar nomes, edite `public/roguelike/config.js`: os IDs e os caminhos dos
+sprites são independentes dos nomes exibidos, inclusive ao carregar uma run salva.
+
+O jogo abre na tela de título, com Continuar, Nova jornada, Configurações,
+Como jogar e Créditos. Esc ou Menu / Pausa interrompe o ATB; é possível retomar,
+configurar ou salvar e voltar ao título. Uma nova jornada pede confirmação dentro
+do jogo antes de substituir uma run em andamento. O volume dos efeitos, velocidade
+do combate, filtro CRT e animações da interface são configuráveis e persistem
+separadamente do save. Não há música de fundo nesta versão.
+
 ### Clone o repositório
 
 ```bash
